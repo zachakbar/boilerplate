@@ -26,11 +26,7 @@
 	}
 }
 
-@each $name, $breakpoint, $class in (MOBILE LANDSCAPE,$mobilels,ml),
-									(TABLET,$tablet,t),
-									(TABLET LANDSCAPE,$tabletls,tl),
-									(DESKTOP,$desktop,d),
-									(WIDESCREEN,$widescreen,w){
+@each $name, $breakpoint, $class in (MOBILE LANDSCAPE,$mobilels,ml),(TABLET,$tablet,t),(TABLET LANDSCAPE,$tabletls,tl),(DESKTOP,$desktop,d),(WIDESCREEN,$widescreen,w){
 	/************************************************************************/
 	/* #{$name} GRID CLASSES
 	/************************************************************************/
