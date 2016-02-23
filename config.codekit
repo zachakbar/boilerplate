@@ -373,9 +373,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "STATIC",
+	"displayValue": "_BOILERPLATE",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-girlfriend"
+	"iconImageName": "meme-grumpy"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
