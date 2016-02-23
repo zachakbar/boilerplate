@@ -1,0 +1,56 @@
+/************************************************************************/
+/* THIS CREATES THE GRID CLASSES
+/************************************************************************/
+
+.row {
+  width: 100%;
+  @include clearfix;
+}
+
+/************************************************************************/
+/* MOBILE GRID CLASSES
+/************************************************************************/
+@for $i from 1 through $columns{
+	.m_#{$i} {
+		@include span($i of $columns);
+		$nth: unquote(($columns / $i) + 'n');
+		@if $columns % $i == 0{
+			&.last, &:nth-child(#{$nth}){
+				@include span($i of $columns last);
+			}
+		}@else{
+			&.last{
+				@include span($i of $columns last);
+			}
+		}
+	}
+}
+
+@each $name, $breakpoint, $class in (MOBILE LANDSCAPE,$mobilels,ml),
+									(TABLET,$tablet,t),
+									(TABLET LANDSCAPE,$tabletls,tl),
+									(DESKTOP,$desktop,d),
+									(WIDESCREEN,$widescreen,w){
+	/************************************************************************/
+	/* #{$name} GRID CLASSES
+	/************************************************************************/
+	@include breakpoint(#{$breakpoint}){
+		@for $i from 1 through $columns{
+			$x: unquote('.' + $class + '_' + $i);
+			#{$x}{
+				@include span($i of $columns);
+				&:nth-child(12n), &:nth-child(6n), &:nth-child(4n), &:nth-child(3n), &:nth-child(2n) { @include span($i of $columns); };
+				$nth: unquote(($columns / $i) + 'n');
+				@if $columns % $i == 0{
+					&.last, &:nth-child(#{$nth}){
+						@include span($i of $columns last);
+					}
+				}@else{
+					&.last{
+						@include span($i of $columns last);
+					}
+				}
+			}
+		}
+	}
+}
