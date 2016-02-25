@@ -57,9 +57,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* THIS CREATES THE GRID CLASSES
 /************************************************************************/
 .row {
-  width: 100%;
   overflow: hidden;
-  *zoom: 1; }
+  *zoom: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
 
 /************************************************************************/
 /* MOBILE GRID CLASSES
