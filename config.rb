@@ -14,6 +14,7 @@ output_style = :compressed
 environment = :development
 
 relative_assets = true
+disable_warnings = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
