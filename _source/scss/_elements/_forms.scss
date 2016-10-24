@@ -2,12 +2,10 @@
 /* FORMS
 /************************************************************************/
 
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder{
-	color: $lightgrey;
-}
+::-webkit-input-placeholder{ color: $lightgrey; }
+:-moz-placeholder{ color: $lightgrey; }
+::-moz-placeholder{ color: $lightgrey; }
+:-ms-input-placeholder{ color: $lightgrey; }
 
 label, legend {
 	display: block;
