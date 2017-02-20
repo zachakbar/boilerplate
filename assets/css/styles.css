@@ -79,7 +79,7 @@ img {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 1140px) {
+  @media (min-width: 1200px) {
     .wrap {
       max-width: 1200px;
       margin-left: auto;

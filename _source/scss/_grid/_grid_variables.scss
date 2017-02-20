@@ -17,7 +17,7 @@ $c: 0; // leave this at 0
 	$c: unquote($calc + 'px'); // NEVERMORE
 }@else if $GRID_TYPE == 'static'{
 	$container: unquote($wrap + 60);
-	$c: $wrap + 'px';
+	$c: $container + 'px';
 }
 
 // Breakpoints
@@ -28,7 +28,7 @@ $xl: $c;
 $xxl: 1500px;
 
 // MAP FOR GRID CLASSES
-$grid_classes: ("MEDIUM" $md "md"),("LARGE" $lg "lg"),("XTRA LARGE" $xl "xl");
+$grid_classes: ("MEDIUM" $md "md"),("LARGE" $lg "lg"),("XTRA LARGE" $xl "xl"),("XTRA XTRA LARGE" $xxl "xxl");
 
 // Other Grid Variables
 $grid_border_box: border-box;
