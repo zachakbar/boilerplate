@@ -3,31 +3,34 @@
 /************************************************************************/
 
 // Grid Type
-//$GRID_TYPE	:	'fluid';
-$GRID_TYPE	:	'static';
+//$GRID_TYPE:	'fluid';
+$GRID_TYPE:	'static';
 
-// Column & Container
-$container	: 1140;
-$columns    : 12;
-$c				: 0; // leave this at 0;
+// Column & Container & Thingzzz
+$wrap: 1140;
+$columns: 12;
+$container: 0; // leave this at 0
+$c: 0; // leave this at 0
+@if $GRID_TYPE == 'fluid'{
+	$container: $wrap;
+	$calc: round((unquote($wrap) / 9) * 10);
+	$c: unquote($calc + 'px'); // NEVERMORE
+}@else if $GRID_TYPE == 'static'{
+	$container: unquote($wrap + 60);
+	$c: $wrap + 'px';
+}
 
 // Breakpoints
-$sm	: 320px;
-$md	: 570px;
-$lg	: 820px;
-@if $GRID_TYPE == 'fluid'{
-	$calc	: round((unquote($container) / 9) * 10);
-	$c		: unquote($calc + 'px'); // NEVERMORE
-}@else{
-	$c		: (unquote($container + 60) + 'px');
-}
-$xl	: $c;
-$xxl	: 1500px;
+$sm: 320px;
+$md: 570px;
+$lg: 820px;
+$xl: $c;
+$xxl: 1500px;
 
 // MAP FOR GRID CLASSES
 $grid_classes: ("MEDIUM" $md "md"),("LARGE" $lg "lg"),("XTRA LARGE" $xl "xl");
 
 // Other Grid Variables
-$grid_border_box			: border-box;
-$grid_gutter_position	: after;
-$grid_padding				: 0 1.5rem;
+$grid_border_box: border-box;
+$grid_gutter_position: after;
+$grid_padding: 0 1.5rem;

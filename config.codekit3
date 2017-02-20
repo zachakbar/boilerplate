@@ -389,15 +389,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/assets\/js\/modernizr-min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/modernizr-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/assets\/js\/scripts-min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -408,7 +399,7 @@
 		"tS": 0
 		},
 	"\/config.rb": {
-		"ft": 131072,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0
