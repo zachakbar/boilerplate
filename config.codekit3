@@ -7,7 +7,7 @@
 		"uuidString": "1066FB26-C9E5-44CE-85AA-DE335F9606A5"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25504",
 "files": {
 	"\/_source\/js\/_functions.js": {
 		"ft": 64,
@@ -49,7 +49,46 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/_source\/scss\/_core\/_flexbox.scss": {
+	"\/_source\/scss\/_core\/_mixins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_mixins.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_core\/_mixins\/_button.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_button.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_core\/_mixins\/_clearfix.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_clearfix.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_core\/_mixins\/_flexbox.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -62,7 +101,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/_source\/scss\/_core\/_mixins.scss": {
+	"\/_source\/scss\/_core\/_mixins\/_wrap.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -70,7 +109,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/_mixins.css",
+		"oAP": "\/assets\/css\/_wrap.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -149,6 +188,84 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/css\/_typography.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_hide.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_hide.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_inset.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_inset.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_pull.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_pull.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_push.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_push.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_source\/scss\/_grid\/_classes\/_row.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/_row.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -291,7 +408,7 @@
 		"tS": 0
 		},
 	"\/config.rb": {
-		"ft": 8192,
+		"ft": 131072,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0
@@ -335,7 +452,7 @@
 	"creationDate": 505163294,
 	"displayValue": "_git BOILERPLATE",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-grumpy"
+	"iconImageName": "meme-punDog"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -983,6 +1100,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -1522,6 +1643,10 @@
 		"prefer-const": {
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
+			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
 		"prefer-numeric-literals": {
 			"active": 0,
