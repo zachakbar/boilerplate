@@ -3,17 +3,17 @@
 /************************************************************************/
 
 a {
-	color: $linkcolor;
+	color: $link_color;
 	text-decoration: none;
 	@include single-transition(all, 0.2s, ease-in-out);
 	
 	&:visited {
-		color: $linkcolor;
+		color: $link_color;
 	}
 	
 	&:hover {
 		text-decoration: none;
-		color: $linkhover;
+		color: $link_hover;
 	}
 	
 	&:hover, &:active, &:focus {
@@ -22,8 +22,8 @@ a {
 }
 
 p {
-	font-size: $basefontsize;
-	line-height: $baselineheight;
+	font-size: $base_font_size;
+	line-height: $base_line_height;
 	margin-bottom: 1.5rem;
 }
 
@@ -32,11 +32,11 @@ p {
 /************************************************************************/
 
 #{headings()} {
-	color: $headingcolor;
-	font-family: $headingfont;
+	color: $heading_color;
+	font-family: $heading_font;
 	font-weight: 500;
 	text-rendering: optimizelegibility;
-	line-height: $baselineheight;
+	line-height: $base_line_height;
 	margin-bottom: 1rem;
 }
 

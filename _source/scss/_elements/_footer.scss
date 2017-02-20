@@ -4,7 +4,6 @@
 
 footer[role="contentinfo"] {
 	@include clearfix;
+	background-color: $lightgrey;
 	padding: 2rem 0;
-	background: $black;
-	color: $grey;
 }

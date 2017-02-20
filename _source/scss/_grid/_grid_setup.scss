@@ -1,17 +1,28 @@
 /************************************************************************/
 /* GRID SETUP
 /************************************************************************/
+@if $GRID_TYPE == 'static'{
+	$susy: (
+		container: 100%,
+		columns: $columns,
+		gutters: 0,
+		global-box-sizing: $grid_border_box,
+		gutter-position: $grid_gutter_position,
+		use-custom:(
+			rem: true
+		)
+	);
+}@else{
+	$susy: (
+		container: 90%,
+		columns: $columns,
+		gutters: 1/4,
+		global-box-sizing: $grid_border_box,
+		gutter-position: $grid_gutter_position,
+		use-custom: (
+			rem: true
+		)
+	);
+}
 
-$susy: (
-	container: 90%,
-	columns: $columns,
-	gutters: 1/4,
-	global-box-sizing: border-box,
-	gutter-position: after
-);
-
-$susy2: (
-	container: unquote($container + 'px')
-);
-
-$breakpoint-to-ems: true;
+$susy2: (container: unquote($container + 'px'));

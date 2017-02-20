@@ -2,30 +2,29 @@
 /* FORMS
 /************************************************************************/
 
-::-webkit-input-placeholder{ color: $lightgrey; }
-:-moz-placeholder{ color: $lightgrey; }
-::-moz-placeholder{ color: $lightgrey; }
-:-ms-input-placeholder{ color: $lightgrey; }
+::-webkit-input-placeholder{ color: $placeholder_color; }
+:-moz-placeholder{ color: $placeholder_color; }
+::-moz-placeholder{ color: $placeholder_color; }
+:-ms-input-placeholder{ color: $placeholder_color; }
 
 label, legend {
 	display: block;
-	font-size: 1.6rem;
-	line-height: 1.8rem;
+	font-size: $base_font_size;
+	line-height: $base_line_height;
 }
 
 input, textarea, select {
 	background: $white;
-	border: $inputborder;
-	color: $textcolor;
+	border: $input_border;
+	color: $text_color;
+	font-family: $base_font;
+	font-size: $base_font_size;
+	line-height: $base_line_height;
 	display: inline-block;
-	font-size: 1.6rem;
-	line-height: 1.4;
-	font-family: $basefont;
-	margin: 0 0 1rem;
 	width: 100%;
 	padding: 1rem 1.5rem;
+	margin: 0 0 1rem;
 	outline: none;
-	
 	@include single-transition(all, 0.2s, ease-in-out);
 }
 
@@ -40,7 +39,7 @@ input[type="submit"]{
 	-webkit-appearance: none;
 	width: 100%;
 
-	@include breakpoint($tablet){
+	@include breakpoint($md){
 		width: auto;
 	}
 }
@@ -52,7 +51,7 @@ input[type="submit"]{
 
 .styled_select {
 	background: $white url("../img/select-arrow.png") right center no-repeat;
-	border: $inputborder;
+	border: $input_border;
 	height: 4rem;
 	overflow: hidden;
 	margin-bottom: 1rem;
@@ -64,7 +63,7 @@ input[type="submit"]{
 		border: 0 !important;
 		border-radius: 0;
 		color: $lightgrey;
-		font-size: 1.6rem;
+		font-size: $base_font_size;
 		height: 4rem;
 		padding: 1rem 1.5rem;
 		-webkit-appearance: none;
@@ -73,10 +72,10 @@ input[type="submit"]{
 }
 
 .message {
-	padding: 1rem 1.5rem;
-	border: 2px solid $textcolor;
+	border: 2px solid $text_color;
 	@include border-radius(3px);
 	color: $white;
+	padding: 1rem 1.5rem;
 	margin-bottom: 1rem;
 
 	&.error {

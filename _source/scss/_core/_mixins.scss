@@ -2,57 +2,8 @@
 /* MIXINS
 /************************************************************************/
 
-// CLEARFIX
-@mixin clearfix {
-	*zoom : 1;
-	&:before, &:after {
-		display: table;
-		content : "";
-	}
-	&:after { clear : both; }
-}
-.clearfix { @include clearfix; }
+@import "_mixins/_button";
+@import "_mixins/_clearfix";
+@import "_mixins/_flexbox";
+@import "_mixins/_wrap";
 
-
-// BUTTON
-@mixin btn($btn_background, $btn_border_color, $btn_color) {
-	@extend .btn_static;
-	background: $btn_background;
-	border-color: $btn_border_color;
-	color: $btn_color;
-
-	&:visited {
-		background: $btn_background;
-		border-color: $btn_border_color;
-		color: $btn_color;
-	}
-}
-
-@mixin btn_static{
-	font-family: $basefont;
-	border: 2px solid;
-	font-size: 1.6rem;
-	font-weight: 500;
-	line-height: 1;
-	padding: 1rem 2rem;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	
-	@include border-radius(3px);
-}
-
-.btn_static{ @include btn_static; }
-
-
-// WRAP
-@mixin wrap{
-	//@include container(show-columns);
-	@include container();
-	
-	@include susy-breakpoint($widescreen,$susy2){
-		//@include container($susy2 show-columns);
-		@include container($susy2);
-	}
-}
-.wrap{ @include wrap; }
