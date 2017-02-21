@@ -9,4 +9,4 @@
 .btn_alt{ @include btn($lightgrey, $lightgrey, $text_color); }
 .btn_alt:hover{ @include btn($grey, $grey, $white); }
 .btn_outline{ @include btn(none, $grey, $text_color); }
-.btn_outline:hover{ @include btn(none, $darkgrey, $text_color); }
+.btn_outline:hover{ @include btn($darkgrey, $darkgrey, $white); }
