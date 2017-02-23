@@ -345,7 +345,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/css\/layout.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 1,
 		"uL": 1
 		},
 	"\/_source\/scss\/styles.scss": {
@@ -358,7 +358,7 @@
 		"oA": 0,
 		"oAP": "\/assets\/css\/styles.css",
 		"oF": 0,
-		"oS": 3,
+		"oS": 1,
 		"uL": 1
 		},
 	"\/assets\/css\/layout.css": {
@@ -407,7 +407,7 @@
 		"tS": 0
 		},
 	"\/config.rb": {
-		"ft": 131072,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0
