@@ -260,7 +260,7 @@ input[type="submit"]:visited {
   border-color: #333333;
   color: white;
 }
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   input[type="submit"] {
     width: auto;
   }

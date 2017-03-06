@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-wrap: wrap;
 }
 
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .row_flex_md {
     width: 100%;
     display: -ms-flexbox;
@@ -84,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     flex-wrap: wrap;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 900px) {
   .row_flex_lg {
     width: 100%;
     display: -ms-flexbox;
@@ -257,7 +257,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************************/
 /* MEDIUM GRID CLASSES
 /************************************************************************/
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .md_1 {
     width: 8.33333%;
     float: left;
@@ -445,7 +445,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************************/
 /* LARGE GRID CLASSES
 /************************************************************************/
-@media (min-width: 820px) {
+@media (min-width: 900px) {
   .lg_1 {
     width: 8.33333%;
     float: left;
@@ -1069,7 +1069,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 100%;
 }
 
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .inset_md_1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
@@ -1130,7 +1130,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 100%;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 900px) {
   .inset_lg_1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
@@ -1319,7 +1319,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .hide_m_down {
   display: none;
 }
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .hide_m_down {
     display: block;
   }
@@ -1328,7 +1328,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .hide_md_down {
   display: none;
 }
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .hide_md_down {
     display: block;
   }
@@ -1337,7 +1337,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .hide_lg_down {
   display: none;
 }
-@media (min-width: 820px) {
+@media (min-width: 900px) {
   .hide_lg_down {
     display: block;
   }
@@ -1361,19 +1361,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .hide_m_up {
     display: none;
   }
 }
 
-@media (min-width: 570px) {
+@media (min-width: 600px) {
   .hide_md_up {
     display: none;
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 900px) {
   .hide_lg_up {
     display: none;
   }
