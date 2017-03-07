@@ -74,7 +74,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @media (min-width: 600px) {
-  .row_flex_md {
+  .row-flex-md {
     width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -85,7 +85,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media (min-width: 900px) {
-  .row_flex_lg {
+  .row-flex-lg {
     width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -96,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media (min-width: 1200px) {
-  .row_flex_xl {
+  .row-flex-xl {
     width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media (min-width: 1500px) {
-  .row_flex_xxl {
+  .row-flex-xxl {
     width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -120,135 +120,135 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************************/
 /* SMALL GRID CLASSES
 /************************************************************************/
-.sm_1 {
+.sm-1 {
   width: 8.33333%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_1.last, .sm_1:nth-child(12n) {
+.sm-1.last, .sm-1:nth-child(12n) {
   width: 8.33333%;
   float: right;
   margin-right: 0;
 }
 
-.sm_2 {
+.sm-2 {
   width: 16.66667%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_2.last, .sm_2:nth-child(6n) {
+.sm-2.last, .sm-2:nth-child(6n) {
   width: 16.66667%;
   float: right;
   margin-right: 0;
 }
 
-.sm_3 {
+.sm-3 {
   width: 25%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_3.last, .sm_3:nth-child(4n) {
+.sm-3.last, .sm-3:nth-child(4n) {
   width: 25%;
   float: right;
   margin-right: 0;
 }
 
-.sm_4 {
+.sm-4 {
   width: 33.33333%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_4.last, .sm_4:nth-child(3n) {
+.sm-4.last, .sm-4:nth-child(3n) {
   width: 33.33333%;
   float: right;
   margin-right: 0;
 }
 
-.sm_5 {
+.sm-5 {
   width: 41.66667%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_5.last {
+.sm-5.last {
   width: 41.66667%;
   float: right;
   margin-right: 0;
 }
 
-.sm_6 {
+.sm-6 {
   width: 50%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_6.last, .sm_6:nth-child(2n) {
+.sm-6.last, .sm-6:nth-child(2n) {
   width: 50%;
   float: right;
   margin-right: 0;
 }
 
-.sm_7 {
+.sm-7 {
   width: 58.33333%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_7.last {
+.sm-7.last {
   width: 58.33333%;
   float: right;
   margin-right: 0;
 }
 
-.sm_8 {
+.sm-8 {
   width: 66.66667%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_8.last {
+.sm-8.last {
   width: 66.66667%;
   float: right;
   margin-right: 0;
 }
 
-.sm_9 {
+.sm-9 {
   width: 75%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_9.last {
+.sm-9.last {
   width: 75%;
   float: right;
   margin-right: 0;
 }
 
-.sm_10 {
+.sm-10 {
   width: 83.33333%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_10.last {
+.sm-10.last {
   width: 83.33333%;
   float: right;
   margin-right: 0;
 }
 
-.sm_11 {
+.sm-11 {
   width: 91.66667%;
   float: left;
   padding: 0 1.5rem;
 }
-.sm_11.last {
+.sm-11.last {
   width: 91.66667%;
   float: right;
   margin-right: 0;
 }
 
-.sm_12 {
+.sm-12 {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
   padding: 0 1.5rem;
 }
-.sm_12.last {
+.sm-12.last {
   width: 100%;
   float: right;
   margin-right: 0;
@@ -258,185 +258,185 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* MEDIUM GRID CLASSES
 /************************************************************************/
 @media (min-width: 600px) {
-  .md_1 {
+  .md-1 {
     width: 8.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_1:nth-child(12n), .md_1:nth-child(6n), .md_1:nth-child(4n), .md_1:nth-child(3n), .md_1:nth-child(2n) {
+  .md-1:nth-child(12n), .md-1:nth-child(6n), .md-1:nth-child(4n), .md-1:nth-child(3n), .md-1:nth-child(2n) {
     width: 8.33333%;
     float: left;
   }
-  .md_1.last, .md_1:nth-child(12n) {
+  .md-1.last, .md-1:nth-child(12n) {
     width: 8.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .md_2 {
+  .md-2 {
     width: 16.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_2:nth-child(12n), .md_2:nth-child(6n), .md_2:nth-child(4n), .md_2:nth-child(3n), .md_2:nth-child(2n) {
+  .md-2:nth-child(12n), .md-2:nth-child(6n), .md-2:nth-child(4n), .md-2:nth-child(3n), .md-2:nth-child(2n) {
     width: 16.66667%;
     float: left;
   }
-  .md_2.last, .md_2:nth-child(6n) {
+  .md-2.last, .md-2:nth-child(6n) {
     width: 16.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .md_3 {
+  .md-3 {
     width: 25%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_3:nth-child(12n), .md_3:nth-child(6n), .md_3:nth-child(4n), .md_3:nth-child(3n), .md_3:nth-child(2n) {
+  .md-3:nth-child(12n), .md-3:nth-child(6n), .md-3:nth-child(4n), .md-3:nth-child(3n), .md-3:nth-child(2n) {
     width: 25%;
     float: left;
   }
-  .md_3.last, .md_3:nth-child(4n) {
+  .md-3.last, .md-3:nth-child(4n) {
     width: 25%;
     float: right;
     margin-right: 0;
   }
 
-  .md_4 {
+  .md-4 {
     width: 33.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_4:nth-child(12n), .md_4:nth-child(6n), .md_4:nth-child(4n), .md_4:nth-child(3n), .md_4:nth-child(2n) {
+  .md-4:nth-child(12n), .md-4:nth-child(6n), .md-4:nth-child(4n), .md-4:nth-child(3n), .md-4:nth-child(2n) {
     width: 33.33333%;
     float: left;
   }
-  .md_4.last, .md_4:nth-child(3n) {
+  .md-4.last, .md-4:nth-child(3n) {
     width: 33.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .md_5 {
+  .md-5 {
     width: 41.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_5:nth-child(12n), .md_5:nth-child(6n), .md_5:nth-child(4n), .md_5:nth-child(3n), .md_5:nth-child(2n) {
+  .md-5:nth-child(12n), .md-5:nth-child(6n), .md-5:nth-child(4n), .md-5:nth-child(3n), .md-5:nth-child(2n) {
     width: 41.66667%;
     float: left;
   }
-  .md_5.last {
+  .md-5.last {
     width: 41.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .md_6 {
+  .md-6 {
     width: 50%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_6:nth-child(12n), .md_6:nth-child(6n), .md_6:nth-child(4n), .md_6:nth-child(3n), .md_6:nth-child(2n) {
+  .md-6:nth-child(12n), .md-6:nth-child(6n), .md-6:nth-child(4n), .md-6:nth-child(3n), .md-6:nth-child(2n) {
     width: 50%;
     float: left;
   }
-  .md_6.last, .md_6:nth-child(2n) {
+  .md-6.last, .md-6:nth-child(2n) {
     width: 50%;
     float: right;
     margin-right: 0;
   }
 
-  .md_7 {
+  .md-7 {
     width: 58.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_7:nth-child(12n), .md_7:nth-child(6n), .md_7:nth-child(4n), .md_7:nth-child(3n), .md_7:nth-child(2n) {
+  .md-7:nth-child(12n), .md-7:nth-child(6n), .md-7:nth-child(4n), .md-7:nth-child(3n), .md-7:nth-child(2n) {
     width: 58.33333%;
     float: left;
   }
-  .md_7.last {
+  .md-7.last {
     width: 58.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .md_8 {
+  .md-8 {
     width: 66.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_8:nth-child(12n), .md_8:nth-child(6n), .md_8:nth-child(4n), .md_8:nth-child(3n), .md_8:nth-child(2n) {
+  .md-8:nth-child(12n), .md-8:nth-child(6n), .md-8:nth-child(4n), .md-8:nth-child(3n), .md-8:nth-child(2n) {
     width: 66.66667%;
     float: left;
   }
-  .md_8.last {
+  .md-8.last {
     width: 66.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .md_9 {
+  .md-9 {
     width: 75%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_9:nth-child(12n), .md_9:nth-child(6n), .md_9:nth-child(4n), .md_9:nth-child(3n), .md_9:nth-child(2n) {
+  .md-9:nth-child(12n), .md-9:nth-child(6n), .md-9:nth-child(4n), .md-9:nth-child(3n), .md-9:nth-child(2n) {
     width: 75%;
     float: left;
   }
-  .md_9.last {
+  .md-9.last {
     width: 75%;
     float: right;
     margin-right: 0;
   }
 
-  .md_10 {
+  .md-10 {
     width: 83.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_10:nth-child(12n), .md_10:nth-child(6n), .md_10:nth-child(4n), .md_10:nth-child(3n), .md_10:nth-child(2n) {
+  .md-10:nth-child(12n), .md-10:nth-child(6n), .md-10:nth-child(4n), .md-10:nth-child(3n), .md-10:nth-child(2n) {
     width: 83.33333%;
     float: left;
   }
-  .md_10.last {
+  .md-10.last {
     width: 83.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .md_11 {
+  .md-11 {
     width: 91.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .md_11:nth-child(12n), .md_11:nth-child(6n), .md_11:nth-child(4n), .md_11:nth-child(3n), .md_11:nth-child(2n) {
+  .md-11:nth-child(12n), .md-11:nth-child(6n), .md-11:nth-child(4n), .md-11:nth-child(3n), .md-11:nth-child(2n) {
     width: 91.66667%;
     float: left;
   }
-  .md_11.last {
+  .md-11.last {
     width: 91.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .md_12 {
+  .md-12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     padding: 0 1.5rem;
   }
-  .md_12:nth-child(12n), .md_12:nth-child(6n), .md_12:nth-child(4n), .md_12:nth-child(3n), .md_12:nth-child(2n) {
+  .md-12:nth-child(12n), .md-12:nth-child(6n), .md-12:nth-child(4n), .md-12:nth-child(3n), .md-12:nth-child(2n) {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  .md_12.last {
+  .md-12.last {
     width: 100%;
     float: right;
     margin-right: 0;
@@ -446,185 +446,185 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* LARGE GRID CLASSES
 /************************************************************************/
 @media (min-width: 900px) {
-  .lg_1 {
+  .lg-1 {
     width: 8.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_1:nth-child(12n), .lg_1:nth-child(6n), .lg_1:nth-child(4n), .lg_1:nth-child(3n), .lg_1:nth-child(2n) {
+  .lg-1:nth-child(12n), .lg-1:nth-child(6n), .lg-1:nth-child(4n), .lg-1:nth-child(3n), .lg-1:nth-child(2n) {
     width: 8.33333%;
     float: left;
   }
-  .lg_1.last, .lg_1:nth-child(12n) {
+  .lg-1.last, .lg-1:nth-child(12n) {
     width: 8.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_2 {
+  .lg-2 {
     width: 16.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_2:nth-child(12n), .lg_2:nth-child(6n), .lg_2:nth-child(4n), .lg_2:nth-child(3n), .lg_2:nth-child(2n) {
+  .lg-2:nth-child(12n), .lg-2:nth-child(6n), .lg-2:nth-child(4n), .lg-2:nth-child(3n), .lg-2:nth-child(2n) {
     width: 16.66667%;
     float: left;
   }
-  .lg_2.last, .lg_2:nth-child(6n) {
+  .lg-2.last, .lg-2:nth-child(6n) {
     width: 16.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_3 {
+  .lg-3 {
     width: 25%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_3:nth-child(12n), .lg_3:nth-child(6n), .lg_3:nth-child(4n), .lg_3:nth-child(3n), .lg_3:nth-child(2n) {
+  .lg-3:nth-child(12n), .lg-3:nth-child(6n), .lg-3:nth-child(4n), .lg-3:nth-child(3n), .lg-3:nth-child(2n) {
     width: 25%;
     float: left;
   }
-  .lg_3.last, .lg_3:nth-child(4n) {
+  .lg-3.last, .lg-3:nth-child(4n) {
     width: 25%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_4 {
+  .lg-4 {
     width: 33.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_4:nth-child(12n), .lg_4:nth-child(6n), .lg_4:nth-child(4n), .lg_4:nth-child(3n), .lg_4:nth-child(2n) {
+  .lg-4:nth-child(12n), .lg-4:nth-child(6n), .lg-4:nth-child(4n), .lg-4:nth-child(3n), .lg-4:nth-child(2n) {
     width: 33.33333%;
     float: left;
   }
-  .lg_4.last, .lg_4:nth-child(3n) {
+  .lg-4.last, .lg-4:nth-child(3n) {
     width: 33.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_5 {
+  .lg-5 {
     width: 41.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_5:nth-child(12n), .lg_5:nth-child(6n), .lg_5:nth-child(4n), .lg_5:nth-child(3n), .lg_5:nth-child(2n) {
+  .lg-5:nth-child(12n), .lg-5:nth-child(6n), .lg-5:nth-child(4n), .lg-5:nth-child(3n), .lg-5:nth-child(2n) {
     width: 41.66667%;
     float: left;
   }
-  .lg_5.last {
+  .lg-5.last {
     width: 41.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_6 {
+  .lg-6 {
     width: 50%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_6:nth-child(12n), .lg_6:nth-child(6n), .lg_6:nth-child(4n), .lg_6:nth-child(3n), .lg_6:nth-child(2n) {
+  .lg-6:nth-child(12n), .lg-6:nth-child(6n), .lg-6:nth-child(4n), .lg-6:nth-child(3n), .lg-6:nth-child(2n) {
     width: 50%;
     float: left;
   }
-  .lg_6.last, .lg_6:nth-child(2n) {
+  .lg-6.last, .lg-6:nth-child(2n) {
     width: 50%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_7 {
+  .lg-7 {
     width: 58.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_7:nth-child(12n), .lg_7:nth-child(6n), .lg_7:nth-child(4n), .lg_7:nth-child(3n), .lg_7:nth-child(2n) {
+  .lg-7:nth-child(12n), .lg-7:nth-child(6n), .lg-7:nth-child(4n), .lg-7:nth-child(3n), .lg-7:nth-child(2n) {
     width: 58.33333%;
     float: left;
   }
-  .lg_7.last {
+  .lg-7.last {
     width: 58.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_8 {
+  .lg-8 {
     width: 66.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_8:nth-child(12n), .lg_8:nth-child(6n), .lg_8:nth-child(4n), .lg_8:nth-child(3n), .lg_8:nth-child(2n) {
+  .lg-8:nth-child(12n), .lg-8:nth-child(6n), .lg-8:nth-child(4n), .lg-8:nth-child(3n), .lg-8:nth-child(2n) {
     width: 66.66667%;
     float: left;
   }
-  .lg_8.last {
+  .lg-8.last {
     width: 66.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_9 {
+  .lg-9 {
     width: 75%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_9:nth-child(12n), .lg_9:nth-child(6n), .lg_9:nth-child(4n), .lg_9:nth-child(3n), .lg_9:nth-child(2n) {
+  .lg-9:nth-child(12n), .lg-9:nth-child(6n), .lg-9:nth-child(4n), .lg-9:nth-child(3n), .lg-9:nth-child(2n) {
     width: 75%;
     float: left;
   }
-  .lg_9.last {
+  .lg-9.last {
     width: 75%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_10 {
+  .lg-10 {
     width: 83.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_10:nth-child(12n), .lg_10:nth-child(6n), .lg_10:nth-child(4n), .lg_10:nth-child(3n), .lg_10:nth-child(2n) {
+  .lg-10:nth-child(12n), .lg-10:nth-child(6n), .lg-10:nth-child(4n), .lg-10:nth-child(3n), .lg-10:nth-child(2n) {
     width: 83.33333%;
     float: left;
   }
-  .lg_10.last {
+  .lg-10.last {
     width: 83.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_11 {
+  .lg-11 {
     width: 91.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .lg_11:nth-child(12n), .lg_11:nth-child(6n), .lg_11:nth-child(4n), .lg_11:nth-child(3n), .lg_11:nth-child(2n) {
+  .lg-11:nth-child(12n), .lg-11:nth-child(6n), .lg-11:nth-child(4n), .lg-11:nth-child(3n), .lg-11:nth-child(2n) {
     width: 91.66667%;
     float: left;
   }
-  .lg_11.last {
+  .lg-11.last {
     width: 91.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .lg_12 {
+  .lg-12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     padding: 0 1.5rem;
   }
-  .lg_12:nth-child(12n), .lg_12:nth-child(6n), .lg_12:nth-child(4n), .lg_12:nth-child(3n), .lg_12:nth-child(2n) {
+  .lg-12:nth-child(12n), .lg-12:nth-child(6n), .lg-12:nth-child(4n), .lg-12:nth-child(3n), .lg-12:nth-child(2n) {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  .lg_12.last {
+  .lg-12.last {
     width: 100%;
     float: right;
     margin-right: 0;
@@ -634,185 +634,185 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* XTRA LARGE GRID CLASSES
 /************************************************************************/
 @media (min-width: 1200px) {
-  .xl_1 {
+  .xl-1 {
     width: 8.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_1:nth-child(12n), .xl_1:nth-child(6n), .xl_1:nth-child(4n), .xl_1:nth-child(3n), .xl_1:nth-child(2n) {
+  .xl-1:nth-child(12n), .xl-1:nth-child(6n), .xl-1:nth-child(4n), .xl-1:nth-child(3n), .xl-1:nth-child(2n) {
     width: 8.33333%;
     float: left;
   }
-  .xl_1.last, .xl_1:nth-child(12n) {
+  .xl-1.last, .xl-1:nth-child(12n) {
     width: 8.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_2 {
+  .xl-2 {
     width: 16.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_2:nth-child(12n), .xl_2:nth-child(6n), .xl_2:nth-child(4n), .xl_2:nth-child(3n), .xl_2:nth-child(2n) {
+  .xl-2:nth-child(12n), .xl-2:nth-child(6n), .xl-2:nth-child(4n), .xl-2:nth-child(3n), .xl-2:nth-child(2n) {
     width: 16.66667%;
     float: left;
   }
-  .xl_2.last, .xl_2:nth-child(6n) {
+  .xl-2.last, .xl-2:nth-child(6n) {
     width: 16.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_3 {
+  .xl-3 {
     width: 25%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_3:nth-child(12n), .xl_3:nth-child(6n), .xl_3:nth-child(4n), .xl_3:nth-child(3n), .xl_3:nth-child(2n) {
+  .xl-3:nth-child(12n), .xl-3:nth-child(6n), .xl-3:nth-child(4n), .xl-3:nth-child(3n), .xl-3:nth-child(2n) {
     width: 25%;
     float: left;
   }
-  .xl_3.last, .xl_3:nth-child(4n) {
+  .xl-3.last, .xl-3:nth-child(4n) {
     width: 25%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_4 {
+  .xl-4 {
     width: 33.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_4:nth-child(12n), .xl_4:nth-child(6n), .xl_4:nth-child(4n), .xl_4:nth-child(3n), .xl_4:nth-child(2n) {
+  .xl-4:nth-child(12n), .xl-4:nth-child(6n), .xl-4:nth-child(4n), .xl-4:nth-child(3n), .xl-4:nth-child(2n) {
     width: 33.33333%;
     float: left;
   }
-  .xl_4.last, .xl_4:nth-child(3n) {
+  .xl-4.last, .xl-4:nth-child(3n) {
     width: 33.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_5 {
+  .xl-5 {
     width: 41.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_5:nth-child(12n), .xl_5:nth-child(6n), .xl_5:nth-child(4n), .xl_5:nth-child(3n), .xl_5:nth-child(2n) {
+  .xl-5:nth-child(12n), .xl-5:nth-child(6n), .xl-5:nth-child(4n), .xl-5:nth-child(3n), .xl-5:nth-child(2n) {
     width: 41.66667%;
     float: left;
   }
-  .xl_5.last {
+  .xl-5.last {
     width: 41.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_6 {
+  .xl-6 {
     width: 50%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_6:nth-child(12n), .xl_6:nth-child(6n), .xl_6:nth-child(4n), .xl_6:nth-child(3n), .xl_6:nth-child(2n) {
+  .xl-6:nth-child(12n), .xl-6:nth-child(6n), .xl-6:nth-child(4n), .xl-6:nth-child(3n), .xl-6:nth-child(2n) {
     width: 50%;
     float: left;
   }
-  .xl_6.last, .xl_6:nth-child(2n) {
+  .xl-6.last, .xl-6:nth-child(2n) {
     width: 50%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_7 {
+  .xl-7 {
     width: 58.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_7:nth-child(12n), .xl_7:nth-child(6n), .xl_7:nth-child(4n), .xl_7:nth-child(3n), .xl_7:nth-child(2n) {
+  .xl-7:nth-child(12n), .xl-7:nth-child(6n), .xl-7:nth-child(4n), .xl-7:nth-child(3n), .xl-7:nth-child(2n) {
     width: 58.33333%;
     float: left;
   }
-  .xl_7.last {
+  .xl-7.last {
     width: 58.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_8 {
+  .xl-8 {
     width: 66.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_8:nth-child(12n), .xl_8:nth-child(6n), .xl_8:nth-child(4n), .xl_8:nth-child(3n), .xl_8:nth-child(2n) {
+  .xl-8:nth-child(12n), .xl-8:nth-child(6n), .xl-8:nth-child(4n), .xl-8:nth-child(3n), .xl-8:nth-child(2n) {
     width: 66.66667%;
     float: left;
   }
-  .xl_8.last {
+  .xl-8.last {
     width: 66.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_9 {
+  .xl-9 {
     width: 75%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_9:nth-child(12n), .xl_9:nth-child(6n), .xl_9:nth-child(4n), .xl_9:nth-child(3n), .xl_9:nth-child(2n) {
+  .xl-9:nth-child(12n), .xl-9:nth-child(6n), .xl-9:nth-child(4n), .xl-9:nth-child(3n), .xl-9:nth-child(2n) {
     width: 75%;
     float: left;
   }
-  .xl_9.last {
+  .xl-9.last {
     width: 75%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_10 {
+  .xl-10 {
     width: 83.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_10:nth-child(12n), .xl_10:nth-child(6n), .xl_10:nth-child(4n), .xl_10:nth-child(3n), .xl_10:nth-child(2n) {
+  .xl-10:nth-child(12n), .xl-10:nth-child(6n), .xl-10:nth-child(4n), .xl-10:nth-child(3n), .xl-10:nth-child(2n) {
     width: 83.33333%;
     float: left;
   }
-  .xl_10.last {
+  .xl-10.last {
     width: 83.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_11 {
+  .xl-11 {
     width: 91.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xl_11:nth-child(12n), .xl_11:nth-child(6n), .xl_11:nth-child(4n), .xl_11:nth-child(3n), .xl_11:nth-child(2n) {
+  .xl-11:nth-child(12n), .xl-11:nth-child(6n), .xl-11:nth-child(4n), .xl-11:nth-child(3n), .xl-11:nth-child(2n) {
     width: 91.66667%;
     float: left;
   }
-  .xl_11.last {
+  .xl-11.last {
     width: 91.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xl_12 {
+  .xl-12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     padding: 0 1.5rem;
   }
-  .xl_12:nth-child(12n), .xl_12:nth-child(6n), .xl_12:nth-child(4n), .xl_12:nth-child(3n), .xl_12:nth-child(2n) {
+  .xl-12:nth-child(12n), .xl-12:nth-child(6n), .xl-12:nth-child(4n), .xl-12:nth-child(3n), .xl-12:nth-child(2n) {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  .xl_12.last {
+  .xl-12.last {
     width: 100%;
     float: right;
     margin-right: 0;
@@ -822,185 +822,185 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* XTRA XTRA LARGE GRID CLASSES
 /************************************************************************/
 @media (min-width: 1500px) {
-  .xxl_1 {
+  .xxl-1 {
     width: 8.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_1:nth-child(12n), .xxl_1:nth-child(6n), .xxl_1:nth-child(4n), .xxl_1:nth-child(3n), .xxl_1:nth-child(2n) {
+  .xxl-1:nth-child(12n), .xxl-1:nth-child(6n), .xxl-1:nth-child(4n), .xxl-1:nth-child(3n), .xxl-1:nth-child(2n) {
     width: 8.33333%;
     float: left;
   }
-  .xxl_1.last, .xxl_1:nth-child(12n) {
+  .xxl-1.last, .xxl-1:nth-child(12n) {
     width: 8.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_2 {
+  .xxl-2 {
     width: 16.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_2:nth-child(12n), .xxl_2:nth-child(6n), .xxl_2:nth-child(4n), .xxl_2:nth-child(3n), .xxl_2:nth-child(2n) {
+  .xxl-2:nth-child(12n), .xxl-2:nth-child(6n), .xxl-2:nth-child(4n), .xxl-2:nth-child(3n), .xxl-2:nth-child(2n) {
     width: 16.66667%;
     float: left;
   }
-  .xxl_2.last, .xxl_2:nth-child(6n) {
+  .xxl-2.last, .xxl-2:nth-child(6n) {
     width: 16.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_3 {
+  .xxl-3 {
     width: 25%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_3:nth-child(12n), .xxl_3:nth-child(6n), .xxl_3:nth-child(4n), .xxl_3:nth-child(3n), .xxl_3:nth-child(2n) {
+  .xxl-3:nth-child(12n), .xxl-3:nth-child(6n), .xxl-3:nth-child(4n), .xxl-3:nth-child(3n), .xxl-3:nth-child(2n) {
     width: 25%;
     float: left;
   }
-  .xxl_3.last, .xxl_3:nth-child(4n) {
+  .xxl-3.last, .xxl-3:nth-child(4n) {
     width: 25%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_4 {
+  .xxl-4 {
     width: 33.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_4:nth-child(12n), .xxl_4:nth-child(6n), .xxl_4:nth-child(4n), .xxl_4:nth-child(3n), .xxl_4:nth-child(2n) {
+  .xxl-4:nth-child(12n), .xxl-4:nth-child(6n), .xxl-4:nth-child(4n), .xxl-4:nth-child(3n), .xxl-4:nth-child(2n) {
     width: 33.33333%;
     float: left;
   }
-  .xxl_4.last, .xxl_4:nth-child(3n) {
+  .xxl-4.last, .xxl-4:nth-child(3n) {
     width: 33.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_5 {
+  .xxl-5 {
     width: 41.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_5:nth-child(12n), .xxl_5:nth-child(6n), .xxl_5:nth-child(4n), .xxl_5:nth-child(3n), .xxl_5:nth-child(2n) {
+  .xxl-5:nth-child(12n), .xxl-5:nth-child(6n), .xxl-5:nth-child(4n), .xxl-5:nth-child(3n), .xxl-5:nth-child(2n) {
     width: 41.66667%;
     float: left;
   }
-  .xxl_5.last {
+  .xxl-5.last {
     width: 41.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_6 {
+  .xxl-6 {
     width: 50%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_6:nth-child(12n), .xxl_6:nth-child(6n), .xxl_6:nth-child(4n), .xxl_6:nth-child(3n), .xxl_6:nth-child(2n) {
+  .xxl-6:nth-child(12n), .xxl-6:nth-child(6n), .xxl-6:nth-child(4n), .xxl-6:nth-child(3n), .xxl-6:nth-child(2n) {
     width: 50%;
     float: left;
   }
-  .xxl_6.last, .xxl_6:nth-child(2n) {
+  .xxl-6.last, .xxl-6:nth-child(2n) {
     width: 50%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_7 {
+  .xxl-7 {
     width: 58.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_7:nth-child(12n), .xxl_7:nth-child(6n), .xxl_7:nth-child(4n), .xxl_7:nth-child(3n), .xxl_7:nth-child(2n) {
+  .xxl-7:nth-child(12n), .xxl-7:nth-child(6n), .xxl-7:nth-child(4n), .xxl-7:nth-child(3n), .xxl-7:nth-child(2n) {
     width: 58.33333%;
     float: left;
   }
-  .xxl_7.last {
+  .xxl-7.last {
     width: 58.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_8 {
+  .xxl-8 {
     width: 66.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_8:nth-child(12n), .xxl_8:nth-child(6n), .xxl_8:nth-child(4n), .xxl_8:nth-child(3n), .xxl_8:nth-child(2n) {
+  .xxl-8:nth-child(12n), .xxl-8:nth-child(6n), .xxl-8:nth-child(4n), .xxl-8:nth-child(3n), .xxl-8:nth-child(2n) {
     width: 66.66667%;
     float: left;
   }
-  .xxl_8.last {
+  .xxl-8.last {
     width: 66.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_9 {
+  .xxl-9 {
     width: 75%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_9:nth-child(12n), .xxl_9:nth-child(6n), .xxl_9:nth-child(4n), .xxl_9:nth-child(3n), .xxl_9:nth-child(2n) {
+  .xxl-9:nth-child(12n), .xxl-9:nth-child(6n), .xxl-9:nth-child(4n), .xxl-9:nth-child(3n), .xxl-9:nth-child(2n) {
     width: 75%;
     float: left;
   }
-  .xxl_9.last {
+  .xxl-9.last {
     width: 75%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_10 {
+  .xxl-10 {
     width: 83.33333%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_10:nth-child(12n), .xxl_10:nth-child(6n), .xxl_10:nth-child(4n), .xxl_10:nth-child(3n), .xxl_10:nth-child(2n) {
+  .xxl-10:nth-child(12n), .xxl-10:nth-child(6n), .xxl-10:nth-child(4n), .xxl-10:nth-child(3n), .xxl-10:nth-child(2n) {
     width: 83.33333%;
     float: left;
   }
-  .xxl_10.last {
+  .xxl-10.last {
     width: 83.33333%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_11 {
+  .xxl-11 {
     width: 91.66667%;
     float: left;
     padding: 0 1.5rem;
   }
-  .xxl_11:nth-child(12n), .xxl_11:nth-child(6n), .xxl_11:nth-child(4n), .xxl_11:nth-child(3n), .xxl_11:nth-child(2n) {
+  .xxl-11:nth-child(12n), .xxl-11:nth-child(6n), .xxl-11:nth-child(4n), .xxl-11:nth-child(3n), .xxl-11:nth-child(2n) {
     width: 91.66667%;
     float: left;
   }
-  .xxl_11.last {
+  .xxl-11.last {
     width: 91.66667%;
     float: right;
     margin-right: 0;
   }
 
-  .xxl_12 {
+  .xxl-12 {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     padding: 0 1.5rem;
   }
-  .xxl_12:nth-child(12n), .xxl_12:nth-child(6n), .xxl_12:nth-child(4n), .xxl_12:nth-child(3n), .xxl_12:nth-child(2n) {
+  .xxl-12:nth-child(12n), .xxl-12:nth-child(6n), .xxl-12:nth-child(4n), .xxl-12:nth-child(3n), .xxl-12:nth-child(2n) {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
-  .xxl_12.last {
+  .xxl-12.last {
     width: 100%;
     float: right;
     margin-right: 0;
@@ -1009,306 +1009,306 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************************/
 /* INSET CLASSES
 /************************************************************************/
-.inset_m_1 {
+.inset-m-1 {
   padding-left: 8.33333%;
   padding-right: 8.33333%;
 }
 
-.inset_m_2 {
+.inset-m-2 {
   padding-left: 16.66667%;
   padding-right: 16.66667%;
 }
 
-.inset_m_3 {
+.inset-m-3 {
   padding-left: 25%;
   padding-right: 25%;
 }
 
-.inset_m_4 {
+.inset-m-4 {
   padding-left: 33.33333%;
   padding-right: 33.33333%;
 }
 
-.inset_m_5 {
+.inset-m-5 {
   padding-left: 41.66667%;
   padding-right: 41.66667%;
 }
 
-.inset_m_6 {
+.inset-m-6 {
   padding-left: 50%;
   padding-right: 50%;
 }
 
-.inset_m_7 {
+.inset-m-7 {
   padding-left: 58.33333%;
   padding-right: 58.33333%;
 }
 
-.inset_m_8 {
+.inset-m-8 {
   padding-left: 66.66667%;
   padding-right: 66.66667%;
 }
 
-.inset_m_9 {
+.inset-m-9 {
   padding-left: 75%;
   padding-right: 75%;
 }
 
-.inset_m_10 {
+.inset-m-10 {
   padding-left: 83.33333%;
   padding-right: 83.33333%;
 }
 
-.inset_m_11 {
+.inset-m-11 {
   padding-left: 91.66667%;
   padding-right: 91.66667%;
 }
 
-.inset_m_12 {
+.inset-m-12 {
   padding-left: 100%;
   padding-right: 100%;
 }
 
 @media (min-width: 600px) {
-  .inset_md_1 {
+  .inset-md-1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 
-  .inset_md_2 {
+  .inset-md-2 {
     padding-left: 16.66667%;
     padding-right: 16.66667%;
   }
 
-  .inset_md_3 {
+  .inset-md-3 {
     padding-left: 25%;
     padding-right: 25%;
   }
 
-  .inset_md_4 {
+  .inset-md-4 {
     padding-left: 33.33333%;
     padding-right: 33.33333%;
   }
 
-  .inset_md_5 {
+  .inset-md-5 {
     padding-left: 41.66667%;
     padding-right: 41.66667%;
   }
 
-  .inset_md_6 {
+  .inset-md-6 {
     padding-left: 50%;
     padding-right: 50%;
   }
 
-  .inset_md_7 {
+  .inset-md-7 {
     padding-left: 58.33333%;
     padding-right: 58.33333%;
   }
 
-  .inset_md_8 {
+  .inset-md-8 {
     padding-left: 66.66667%;
     padding-right: 66.66667%;
   }
 
-  .inset_md_9 {
+  .inset-md-9 {
     padding-left: 75%;
     padding-right: 75%;
   }
 
-  .inset_md_10 {
+  .inset-md-10 {
     padding-left: 83.33333%;
     padding-right: 83.33333%;
   }
 
-  .inset_md_11 {
+  .inset-md-11 {
     padding-left: 91.66667%;
     padding-right: 91.66667%;
   }
 
-  .inset_md_12 {
+  .inset-md-12 {
     padding-left: 100%;
     padding-right: 100%;
   }
 }
 @media (min-width: 900px) {
-  .inset_lg_1 {
+  .inset-lg-1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 
-  .inset_lg_2 {
+  .inset-lg-2 {
     padding-left: 16.66667%;
     padding-right: 16.66667%;
   }
 
-  .inset_lg_3 {
+  .inset-lg-3 {
     padding-left: 25%;
     padding-right: 25%;
   }
 
-  .inset_lg_4 {
+  .inset-lg-4 {
     padding-left: 33.33333%;
     padding-right: 33.33333%;
   }
 
-  .inset_lg_5 {
+  .inset-lg-5 {
     padding-left: 41.66667%;
     padding-right: 41.66667%;
   }
 
-  .inset_lg_6 {
+  .inset-lg-6 {
     padding-left: 50%;
     padding-right: 50%;
   }
 
-  .inset_lg_7 {
+  .inset-lg-7 {
     padding-left: 58.33333%;
     padding-right: 58.33333%;
   }
 
-  .inset_lg_8 {
+  .inset-lg-8 {
     padding-left: 66.66667%;
     padding-right: 66.66667%;
   }
 
-  .inset_lg_9 {
+  .inset-lg-9 {
     padding-left: 75%;
     padding-right: 75%;
   }
 
-  .inset_lg_10 {
+  .inset-lg-10 {
     padding-left: 83.33333%;
     padding-right: 83.33333%;
   }
 
-  .inset_lg_11 {
+  .inset-lg-11 {
     padding-left: 91.66667%;
     padding-right: 91.66667%;
   }
 
-  .inset_lg_12 {
+  .inset-lg-12 {
     padding-left: 100%;
     padding-right: 100%;
   }
 }
 @media (min-width: 1200px) {
-  .inset_xl_1 {
+  .inset-xl-1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 
-  .inset_xl_2 {
+  .inset-xl-2 {
     padding-left: 16.66667%;
     padding-right: 16.66667%;
   }
 
-  .inset_xl_3 {
+  .inset-xl-3 {
     padding-left: 25%;
     padding-right: 25%;
   }
 
-  .inset_xl_4 {
+  .inset-xl-4 {
     padding-left: 33.33333%;
     padding-right: 33.33333%;
   }
 
-  .inset_xl_5 {
+  .inset-xl-5 {
     padding-left: 41.66667%;
     padding-right: 41.66667%;
   }
 
-  .inset_xl_6 {
+  .inset-xl-6 {
     padding-left: 50%;
     padding-right: 50%;
   }
 
-  .inset_xl_7 {
+  .inset-xl-7 {
     padding-left: 58.33333%;
     padding-right: 58.33333%;
   }
 
-  .inset_xl_8 {
+  .inset-xl-8 {
     padding-left: 66.66667%;
     padding-right: 66.66667%;
   }
 
-  .inset_xl_9 {
+  .inset-xl-9 {
     padding-left: 75%;
     padding-right: 75%;
   }
 
-  .inset_xl_10 {
+  .inset-xl-10 {
     padding-left: 83.33333%;
     padding-right: 83.33333%;
   }
 
-  .inset_xl_11 {
+  .inset-xl-11 {
     padding-left: 91.66667%;
     padding-right: 91.66667%;
   }
 
-  .inset_xl_12 {
+  .inset-xl-12 {
     padding-left: 100%;
     padding-right: 100%;
   }
 }
 @media (min-width: 1500px) {
-  .inset_xxl_1 {
+  .inset-xxl-1 {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
 
-  .inset_xxl_2 {
+  .inset-xxl-2 {
     padding-left: 16.66667%;
     padding-right: 16.66667%;
   }
 
-  .inset_xxl_3 {
+  .inset-xxl-3 {
     padding-left: 25%;
     padding-right: 25%;
   }
 
-  .inset_xxl_4 {
+  .inset-xxl-4 {
     padding-left: 33.33333%;
     padding-right: 33.33333%;
   }
 
-  .inset_xxl_5 {
+  .inset-xxl-5 {
     padding-left: 41.66667%;
     padding-right: 41.66667%;
   }
 
-  .inset_xxl_6 {
+  .inset-xxl-6 {
     padding-left: 50%;
     padding-right: 50%;
   }
 
-  .inset_xxl_7 {
+  .inset-xxl-7 {
     padding-left: 58.33333%;
     padding-right: 58.33333%;
   }
 
-  .inset_xxl_8 {
+  .inset-xxl-8 {
     padding-left: 66.66667%;
     padding-right: 66.66667%;
   }
 
-  .inset_xxl_9 {
+  .inset-xxl-9 {
     padding-left: 75%;
     padding-right: 75%;
   }
 
-  .inset_xxl_10 {
+  .inset-xxl-10 {
     padding-left: 83.33333%;
     padding-right: 83.33333%;
   }
 
-  .inset_xxl_11 {
+  .inset-xxl-11 {
     padding-left: 91.66667%;
     padding-right: 91.66667%;
   }
 
-  .inset_xxl_12 {
+  .inset-xxl-12 {
     padding-left: 100%;
     padding-right: 100%;
   }
@@ -1316,77 +1316,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /************************************************************************/
 /* SHOW/HIDE CLASSES
 /************************************************************************/
-.hide_m_down {
+.hide-m-down {
   display: none;
 }
 @media (min-width: 600px) {
-  .hide_m_down {
+  .hide-m-down {
     display: block;
   }
 }
 
-.hide_md_down {
+.hide-md-down {
   display: none;
 }
 @media (min-width: 600px) {
-  .hide_md_down {
+  .hide-md-down {
     display: block;
   }
 }
 
-.hide_lg_down {
+.hide-lg-down {
   display: none;
 }
 @media (min-width: 900px) {
-  .hide_lg_down {
+  .hide-lg-down {
     display: block;
   }
 }
 
-.hide_xl_down {
+.hide-xl-down {
   display: none;
 }
 @media (min-width: 1200px) {
-  .hide_xl_down {
+  .hide-xl-down {
     display: block;
   }
 }
 
-.hide_xxl_down {
+.hide-xxl-down {
   display: none;
 }
 @media (min-width: 1500px) {
-  .hide_xxl_down {
+  .hide-xxl-down {
     display: block;
   }
 }
 
 @media (min-width: 600px) {
-  .hide_m_up {
+  .hide-m-up {
     display: none;
   }
 }
 
 @media (min-width: 600px) {
-  .hide_md_up {
+  .hide-md-up {
     display: none;
   }
 }
 
 @media (min-width: 900px) {
-  .hide_lg_up {
+  .hide-lg-up {
     display: none;
   }
 }
 
 @media (min-width: 1200px) {
-  .hide_xl_up {
+  .hide-xl-up {
     display: none;
   }
 }
 
 @media (min-width: 1500px) {
-  .hide_xxl_up {
+  .hide-xxl-up {
     display: none;
   }
 }

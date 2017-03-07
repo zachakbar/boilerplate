@@ -30,7 +30,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-.btn_static, input[type="submit"], .btn, .btn:hover, .btn_alt, .btn_alt:hover, .btn_outline, .btn_outline:hover {
+.btn-static, input[type="submit"], .btn, .btn:hover, .btn-alt, .btn-alt:hover, .btn-outline, .btn-outline:hover {
   border-width: 2px;
   border-style: solid;
   font-family: Helvetica, Arial, sans-serif;
@@ -266,12 +266,12 @@ input[type="submit"]:visited {
   }
 }
 
-.options_list {
+.options-list {
   list-style-type: none;
   padding: 0;
 }
 
-.styled_select {
+.styled-select {
   background: white url("../img/select-arrow.png") right center no-repeat;
   border: 1px solid #999999;
   height: 4rem;
@@ -280,7 +280,7 @@ input[type="submit"]:visited {
   -webkit-appearance: none;
   width: 100%;
 }
-.styled_select select {
+.styled-select select {
   background: transparent;
   border: 0 !important;
   border-radius: 0;
@@ -337,45 +337,45 @@ input[type="submit"]:visited {
   color: white;
 }
 
-.btn_alt {
+.btn-alt {
   background: #cccccc;
   border-color: #cccccc;
   color: #141414;
 }
-.btn_alt:visited {
+.btn-alt:visited {
   background: #cccccc;
   border-color: #cccccc;
   color: #141414;
 }
 
-.btn_alt:hover {
+.btn-alt:hover {
   background: #999999;
   border-color: #999999;
   color: white;
 }
-.btn_alt:hover:visited {
+.btn-alt:hover:visited {
   background: #999999;
   border-color: #999999;
   color: white;
 }
 
-.btn_outline {
+.btn-outline {
   background: none;
   border-color: #999999;
   color: #141414;
 }
-.btn_outline:visited {
+.btn-outline:visited {
   background: none;
   border-color: #999999;
   color: #141414;
 }
 
-.btn_outline:hover {
+.btn-outline:hover {
   background: #333333;
   border-color: #333333;
   color: white;
 }
-.btn_outline:hover:visited {
+.btn-outline:hover:visited {
   background: #333333;
   border-color: #333333;
   color: white;

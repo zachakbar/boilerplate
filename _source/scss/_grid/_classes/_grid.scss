@@ -2,7 +2,7 @@
 /* SMALL GRID CLASSES
 /************************************************************************/
 @for $i from 1 through $columns{
-	.sm_#{$i} {
+	.sm-#{$i} {
 		@include span($i of $columns);
 		@if $GRID_TYPE == 'static'{ padding: $grid_padding; }
 		$nth: unquote(($columns / $i) + 'n');
@@ -40,7 +40,7 @@
 	/************************************************************************/
 	@include breakpoint(#{$breakpoint}){
 		@for $i from 1 through $columns{
-			$x: unquote('.' + $class + '_' + $i);
+			$x: unquote('.' + $class + '-' + $i);
 			#{$x}{
 				@include span($i of $columns);
 				@if $GRID_TYPE == 'static'{ padding: $grid_padding; }

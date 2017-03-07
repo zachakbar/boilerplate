@@ -2,7 +2,7 @@
 /* PULL CLASSES
 /************************************************************************/
 @for $i from 1 through $columns{
-	.pull_m_#{$i}{
+	.pull-m-#{$i}{
 		@include post($i of $columns);
 	}
 }
@@ -10,7 +10,7 @@
 @each $name, $breakpoint, $class in $grid_classes{
 	@include breakpoint(#{$breakpoint}){
 		@for $i from 1 through $columns{
-			.pull_#{$class}_#{$i}{
+			.pull-#{$class}-#{$i}{
 				@include post($i of $columns);
 			}
 		}

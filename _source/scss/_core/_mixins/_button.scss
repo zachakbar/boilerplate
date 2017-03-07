@@ -2,7 +2,7 @@
 // BUTTON
 //------------------------------------------------------------------------
 @mixin btn($btn_bg, $btn_border, $btn_color) {
-	@extend .btn_static;
+	@extend .btn-static;
 	background: $btn_bg;
 	border-color: $btn_border;
 	color: $btn_color;
@@ -14,7 +14,7 @@
 	}
 }
 
-@mixin btn_static{
+@mixin btn-static{
 	border-width: $btn_border_width;
 	border-style: $btn_border_style;
 	font-family: $btn_font;
@@ -30,4 +30,4 @@
 	@include border-radius($btn_border_radius);
 }
 
-.btn_static{ @include btn_static; }
+.btn-static{ @include btn-static; }

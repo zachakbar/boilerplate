@@ -51,12 +51,12 @@ input[type="submit"]{
 	}
 }
 
-.options_list {
+.options-list {
 	list-style-type: none;
 	padding: 0;
 }
 
-.styled_select {
+.styled-select {
 	background: $white url("../img/select-arrow.png") right center no-repeat;
 	border: $input_border;
 	height: 4rem;

@@ -1,7 +1,7 @@
 /************************************************************************/
 /* SHOW/HIDE CLASSES
 /************************************************************************/
-.hide_m_down{
+.hide-m-down{
 	display: none;
 	@include breakpoint($md){
 		display: block;
@@ -9,7 +9,7 @@
 }
 
 @each $name, $breakpoint, $class in $grid_classes{
-	.hide_#{$class}_down{
+	.hide-#{$class}-down{
 		display: none;
 		@include breakpoint(#{$breakpoint}){
 			display: block;
@@ -17,14 +17,14 @@
 	}
 }
 
-.hide_m_up{
+.hide-m-up{
 	@include breakpoint($md){
 		display: none;
 	}
 }
 
 @each $name, $breakpoint, $class in $grid_classes{
-	.hide_#{$class}_up{
+	.hide-#{$class}-up{
 		@include breakpoint(#{$breakpoint}){
 			display: none;
 		}
