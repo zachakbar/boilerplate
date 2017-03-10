@@ -1,37 +1,50 @@
-/************************************************************************/
-/* VARIABLES
-/************************************************************************/
+//------------------------------------------------------------------------
+// VARIABLES
+//------------------------------------------------------------------------
 
-$black     		: rgb(20,20,20);
-$darkgrey  		: rgb(51, 51, 51);
-$grey      		: rgb(153, 153, 153);
-$lightgrey 		: rgb(204,204,204);
-$white     		: rgb(255,255,255);
+$black: rgb(20,20,20);
+$darkgrey: rgb(51, 51, 51);
+$grey: rgb(153, 153, 153);
+$lightgrey: rgb(204,204,204);
+$white: rgb(255,255,255);
 
 // Site Colors
 
-$blue    		: rgb(0,180,188);
-$msggreen   	: rgb(60,150,10); // Used for Success Messages
-$msgred     	: rgb(225,0,0); // Used for Error Messages
-$bgcolor 		: $white;
+$blue: rgb(0,180,188);
+$msggreen: rgb(60,150,10); // Used for Success Messages
+$msgred: rgb(225,0,0); // Used for Error Messages
+$bgcolor: $white;
 
 // Typography
 
-$textcolor      	: $black;
-$basefont       	: Helvetica, Arial, sans-serif;
-$basefontsize   	: 1.6rem;
-$basefontweight 	: 400;
-$baselineheight 	: 1.2;
+$text_color: $black;
+$base_font: Helvetica, Arial, sans-serif;
+$base_font_size: 1.6rem;
+$base_font_weight: 400;
+$base_line_height: 1.2;
 
-$headingfont  		: Helvetica, Arial, sans-serif;
-$headingcolor 		: $black;
+$heading_font: Helvetica, Arial, sans-serif;
+$heading_color: $black;
 
 
 // Links
 
-$linkcolor   	: $blue;
-$linkhover   	: lighten($blue, 0.25);
+$link_color: $blue;
+$link_hover: lighten($blue, 0.25);
 
 // Elements
 
-$inputborder 	: 1px solid $grey;
+$placeholder_color: $lightgrey;
+$input_border: 1px solid $grey;
+
+
+// Buttons
+
+$btn_border_width: 2px;
+$btn_border_style: solid;
+$btn_font: $base_font;
+$btn_font_size: 1.6rem;
+$btn_font_weight: 400;
+$btn_line_height: 1;
+$btn_padding: 1rem 2rem;
+$btn_border_radius: 3px;

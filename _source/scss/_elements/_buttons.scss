@@ -2,11 +2,11 @@
 /* BUTTONS
 /************************************************************************/
 
-// BUTTON_CLASS_NAME{ @include btn(BACKGROUND_COLOR, BORDER_COLOR, TEXT_COLOR); }
+// BUTTON_CLASS_NAME{ @include btn(BACKGROUND_COLOR,BORDER_COLOR,TEXT_COLOR); }
 
-.btn{ @include btn($darkgrey, $darkgrey, $white); }
-.btn:hover{ @include btn($grey, $grey, $white); }
-.btn_alt{ @include btn($lightgrey, $lightgrey, $textcolor); }
-.btn_alt:hover{ @include btn($grey, $grey, $white); }
-.btn_outline{ @include btn(none, $grey, $textcolor); }
-.btn_outline:hover{ @include btn(none, $darkgrey, $textcolor); }
+.btn{ @include btn($darkgrey,$darkgrey,$white); }
+.btn:hover{ @include btn($grey,$grey,$white); }
+.btn-alt{ @include btn($lightgrey,$lightgrey,$text_color); }
+.btn-alt:hover{ @include btn($grey,$grey,$white); }
+.btn-outline{ @include btn(none,$grey,$text_color); }
+.btn-outline:hover{ @include btn($darkgrey,$darkgrey,$white); }

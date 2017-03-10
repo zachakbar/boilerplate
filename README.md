@@ -1,3 +1,5 @@
 # Boilerplate
 
-This is the Boilerplate that I use to start basic web pages/sites.
+A responsive boilerplate to start basic web pages/sites with.
+
+~z

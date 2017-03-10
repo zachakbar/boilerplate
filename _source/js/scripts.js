@@ -5,6 +5,6 @@
 
 $(document).ready(function() {
 	
-	initMobileNav();
+	//FUNCTION_NAME();
 	
 });
