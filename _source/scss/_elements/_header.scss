@@ -4,11 +4,6 @@
 
 header[role="banner"] {
 	@include clearfix;
-	background: $grey;
+	@include background-image(linear-gradient(to bottom, tint($black,25%), tint($lightgrey,50%)));
 	padding: 2rem 0;
-	
-	.logo {
-		float: left;
-		display: block;
-	}
 }
