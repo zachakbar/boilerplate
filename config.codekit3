@@ -777,19 +777,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/_source\/scss\/_elements\/_modules.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/_modules.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/_source\/scss\/_elements\/_typography.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1032,6 +1019,15 @@
 		"oA": 2,
 		"oAP": "\/favicon.ico",
 		"oF": 0
+		},
+	"\/gulpfile.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/assets\/js\/gulpfile-min.js",
+		"oF": 1,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
