@@ -4,6 +4,7 @@ var compass = require('gulp-compass');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
+var sourcemaps = require('gulp-sourcemaps');
 
 // Compile all gulp tasks
 gulp.task('default', ['js', 'sass', 'watch']);
@@ -18,11 +19,13 @@ gulp.task('js', function() {
 			},
 			preserveComments: 'some'
 		}))
+		.pipe(sourcemaps.init())
+		.pipe(sourcemaps.write('../maps'))
 		.pipe(gulp.dest('assets/js/'));
 });
 
 // Compile SASS files
-gulp.task("sass", function() {
+gulp.task('sass', function() {
 	gulp.src("_source/scss/**/*.scss")
 		.pipe(compass({
 	      config_file: 'config.rb',
@@ -30,7 +33,9 @@ gulp.task("sass", function() {
 	      sass: '_source/scss'
 	    })
 		.on('error', sass.logError))
-		.pipe(sass({outputStyle: 'expanded'})) // compressed, expanded, nested, compact
+		//.pipe(sass({outputStyle: 'expanded'})) // compressed, expanded, nested, compact
+		.pipe(sourcemaps.init())
+		.pipe(sourcemaps.write('../maps'))
 		.pipe(gulp.dest("assets/css/"));
 });
 

@@ -23,3 +23,5 @@ $(document).ready(function() {
 	//FUNCTION_NAME();
 	
 });
+
+//# sourceMappingURL=../maps/scripts.js.map
