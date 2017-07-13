@@ -20,6 +20,9 @@ disable_warnings = true
 # line_comments = false
 color_output = false
 
+# Disable the createtion of .sass-cache folder, turn this on if you have a large stylesheet. 
+# Make sure to not upload this folder if you are using caching.
+cache = false
 
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
