@@ -5,6 +5,7 @@ var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
 var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
 
 // Compile all gulp tasks
 gulp.task('default', ['js', 'sass', 'watch']);
@@ -21,7 +22,12 @@ gulp.task('js', function() {
 		}))
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write('../maps'))
-		.pipe(gulp.dest('assets/js/'));
+		.pipe(gulp.dest('assets/js/'))
+		.on('end',function(){
+			gutil.log('**************************************');
+			gutil.log('************ JS COMPLETED ************');
+			gutil.log('**************************************');
+		});
 });
 
 // Compile SASS files
@@ -36,7 +42,12 @@ gulp.task('sass', function() {
 		//.pipe(sass({outputStyle: 'expanded'})) // compressed, expanded, nested, compact
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write('../maps'))
-		.pipe(gulp.dest("assets/css/"));
+		.pipe(gulp.dest("assets/css/"))
+		.on('end',function(){
+			gutil.log('***************************************');
+			gutil.log('************ CSS COMPLETED ************');
+			gutil.log('***************************************');
+		});
 });
 
 // Watch
