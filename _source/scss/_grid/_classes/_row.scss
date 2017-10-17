@@ -6,7 +6,7 @@
 	width: 100%;
 }
 
-.row_flex{
+.row-flex{
 	width: 100%;
 	@include flexbox();
 	@include flex-wrap(wrap);
