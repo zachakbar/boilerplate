@@ -1,0 +1,17 @@
+/************************************************************************/
+/* HELPER CLASSES
+/************************************************************************/
+
+.bg-img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.pos-top-center{ background-position: top center; }    
+    &.pos-top-left{ background-position: top left; }    
+    &.pos-top-right{ background-position: top center; }
+    
+    &.pos-btm-center{ background-position: bottom center; }
+    &.pos-btm-left{ background-position: bottom left; }    
+    &.pos-btm-right{ background-position: bottom center; }
+}
