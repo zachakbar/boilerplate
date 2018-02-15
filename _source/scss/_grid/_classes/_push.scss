@@ -2,7 +2,7 @@
 /* PUSH CLASSES
 /************************************************************************/
 @for $i from 1 through $columns{
-	.push-m-#{$i}{
+	.push-sm-#{$i}{
 		@include pre($i of $columns);
 	}
 }
