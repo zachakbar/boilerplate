@@ -1,7 +1,7 @@
 /************************************************************************/
 /* SHOW/HIDE CLASSES
 /************************************************************************/
-.hide-m-down{
+.hide-sm-down{
 	display: none;
 	@include breakpoint($md){
 		display: block;
@@ -17,7 +17,7 @@
 	}
 }
 
-.hide-m-up{
+.hide-sm-up{
 	@include breakpoint($md){
 		display: none;
 	}
