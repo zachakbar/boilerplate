@@ -2,7 +2,7 @@
 /* PULL CLASSES
 /************************************************************************/
 @for $i from 1 through $columns{
-	.pull-m-#{$i}{
+	.pull-sm-#{$i}{
 		@include post($i of $columns);
 	}
 }
