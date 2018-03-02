@@ -11,7 +11,7 @@ cd PROJECT/FOLDER/PATH/
 ```
 2. install the boilderplate-core
 ```html
-git clone git@github.com:zachakbar/boilerplate-core.git <PROJECT_NAME>
+git clone git@github.com:zachakbar/boilerplate-core.git PROJECT_NAME
 ```
 3. change folder to the one just created
 ```html
