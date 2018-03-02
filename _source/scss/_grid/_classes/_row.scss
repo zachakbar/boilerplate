@@ -8,27 +8,27 @@
 
 .row-flex{
 	width: 100%;
-	@include flexbox();
-	@include flex-wrap(wrap);
+	display: flex;
+	flex-wrap: wrap;
 }
 
-@each $name, $breakpoint, $class in $grid_classes{
+.row-flex-nowrap{
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+@each $name, $breakpoint, $class in $GRID_CLASSES{
 	@include breakpoint(#{$breakpoint}){
 		.row-flex-#{$class}{
 			width: 100%;
-			@include flexbox();
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.row-flex-nowrap-#{$class}{
+			width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

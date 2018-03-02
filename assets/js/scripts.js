@@ -16,12 +16,9 @@ function FUNCTION_NAME(){
 /************************************************************************/
 /* SCRIPTS
 /************************************************************************/
-//@codekit-prepend "_plugins.js", "_functions.js";
 
 $(document).ready(function() {
 	
 	//FUNCTION_NAME();
 	
 });
-
-//# sourceMappingURL=../maps/scripts.js.map

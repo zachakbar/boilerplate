@@ -1,0 +1,28 @@
+{
+  "author": "Zach Akbar",
+  "contributors": "zach@thinkbigfish.com",
+  "name": "boilerplate-core",
+  "main": "gulfile.js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/zachakbar/boilerplate",
+  "description": "A responsive boilerplate to start basic web pages/sites with.",
+  "keywords": [
+    "boilerplate",
+    "sass"
+  ],
+  "dependencies": {
+    "autoprefixer": "*",
+    "bourbon": "*",
+    "breakpoint-sass": "*",
+    "gulp": "*",
+    "gulp-compass": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-minify": "*",
+    "gulp-plumber": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "susy": "*"
+  }
+}

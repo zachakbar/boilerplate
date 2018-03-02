@@ -2,10 +2,7 @@
 /* HTML/BODY
 /************************************************************************/
 
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
 	-ms-text-size-adjust: 100%;
@@ -17,11 +14,11 @@ html {
 }
 
 body {
-	background: $bgcolor;
-	color: $text_color;
-	font-family: $base_font;
-	font-weight: $base_font_weight;
-	line-height: $base_line_height;
+	background: $bg-color;
+	color: $text-color;
+	font-family: $base-font;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
 }
 
 img,

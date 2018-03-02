@@ -21,16 +21,16 @@ $c: 0; // leave this at 0
 }
 
 // Breakpoints
-$sm: 320px;
-$md: 600px;
-$lg: 900px;
-$xl: $c;
-$xxl: 1500px;
+$xs: 320px;
+$sm: 600px;
+$md: 900px;
+$lg: $c;
+$xl: 1500px;
 
 // MAP FOR GRID CLASSES
-$grid_classes: ("MEDIUM" $md "md"),("LARGE" $lg "lg"),("XTRA LARGE" $xl "xl"),("XTRA XTRA LARGE" $xxl "xxl");
+$GRID_CLASSES: ("SMALL" $sm "sm"),("MEDIUM" $md "md"),("LARGE" $lg "lg"),("XTRA LARGE" $xl "xl");
 
 // Other Grid Variables
-$grid_border_box: border-box;
-$grid_gutter_position: after;
-$grid_padding: 0 1.5rem;
+$grid-border-box: border-box;
+$grid-gutter-position: after;
+$grid-padding: 0 1.5rem;

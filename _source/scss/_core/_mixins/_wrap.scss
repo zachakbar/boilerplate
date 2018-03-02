@@ -6,10 +6,10 @@
 	@include container();
 	
 	@if $GRID_TYPE == 'static'{
-		padding: $grid_padding;
+		padding: $grid-padding;
 	}
 	
-	@include susy-breakpoint($xl,$susy2){
+	@include susy-breakpoint($lg,$susy2){
 		//@include container($susy2 show-columns);
 		@include container($susy2);
 	}

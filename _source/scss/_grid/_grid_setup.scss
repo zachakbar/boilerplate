@@ -6,8 +6,8 @@
 		container: 100%,
 		columns: $columns,
 		gutters: 0,
-		global-box-sizing: $grid_border_box,
-		gutter-position: $grid_gutter_position,
+		global-box-sizing: $grid-border-box,
+		gutter-position: $grid-gutter-position,
 		use-custom:(
 			rem: true
 		)
@@ -17,8 +17,8 @@
 		container: 90%,
 		columns: $columns,
 		gutters: 1/4,
-		global-box-sizing: $grid_border_box,
-		gutter-position: $grid_gutter_position,
+		global-box-sizing: $grid-border-box,
+		gutter-position: $grid-gutter-position,
 		use-custom: (
 			rem: true
 		)

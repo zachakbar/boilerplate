@@ -2,12 +2,12 @@
 /* PUSH CLASSES
 /************************************************************************/
 @for $i from 1 through $columns{
-	.push-m-#{$i}{
+	.push-xl-#{$i}{
 		@include pre($i of $columns);
 	}
 }
 
-@each $name, $breakpoint, $class in $grid_classes{
+@each $name, $breakpoint, $class in $GRID_CLASSES{
 	@include breakpoint(#{$breakpoint}){
 		@for $i from 1 through $columns{
 			.push-#{$class}-#{$i}{

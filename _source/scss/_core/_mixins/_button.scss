@@ -1,32 +1,34 @@
 //------------------------------------------------------------------------
 // BUTTON
 //------------------------------------------------------------------------
-@mixin btn($btn_bg, $btn_border, $btn_color) {
+@mixin btn($btn-bg, $btn-border, $btn-color) {
 	@extend .btn-static;
-	background: $btn_bg;
-	border-color: $btn_border;
-	color: $btn_color;
+	background: $btn-bg;
+	border-color: $btn-border;
+	color: $btn-color;
 
-	&:visited {
-		background: $btn_bg;
-		border-color: $btn_border;
-		color: $btn_color;
+	&:visited, &:active, &:focus {
+		background: $btn-bg;
+		border-color: $btn-border;
+		color: $btn-color;
 	}
 }
 
 @mixin btn-static{
-	border-width: $btn_border_width;
-	border-style: $btn_border_style;
-	font-family: $btn_font;
-	font-size: $btn_font_size;
-	font-weight: $btn_font_weight;
-	line-height: $btn_line_height;
-	padding: $btn_padding;
+	border-width: $btn-border-width;
+	border-style: $btn-border-style;
+	@include border-radius($btn-border-radius);
+	font-family: $btn-font;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	text-decoration: $btn-text-decoration;
+	text-transform: $btn-text-transform;
+	@include letter-spacing(0);
+	line-height: $btn-line-height;
+	padding: $btn-padding;
 	display: inline-block;
 	cursor: pointer;
 	outline: none;
-	
-	@include border-radius($btn_border_radius);
 }
 
 .btn-static{ @include btn-static; }

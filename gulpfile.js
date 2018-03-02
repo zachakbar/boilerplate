@@ -1,18 +1,37 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var compass = require('gulp-compass');
-var watch = require('gulp-watch');
-var concat = require('gulp-concat');
-var minify = require('gulp-minify');
-var sourcemaps = require('gulp-sourcemaps');
-var gutil = require('gulp-util');
+var gulp 			= require('gulp'),
+	 autoprefixer 	= require('gulp-autoprefixer'),
+    connect			= require("gulp-connect"),
+	 compass 		= require('gulp-compass'),
+	 watch 			= require('gulp-watch'),
+	 concat 			= require('gulp-concat'),
+	 minify 			= require('gulp-minify'),
+	 plumber			= require('gulp-plumber'),
+	 gutil 			= require('gulp-util');
 
-// Compile all gulp tasks
-gulp.task('default', ['js', 'sass', 'watch']);
+// SCSS paths
+var paths = {
+	scss: ["./_source/scss/**/*.scss"]
+};
+
+// Configure Compass settings
+var compass_config = {
+	css: 'assets/css',
+	javascript: 'assets/js',
+	sass: '_source/scss',
+	image: 'assets/img',
+	sourcemap: false,
+	relative: true,
+	logging: false,
+	comments: true,
+	environment: 'development',
+	style: 'compressed',
+	require: ['susy', 'breakpoint', 'bourbon']
+};
 
 // Minify JS
 gulp.task('js', function() {
 	return gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js'])
+		.pipe(plumber())
 		.pipe(concat('scripts.js'))
 		.pipe(minify({
 			ext:{
@@ -20,8 +39,6 @@ gulp.task('js', function() {
 			},
 			preserveComments: 'some'
 		}))
-		.pipe(sourcemaps.init())
-		.pipe(sourcemaps.write('../maps'))
 		.pipe(gulp.dest('assets/js/'))
 		.on('end',function(){
 			gutil.log('**************************************');
@@ -32,16 +49,17 @@ gulp.task('js', function() {
 
 // Compile SASS files
 gulp.task('sass', function() {
-	gulp.src("_source/scss/**/*.scss")
-		.pipe(compass({
-	      config_file: 'config.rb',
-	      css: 'assets/css',
-	      sass: '_source/scss'
-	    })
-		.on('error', sass.logError))
-		//.pipe(sass({outputStyle: 'expanded'})) // compressed, expanded, nested, compact
-		.pipe(sourcemaps.init())
-		.pipe(sourcemaps.write('../maps'))
+	gulp.src(paths.scss)
+		.pipe(plumber())
+		.pipe(compass(compass_config))
+		.on('error', function(error) {
+			console.log(error);
+			this.emit('end');
+		})
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest("assets/css/"))
 		.on('end',function(){
 			gutil.log('***************************************');
@@ -50,8 +68,19 @@ gulp.task('sass', function() {
 		});
 });
 
+// Set up localhost server
+gulp.task('connect', function() {
+  connect.server({
+    port: 8000,
+    livereload: true
+  });
+});
+
 // Watch
 gulp.task("watch", function() {
 	watch('_source/scss/**/*.scss', function() { gulp.start('sass'); });
 	watch('_source/js/**/*.js', function() { gulp.start('js'); });
 });
+
+// Compile all gulp tasks
+gulp.task('default', ['js', 'sass', 'watch', 'connect']);
