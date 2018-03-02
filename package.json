@@ -12,7 +12,7 @@
     "sass"
   ],
   "dependencies": {
-    "autoprefixer": "*",
+    "gulp-autoprefixer": "*",
     "bourbon": "*",
     "breakpoint-sass": "*",
     "gulp": "*",
