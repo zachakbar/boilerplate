@@ -5,9 +5,9 @@ A responsive boilerplate to start basic web pages/sites with.
 make sure you have installed [NPM](https://www.npmjs.com/get-npm).
 
 it is also a good idea to have the following ruby gems installed:
-- compass ```html gem install compass ```
-- susy ```html gem install susy ```
-- breakpoint ```html gem install breakpoint ```
+- compass ``` gem install compass ```
+- susy ``` gem install susy ```
+- breakpoint ``` gem install breakpoint ```
 
 _if you are on macOS High Sierra you may run into issues. check out [this stackoverflow article](https://stackoverflow.com/questions/46511870/doesnt-compile-scss-after-update-osx-to-10-13-macos-high-sierra) for a possible solution._
 
