@@ -35,4 +35,6 @@ gulp
 
 _tip: make sure to exclude the **node_modules** and **.sass-cache** folder from uploading. you can also remove the **styles.html** and **README.md** if you so choose._
 
+Please create a new [issue](https://github.com/zachakbar/boilerplate-core/issues) for any bugs or potential items you wish to add.
+
 ~z
