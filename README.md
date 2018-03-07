@@ -2,7 +2,7 @@
 
 A responsive boilerplate to start basic web pages/sites with.
 
-make sure you have installed [NPM](https://www.npmjs.com/get-npm).
+make sure you have installed both [NPM](https://www.npmjs.com/get-npm) and [gulp.js](https://gulpjs.com/).
 
 it is also a good idea to have the following ruby gems installed:
 - compass ``` gem install compass ```
