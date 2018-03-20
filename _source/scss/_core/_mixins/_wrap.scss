@@ -2,16 +2,10 @@
 // WRAP
 //------------------------------------------------------------------------
 @mixin wrap{
-	//@include container(show-columns);
-	@include container();
-	
-	@if $GRID_TYPE == 'static'{
-		padding: $grid-padding;
-	}
-	
-	@include susy-breakpoint($lg,$susy2){
-		//@include container($susy2 show-columns);
-		@include container($susy2);
-	}
+	$w: $container + rem;
+	$c: calc(#{$w} / 10); 
+	max-width: $c;
+	@include padding($grid-padding);
+	@include margin(0 auto);
 }
 .wrap{ @include wrap; }

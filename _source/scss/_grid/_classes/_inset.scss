@@ -3,7 +3,9 @@
 /************************************************************************/
 @for $i from 1 through $columns{
 	.inset-xs-#{$i}{
-		@include pad($i of $columns, $i of $columns);
+		$c: $i of $columns;
+		padding-right: span($i);
+		padding-left: span($i);
 	}
 }
 
@@ -11,7 +13,9 @@
 	@include breakpoint(#{$breakpoint}){
 		@for $i from 1 through $columns{
 			.inset-#{$class}-#{$i}{
-				@include pad($i of $columns, $i of $columns);
+				$c: $i of $columns;
+				padding-right: span($i);
+				padding-left: span($i);
 			}
 		}
 	}

@@ -3,7 +3,8 @@
 /************************************************************************/
 @for $i from 1 through $columns{
 	.push-xs-#{$i}{
-		@include pre($i of $columns);
+		$c: $i of $columns;
+		margin-left: span($c);
 	}
 }
 
@@ -11,7 +12,8 @@
 	@include breakpoint(#{$breakpoint}){
 		@for $i from 1 through $columns{
 			.push-#{$class}-#{$i}{
-				@include pre($i of $columns);
+				$c: $i of $columns;
+				margin-left: span($c);
 			}
 		}
 	}

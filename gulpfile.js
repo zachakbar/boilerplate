@@ -1,70 +1,48 @@
 var gulp 			= require('gulp'),
 	 autoprefixer 	= require('gulp-autoprefixer'),
+	 bourbon 		= require('bourbon').includePaths,
     connect			= require("gulp-connect"),
-	 compass 		= require('gulp-compass'),
+	 sass 			= require('gulp-sass'),
 	 watch 			= require('gulp-watch'),
 	 concat 			= require('gulp-concat'),
-	 minify 			= require('gulp-minify'),
-	 plumber			= require('gulp-plumber'),
-	 gutil 			= require('gulp-util');
+	 uglify 			= require('gulp-uglify'),
+	 pump 			= require('pump'),
+	 log	 			= require('fancy-log');
 
 // SCSS paths
 var paths = {
 	scss: ["./_source/scss/**/*.scss"]
 };
 
-// Configure Compass settings
-var compass_config = {
-	css: 'assets/css',
-	javascript: 'assets/js',
-	sass: '_source/scss',
-	image: 'assets/img',
-	sourcemap: false,
-	relative: true,
-	logging: false,
-	comments: true,
-	environment: 'development',
-	style: 'compressed',
-	require: ['susy', 'breakpoint', 'bourbon']
-};
-
 // Minify JS
 gulp.task('js', function() {
 	return gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js'])
-		.pipe(plumber())
 		.pipe(concat('scripts.js'))
-		.pipe(minify({
-			ext:{
-				min:'-min.js'
-			},
-			preserveComments: 'some'
-		}))
+		.pipe(uglify())
 		.pipe(gulp.dest('assets/js/'))
 		.on('end',function(){
-			gutil.log('**************************************');
-			gutil.log('************ JS COMPLETED ************');
-			gutil.log('**************************************');
+			log('**************************************');
+			log('************ JS COMPLETED ************');
+			log('**************************************');
 		});
 });
 
 // Compile SASS files
 gulp.task('sass', function() {
 	gulp.src(paths.scss)
-		.pipe(plumber())
-		.pipe(compass(compass_config))
-		.on('error', function(error) {
-			console.log(error);
-			this.emit('end');
-		})
+		.pipe(sass({
+			outputStyle: 'expanded',
+			includePaths: [bourbon, 'node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
+		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
 		.pipe(gulp.dest("assets/css/"))
 		.on('end',function(){
-			gutil.log('***************************************');
-			gutil.log('************ CSS COMPLETED ************');
-			gutil.log('***************************************');
+			log('***************************************');
+			log('************ CSS COMPLETED ************');
+			log('***************************************');
 		});
 });
 
@@ -83,4 +61,4 @@ gulp.task("watch", function() {
 });
 
 // Compile all gulp tasks
-gulp.task('default', ['js', 'sass', 'watch', 'connect']);
+gulp.task('default', ['connect', 'js', 'sass', 'watch']);

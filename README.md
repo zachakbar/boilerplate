@@ -1,5 +1,7 @@
 # Boilerplate
 
+v3.0 Beta
+
 A responsive boilerplate to start basic web pages/sites with.
 
 make sure you have installed both [NPM](https://www.npmjs.com/get-npm) and [gulp.js](https://gulpjs.com/).

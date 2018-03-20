@@ -17,7 +17,7 @@
 @mixin btn-static{
 	border-width: $btn-border-width;
 	border-style: $btn-border-style;
-	@include border-radius($btn-border-radius);
+	border-radius: $btn-border-radius;
 	font-family: $btn-font;
 	font-size: $btn-font-size;
 	font-weight: $btn-font-weight;
@@ -29,6 +29,7 @@
 	display: inline-block;
 	cursor: pointer;
 	outline: none;
+	transition: all 0.2s ease-in-out;
 }
 
 .btn-static{ @include btn-static; }

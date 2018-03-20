@@ -1,28 +1,8 @@
 //------------------------------------------------------------------------
 // GRID SETUP
 //------------------------------------------------------------------------
-@if $GRID_TYPE == 'static'{
-	$susy: (
-		container: 100%,
-		columns: $columns,
-		gutters: 0,
-		global-box-sizing: $grid-border-box,
-		gutter-position: $grid-gutter-position,
-		use-custom:(
-			rem: true
-		)
-	);
-}@else{
-	$susy: (
-		container: 90%,
-		columns: $columns,
-		gutters: 1/4,
-		global-box-sizing: $grid-border-box,
-		gutter-position: $grid-gutter-position,
-		use-custom: (
-			rem: true
-		)
-	);
-}
 
-$susy2: (container: unquote($container + 'px'));
+$susy: (
+  'columns': susy-repeat(12),
+  'gutters': 1.5rem,
+);

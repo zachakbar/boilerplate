@@ -2,23 +2,12 @@
 // GRID VARIABLES
 //------------------------------------------------------------------------
 
-// Grid Type
-//$GRID_TYPE:	'fluid';
-$GRID_TYPE:	'static';
-
 // Column & Container & Thingzzz
 $wrap: 1140;
 $columns: 12;
-$container: 0; // leave this at 0
-$c: 0; // leave this at 0
-@if $GRID_TYPE == 'fluid'{
-	$container: $wrap;
-	$calc: round((unquote($wrap) / 9) * 10);
-	$c: unquote($calc + 'px'); // NEVERMORE
-}@else if $GRID_TYPE == 'static'{
-	$container: unquote($wrap + 60);
-	$c: $container + 'px';
-}
+$susy: (columns: repeat($columns));
+$container: $wrap + 60;
+$c: $container + px;
 
 // Breakpoints
 $xs: 320px;

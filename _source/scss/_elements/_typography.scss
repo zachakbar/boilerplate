@@ -6,7 +6,7 @@ a {
 	color: $link-color;
 	font-weight: $link-font-weight;
 	text-decoration: none;
-	@include single-transition(all, 0.2s, ease-in-out);
+	transition: all 0.2s ease-in-out;
 	
 	&:active,
 	&:focus,

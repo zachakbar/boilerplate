@@ -20,7 +20,7 @@ label, legend {
 #{$all-text-inputs} {
 	background: $white;
 	border: $input-border;
-	@include border-radius($input-border-radius);
+	border-radius: $input-border-radius;
 	color: $text-color;
 	font-family: $base-font;
 	font-size: $base-font-size;
@@ -30,7 +30,7 @@ label, legend {
 	padding: $input-padding;
 	margin: $input-margin;
 	outline: none;
-	@include single-transition(all, 0.2s, ease-in-out);
+	transition: all 0.2s ease-in-out;
 	
 	&:hover {
 		border-color: shade($blue,20%);
@@ -39,7 +39,7 @@ label, legend {
 	&:focus {
 		border-color: $blue;
 		outline: none;
-		@include box-shadow($input-focus-glow);
+		box-shadow: $input-focus-glow;
 	}
 	
 	&:disabled {
@@ -57,14 +57,14 @@ input[type="checkbox"],
 input[type="radio"] {
 	display: inline;
 	@include size(auto);
-	padding: 0;
-	margin: 0 0.5rem 1rem 0;
+	@include padding(0);
+	@include margin(0 0.5rem 1rem 0);
 }
 
 input[type="color"]{
 	border: 0;
 	@include size(4.1rem);
-	padding: 0;
+	@include padding(0);
 }
 
 input[type="submit"]{
@@ -88,7 +88,7 @@ select{
 	background-repeat: no-repeat;
 	background-color: $white;
 	border: $input-border;
-	@include border-radius($input-border-radius);
+	border-radius: $input-border-radius;
 	color: $text-color;
 	font-size: $base-font-size;
 	@include size(100%,5.3rem);
@@ -103,7 +103,7 @@ select{
 	&:focus{
 		border-color: $blue;
 		outline: none;
-		@include box-shadow($input-focus-glow);
+		box-shadow: $input-focus-glow;
 	}
 	
 	&.disabled {
@@ -118,7 +118,7 @@ select{
 
 .message {
 	border: 2px solid $text-color;
-	@include border-radius(3px);
+	border-radius: 3px;
 	color: $white;
 	padding: 1rem 1.5rem;
 	@include margin(null null 1rem null);

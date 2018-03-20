@@ -2,8 +2,7 @@
 // LAYOUT
 //------------------------------------------------------------------------
 
-@import "compass";
-@import "compass/reset";
+@import "_core/reset";
 @import "breakpoint";
 @import "susy";
 @import "_core/_mixins/clearfix";
