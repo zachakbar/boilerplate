@@ -15,16 +15,20 @@ var paths = {
 };
 
 // Minify JS
-gulp.task('js', function() {
-	return gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js'])
-		.pipe(concat('scripts.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('assets/js/'))
-		.on('end',function(){
-			log('**************************************');
-			log('************ JS COMPLETED ************');
-			log('**************************************');
-		});
+gulp.task('js', function(cb) {
+	pump([
+			gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js']),
+			concat('scripts.js'),
+			uglify(),
+			gulp.dest('assets/js/')
+		],
+		cb
+	)
+	.on('end',function(){
+		log('**************************************');
+		log('************ JS COMPLETED ************');
+		log('**************************************');
+	});
 });
 
 // Compile SASS files
