@@ -1,28 +1,30 @@
-var gulp 			= require('gulp'),
-	 autoprefixer 	= require('gulp-autoprefixer'),
-	 bourbon 		= require('bourbon').includePaths,
-    connect			= require("gulp-connect"),
-	 sass 			= require('gulp-sass'),
-	 watch 			= require('gulp-watch'),
-	 concat 			= require('gulp-concat'),
-	 uglify 			= require('gulp-uglify'),
-	 pump 			= require('pump'),
-	 log	 			= require('fancy-log');
+var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var bourbon = require('bourbon').includePaths;
+var connect = require("gulp-connect");
+var sass = require('gulp-sass');
+var watch = require('gulp-watch');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+var log = require('fancy-log');
 
-// SCSS paths
+// PATH objects
 var paths = {
-	scss: ["./_source/scss/**/*.scss"]
+	js: ['_source/js/*.js'],
+	scss: ['./_source/scss/**/*.scss'],
+	inc: [bourbon, 'node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
 };
 
 // Minify JS
-gulp.task('js', function(cb) {
+gulp.task('js', function(e) {
 	pump([
-			gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js']),
+			gulp.src(paths.js),
 			concat('scripts.js'),
 			uglify(),
 			gulp.dest('assets/js/')
 		],
-		cb
+		e
 	)
 	.on('end',function(){
 		log('**************************************');
@@ -36,7 +38,7 @@ gulp.task('sass', function() {
 	gulp.src(paths.scss)
 		.pipe(sass({
 			outputStyle: 'expanded',
-			includePaths: [bourbon, 'node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
+			includePaths: paths.inc
 		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -53,8 +55,7 @@ gulp.task('sass', function() {
 // Set up localhost server
 gulp.task('connect', function() {
   connect.server({
-    port: 8000,
-    livereload: true
+    port: 8000
   });
 });
 
