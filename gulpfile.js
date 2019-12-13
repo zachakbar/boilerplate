@@ -51,7 +51,6 @@ function scripts() {
 		.pipe(gulp.dest('assets/js/'))
 		.pipe(notify({ message: 'JS complete!' }))
 }
-
 // css
 function css() {
 	return gulp.src(paths.styles.src)
