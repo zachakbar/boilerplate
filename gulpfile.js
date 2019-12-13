@@ -1,64 +1,86 @@
-var gulp 			= require('gulp'),
-	 autoprefixer 	= require('gulp-autoprefixer'),
-	 bourbon 		= require('bourbon').includePaths,
-    connect			= require("gulp-connect"),
-	 sass 			= require('gulp-sass'),
-	 watch 			= require('gulp-watch'),
-	 concat 			= require('gulp-concat'),
-	 uglify 			= require('gulp-uglify'),
-	 pump 			= require('pump'),
-	 log	 			= require('fancy-log');
+'use strict';
 
-// SCSS paths
+// helpers 
+// https://github.com/gulpjs/gulp
+// https://www.webstoemp.com/blog/switching-to-gulp4/
+
+var bourbon = require('bourbon').includePaths;
+var del = require("del");
+var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var eslint = require("gulp-eslint");
+var notify = require('gulp-notify');
+var plumber = require("gulp-plumber");
+var sass = require('gulp-sass');
+var terser = require('gulp-terser');
+
+// PATH objects
 var paths = {
-	scss: ["./_source/scss/**/*.scss"]
+	scripts: {
+		src: ['_src/js/**/*.js'],
+		dest: ['assets/js/']
+	},
+	styles: {
+		src: ['_src/scss/**/*.scss'],
+		dest: ['assets/css/'],
+		inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+	}
 };
 
-// Minify JS
-gulp.task('js', function() {
-	return gulp.src(['_source/js/_plugins.js','_source/js/_functions.js','_source/js/scripts.js'])
+// Clean assets
+function clean() {
+	return del(paths.scripts.dest,paths.styles.dest);
+}
+
+// lint
+function scriptsLint() {
+	return gulp.src(paths.scripts.src)
+    .pipe(plumber())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+}
+
+// js
+function scripts() {
+	return gulp.src(paths.scripts.src)
+		.pipe(plumber())
 		.pipe(concat('scripts.js'))
-		.pipe(uglify())
+		.pipe(terser())
 		.pipe(gulp.dest('assets/js/'))
-		.on('end',function(){
-			log('**************************************');
-			log('************ JS COMPLETED ************');
-			log('**************************************');
-		});
-});
+		.pipe(notify({ message: 'JS complete!' }))
+}
 
-// Compile SASS files
-gulp.task('sass', function() {
-	gulp.src(paths.scss)
+// css
+function css() {
+	return gulp.src(paths.styles.src)
 		.pipe(sass({
-			outputStyle: 'expanded',
-			includePaths: [bourbon, 'node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
+			outputStyle: 'compressed',
+			includePaths: paths.styles.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest("assets/css/"))
-		.on('end',function(){
-			log('***************************************');
-			log('************ CSS COMPLETED ************');
-			log('***************************************');
-		});
-});
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('assets/css/'))
+		.pipe(notify({ message: 'CSS complete!' }));
+}
 
-// Set up localhost server
-gulp.task('connect', function() {
-  connect.server({
-    port: 8000,
-    livereload: true
-  });
-});
+// watch
+function watch() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.styles.src, css);
+}
 
-// Watch
-gulp.task("watch", function() {
-	watch('_source/scss/**/*.scss', function() { gulp.start('sass'); });
-	watch('_source/js/**/*.js', function() { gulp.start('js'); });
-});
+// run eslint on js then run other tasks
+var js = gulp.series(scriptsLint, scripts);
+var build = gulp.series(clean, gulp.parallel(watch, js, css));
 
-// Compile all gulp tasks
-gulp.task('default', ['connect', 'js', 'sass', 'watch']);
+// declare tasks
+exports.clean = clean;
+exports.scriptsLint = scriptsLint;
+exports.scripts = scripts;
+exports.styles = css;
+exports.watch = watch;
+exports.build = build;
+
+// run 'gulp' cli command 
+exports.default = build;
