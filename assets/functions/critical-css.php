@@ -2,7 +2,8 @@
 	
 /* Add critical CSS to the <head> of the site.
  * 
- * @param 
+ * @link https://www.sitelocity.com/critical-path-css-generator
+ * @link https://www.namehero.com/startup/how-to-inline-and-defer-css-on-wordpress-without-plugins/
  */
 function critical_css() {
 	?>
