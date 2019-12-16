@@ -1,0 +1,41 @@
+<?php
+/**
+ * single
+ * @link https://developer.wordpress.org/themes/basics/template-files/
+ */
+?>
+<?php get_header(); ?>
+
+<?php if ( have_posts() ): ?>
+	<?php while ( have_posts() ) : the_post(); ?>
+		
+		<section role="main">
+			
+			<header>
+				<div class="wrap">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</header>
+		
+			<section>
+				<div class="wrap">
+					<article>
+						<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+						<?php the_content(); ?>
+					</article>
+				</div>
+			</section>
+			
+			<section class="comments">
+				<?php comments_template( '', true ); ?>
+			</section>
+				
+		</section>
+			
+		<?php get_sidebar(); ?>
+		
+	<?php endwhile; ?>
+<?php endif; ?>
+
+<?php get_footer(); ?>
