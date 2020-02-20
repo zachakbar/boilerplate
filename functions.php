@@ -9,6 +9,7 @@
 	include( get_template_directory().'/assets/functions/critical-assets.php' );
 	include( get_template_directory().'/assets/functions/custom-color-picker.php' );
 	include( get_template_directory().'/assets/functions/helpers.php' );
+	include( get_template_directory().'/assets/functions/page-elements.php' );
 	
 
 /************************************************************************/
