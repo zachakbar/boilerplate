@@ -5,7 +5,7 @@
   "main": "gulfile.js",
   "version": "1.0.0",
   "license": "MIT",
-  "repository": "https://github.com/zachakbar/boilerplate-core",
+  "repository": "https://github.com/zachakbar/boilerplate",
   "description": "A responsive boilerplate to start basic web pages/sites with.",
   "keywords": [
     "boilerplate",
@@ -14,15 +14,14 @@
   "devDependencies": {
     "bourbon": "^5.1.0",
     "breakpoint-sass": "^2.7.1",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-eslint": "^6.0.0",
     "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^3.1.0",
-    "gulp-terser": "^1.2.0"
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "pump": "^3.0.0"
   }
 }
