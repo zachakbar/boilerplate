@@ -1,85 +1,51 @@
-'use strict';
-
-// helpers 
-// https://github.com/gulpjs/gulp
-// https://www.webstoemp.com/blog/switching-to-gulp4/
-
-var bourbon = require('bourbon').includePaths;
-var del = require("del");
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var eslint = require("gulp-eslint");
-var notify = require('gulp-notify');
-var plumber = require("gulp-plumber");
+var bourbon = require('bourbon').includePaths;
 var sass = require('gulp-sass');
-var terser = require('gulp-terser');
+var watch = require('gulp-watch');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var notify = require('gulp-notify');
+var pump	= require('pump');
 
 // PATH objects
 var paths = {
-	scripts: {
-		src: ['_src/js/**/*.js'],
-		dest: ['assets/js/']
-	},
-	styles: {
-		src: ['_src/scss/**/*.scss'],
-		dest: ['assets/css/'],
-		inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
-	}
+	js: ['_src/js/_functions.js','_src/js/_plugins.js','_src/js/scripts.js'],
+	scss: ['./_src/scss/**/*.scss'],
+	inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
 };
 
-// Clean assets
-function clean() {
-	return del(paths.scripts.dest,paths.styles.dest);
-}
+// Minify JS
+gulp.task('js', function(e) {
+	pump([
+			gulp.src(paths.js),
+			concat('scripts.js'),
+			uglify(),
+			gulp.dest('assets/js/')
+		],e)
+		.pipe(notify({ message: 'JS complete!' }));
+});
 
-// lint
-function scriptsLint() {
-	return gulp.src(paths.scripts.src)
-    .pipe(plumber())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-}
-
-// js
-function scripts() {
-	return gulp.src(paths.scripts.src)
-		.pipe(plumber())
-		.pipe(concat('scripts.js'))
-		.pipe(terser())
-		.pipe(gulp.dest('assets/js/'))
-		.pipe(notify({ message: 'JS complete!' }))
-}
-// css
-function css() {
-	return gulp.src(paths.styles.src)
+// Compile SASS files
+gulp.task('sass', function() {
+	gulp.src(paths.scss)
 		.pipe(sass({
 			outputStyle: 'compressed',
-			includePaths: paths.styles.inc
+			includePaths: paths.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer())
-		.pipe(gulp.dest('assets/css/'))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest("assets/css/"))
 		.pipe(notify({ message: 'CSS complete!' }));
-}
+});
 
-// watch
-function watch() {
-  gulp.watch(paths.scripts.src, scripts);
-  gulp.watch(paths.styles.src, css);
-}
+// Watch
+gulp.task("watch", function() {
+	watch('_src/scss/**/*.scss', function() { gulp.start('sass'); });
+	watch('_src/js/**/*.js', function() { gulp.start('js'); });
+});
 
-// run eslint on js then run other tasks
-var js = gulp.series(scriptsLint, scripts);
-var build = gulp.series(clean, gulp.parallel(watch, js, css));
-
-// declare tasks
-exports.clean = clean;
-exports.scriptsLint = scriptsLint;
-exports.scripts = scripts;
-exports.styles = css;
-exports.watch = watch;
-exports.build = build;
-
-// run 'gulp' cli command 
-exports.default = build;
+// Compile all gulp tasks
+gulp.task('default', ['js', 'sass', 'watch']);

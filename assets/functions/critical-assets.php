@@ -1,14 +1,22 @@
 <?php
 	
+/* Add critical JS to the <head> of the site.
+ * 
+ */
+function critical_js() {
+	$js = file_get_contents( get_stylesheet_directory_uri().'/assets/js/jquery.min.js' );
+	echo '<script type="text/javascript">'.$js.'</script>';
+}
+add_action( 'wp_head', 'critical_js' );
+	
 /* Add critical CSS to the <head> of the site.
  * 
  * @link https://www.sitelocity.com/critical-path-css-generator
  * @link https://www.namehero.com/startup/how-to-inline-and-defer-css-on-wordpress-without-plugins/
  */
 function critical_css() {
-	?>
-		[INSERT CRITICAL CSS HERE]
-	<?php
+	$css = file_get_contents( get_stylesheet_directory_uri().'/assets/css/critical.css' );
+	echo '<style>'.update_style_asset_url( $css ).'</style>';
 }
 add_action( 'wp_head', 'critical_css' );
 
@@ -32,3 +40,14 @@ EOT;
   return $html;
 }
 add_filter( 'style_loader_tag', 'add_rel_preload', 10, 4 );
+
+
+/* Correct asset path urls for critical css.
+ * 
+ */
+function update_style_asset_url( $haystack ) {
+	$path = get_stylesheet_directory_uri().'/assets/';
+	$paths = [ '../fonts/', '../img/', '../svg/' ];
+	$new_paths = [ $path.'fonts/', $path.'img/', $path.'svg/' ];
+	return str_replace( $paths, $new_paths, $haystack );
+}

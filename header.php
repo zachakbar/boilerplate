@@ -17,9 +17,7 @@
 </head>
 
 <?php 
-global $wp_query;
-$post_id = $wp_query->post->ID;
-$post = get_post( $post_id );
+global $post;
 $slug = $post->post_name;
 ?>
 <body <?php body_class(); ?>>

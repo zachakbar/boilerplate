@@ -6,7 +6,7 @@
 
 	// why don't ya add somethin' already?!
 	include( get_template_directory().'/assets/functions/acf-functions.php' );
-	include( get_template_directory().'/assets/functions/critical-css.php' );
+	include( get_template_directory().'/assets/functions/critical-assets.php' );
 	include( get_template_directory().'/assets/functions/custom-color-picker.php' );
 	include( get_template_directory().'/assets/functions/helpers.php' );
 	
