@@ -1,51 +1,72 @@
+'use strict';
+
+// helpers 
+// https://github.com/gulpjs/gulp
+// https://www.webstoemp.com/blog/switching-to-gulp4/
+
+var bourbon = require('bourbon').includePaths;
+var del = require("del");
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
-var bourbon = require('bourbon').includePaths;
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var notify = require('gulp-notify');
-var pump	= require('pump');
+var plumber = require("gulp-plumber");
+var sass = require('gulp-sass');
+var terser = require('gulp-terser');
 
 // PATH objects
 var paths = {
-	js: ['_src/js/_functions.js','_src/js/_plugins.js','_src/js/scripts.js'],
-	scss: ['./_src/scss/**/*.scss'],
-	inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+	scripts: {
+		src: ['_src/js/**/*.js'],
+		dest: ['assets/js/']
+	},
+	styles: {
+		src: ['_src/scss/**/*.scss'],
+		dest: ['assets/css/'],
+		inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+	}
 };
 
-// Minify JS
-gulp.task('js', function(e) {
-	pump([
-			gulp.src(paths.js),
-			concat('scripts.js'),
-			uglify(),
-			gulp.dest('assets/js/')
-		],e)
-		.pipe(notify({ message: 'JS complete!' }));
-});
+// Clean assets
+function clean() {
+	return del(paths.scripts.dest,paths.styles.dest);
+}
 
-// Compile SASS files
-gulp.task('sass', function() {
-	gulp.src(paths.scss)
+// js
+function scripts() {
+	return gulp.src(paths.scripts.src)
+		.pipe(plumber())
+		.pipe(concat('scripts.js'))
+		.pipe(terser())
+		.pipe(gulp.dest('assets/js/'))
+		.pipe(notify({ message: 'JS complete!' }))
+}
+// css
+function css() {
+	return gulp.src(paths.styles.src)
 		.pipe(sass({
 			outputStyle: 'compressed',
-			includePaths: paths.inc
+			includePaths: paths.styles.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest("assets/css/"))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('assets/css/'))
 		.pipe(notify({ message: 'CSS complete!' }));
-});
+}
 
-// Watch
-gulp.task("watch", function() {
-	watch('_src/scss/**/*.scss', function() { gulp.start('sass'); });
-	watch('_src/js/**/*.js', function() { gulp.start('js'); });
-});
+// watch
+function watch() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.styles.src, css);
+}
 
-// Compile all gulp tasks
-gulp.task('default', ['js', 'sass', 'watch']);
+var build = gulp.series(clean, gulp.parallel(watch, scripts, css));
+
+// declare tasks
+exports.clean = clean;
+exports.scripts = scripts;
+exports.styles = css;
+exports.watch = watch;
+exports.build = build;
+
+// run 'gulp' cli command 
+exports.default = build;
