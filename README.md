@@ -1,6 +1,6 @@
 # Boilerplate
 
-v3.0
+v4.0
 
 A responsive boilerplate to start basic web pages/sites with.
 
