@@ -3,14 +3,8 @@
  * 404
  * @link https://developer.wordpress.org/themes/basics/template-files/
  */
-?>
-<?php get_header(); ?>
+get_header();
 
-	<section class="content" role="main">
-		<div class="wrap">
-			<h1>Oops, page not found :(</h1>
-			<a href="<?php bloginfo('url'); ?>" class="btn">Back to homepage</a>
-		</div>
-	</section>
+get_template_part( '/lib/template-parts/page', 'layouts' );
 
-<?php get_footer(); ?>
+get_footer();

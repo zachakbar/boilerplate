@@ -1,0 +1,14 @@
+// outputs all heading declarations. #
+@function headings($from:1, $to:6) {
+	@if $from == $to {
+		@return 'h#{$from}';
+	} @else {
+		@return 'h#{$from},' + headings($from+1, $to);
+	}
+}
+
+// Calcluates the CSS letter spacing based on Photoshop letter spacing value.
+@mixin letter-spacing($s){
+	$calc: unquote( ( $s / 1000 ) + 'em' );
+	letter-spacing: #{$calc};
+}

@@ -1,51 +1,85 @@
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var bourbon = require('bourbon').includePaths;
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var notify = require('gulp-notify');
-var pump	= require('pump');
+'use strict';
 
-// PATH objects
+// helpers
+// https://github.com/gulpjs/gulp
+// https://www.webstoemp.com/blog/switching-to-gulp4/
+
+var autoprefixer = require('gulp-autoprefixer'),
+		bourbon = require('bourbon').includePaths,
+		concat = require('gulp-concat'),
+		del = require("del"),
+		gracefulFs = require('graceful-fs'),
+		gulp = require('gulp'),
+		mapStream  = require('map-stream'),
+		notify = require('gulp-notify'),
+		plumber = require("gulp-plumber"),
+		sass = require('gulp-sass'),
+		terser = require('gulp-terser');
+
 var paths = {
-	js: ['_src/js/_functions.js','_src/js/_plugins.js','_src/js/scripts.js'],
-	scss: ['./_src/scss/**/*.scss'],
-	inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+			scripts: {
+				src: ['_src/js/**/*.js'],
+				dest: ['assets/js/']
+			},
+			styles: {
+				src: ['_src/scss/**/*.scss'],
+				dest: ['assets/css/'],
+				inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+			}
+		};
+
+// modified version of https://www.npmjs.com/package/gulp-touch
+const updateTimestamp = function (options) {
+	return mapStream(function (file, cb) {
+		if (file.isNull()) {
+			return cb(null, file);
+		}
+		return gracefulFs.utimes(file.path, new Date(), new Date(), cb.bind(null, null, file));
+	});
 };
 
-// Minify JS
-gulp.task('js', function(e) {
-	pump([
-			gulp.src(paths.js),
-			concat('scripts.js'),
-			uglify(),
-			gulp.dest('assets/js/')
-		],e)
-		.pipe(notify({ message: 'JS complete!' }));
-});
+// Clean assets
+function clean() {
+	return del('assets/js/scripts.js',paths.styles.dest);
+}
 
-// Compile SASS files
-gulp.task('sass', function() {
-	gulp.src(paths.scss)
+// js
+function scripts() {
+	return gulp.src(paths.scripts.src)
+		.pipe(plumber())
+		.pipe(concat('scripts.js'))
+		.pipe(terser())
+		.pipe(gulp.dest(paths.scripts.dest))
+		.pipe(notify({ message: 'JS complete!' }))
+}
+// css
+function css() {
+	return gulp.src(paths.styles.src)
+		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: 'compressed',
-			includePaths: paths.inc
+			includePaths: paths.styles.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest("assets/css/"))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest(paths.styles.dest))
+		.pipe(updateTimestamp())
 		.pipe(notify({ message: 'CSS complete!' }));
-});
+}
 
-// Watch
-gulp.task("watch", function() {
-	watch('_src/scss/**/*.scss', function() { gulp.start('sass'); });
-	watch('_src/js/**/*.js', function() { gulp.start('js'); });
-});
+// watch
+function watch() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.styles.src, css);
+}
 
-// Compile all gulp tasks
-gulp.task('default', ['js', 'sass', 'watch']);
+var build = gulp.series(clean, gulp.parallel(watch, scripts, css));
+
+// declare tasks
+exports.clean = clean;
+exports.scripts = scripts;
+exports.styles = css;
+exports.watch = watch;
+exports.build = build;
+
+// run 'gulp' cli command
+exports.default = build;
