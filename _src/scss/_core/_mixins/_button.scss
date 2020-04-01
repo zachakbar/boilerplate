@@ -20,7 +20,6 @@
 	font-weight: $btn-font-weight;
 	text-decoration: $btn-text-decoration;
 	text-transform: $btn-text-transform;
-	@include letter-spacing(0);
 	line-height: $btn-line-height;
 	padding: $btn-padding;
 	display: inline-block;

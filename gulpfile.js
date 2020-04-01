@@ -1,30 +1,41 @@
 'use strict';
 
-// helpers 
+// helpers
 // https://github.com/gulpjs/gulp
 // https://www.webstoemp.com/blog/switching-to-gulp4/
 
-var bourbon = require('bourbon').includePaths;
-var del = require("del");
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var notify = require('gulp-notify');
-var plumber = require("gulp-plumber");
-var sass = require('gulp-sass');
-var terser = require('gulp-terser');
+var autoprefixer = require('gulp-autoprefixer'),
+		bourbon = require('bourbon').includePaths,
+		concat = require('gulp-concat'),
+		del = require("del"),
+		gracefulFs = require('graceful-fs'),
+		gulp = require('gulp'),
+		mapStream  = require('map-stream'),
+		notify = require('gulp-notify'),
+		plumber = require("gulp-plumber"),
+		sass = require('gulp-sass'),
+		terser = require('gulp-terser');
 
-// PATH objects
 var paths = {
-	scripts: {
-		src: ['_src/js/**/*.js'],
-		dest: ['assets/js/']
-	},
-	styles: {
-		src: ['_src/scss/**/*.scss'],
-		dest: ['assets/css/'],
-		inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
-	}
+			scripts: {
+				src: ['_src/js/**/*.js'],
+				dest: ['assets/js/']
+			},
+			styles: {
+				src: ['_src/scss/**/*.scss'],
+				dest: ['assets/css/'],
+				inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+			}
+		};
+
+// modified version of https://www.npmjs.com/package/gulp-touch
+const updateTimestamp = function (options) {
+	return mapStream(function (file, cb) {
+		if (file.isNull()) {
+			return cb(null, file);
+		}
+		return gracefulFs.utimes(file.path, new Date(), new Date(), cb.bind(null, null, file));
+	});
 };
 
 // Clean assets
@@ -38,18 +49,20 @@ function scripts() {
 		.pipe(plumber())
 		.pipe(concat('scripts.js'))
 		.pipe(terser())
-		.pipe(gulp.dest('assets/js/'))
+		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(notify({ message: 'JS complete!' }))
 }
 // css
 function css() {
 	return gulp.src(paths.styles.src)
+		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: 'compressed',
 			includePaths: paths.styles.inc
 		}).on('error', sass.logError))
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('assets/css/'))
+		.pipe(gulp.dest(paths.styles.dest))
+		.pipe(updateTimestamp())
 		.pipe(notify({ message: 'CSS complete!' }));
 }
 
@@ -68,5 +81,5 @@ exports.styles = css;
 exports.watch = watch;
 exports.build = build;
 
-// run 'gulp' cli command 
+// run 'gulp' cli command
 exports.default = build;
