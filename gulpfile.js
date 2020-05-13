@@ -40,7 +40,7 @@ const updateTimestamp = function (options) {
 
 // Clean assets
 function clean() {
-	return del('assets/js/scripts.js',paths.styles.dest);
+	return del(paths.scripts.dest,paths.styles.dest);
 }
 
 // js
