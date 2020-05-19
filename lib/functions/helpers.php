@@ -1,24 +1,14 @@
 <?php
 
-/* simple helper function to the svg path.
- * echos the svg
- *
- * @param string $svg: SVG file name
- */
-function the_svg( $svg ){
-	$svg_path = get_stylesheet_directory_uri().'/assets/svg/';
-	echo file_get_contents( $svg_path . sanitize_file_name( $svg . '.svg' ) );
-}
-
 /* simple helper function for the svg path.
- * returns the svg
  *
  * @param string $svg: SVG file name
  */
-function get_svg( $svg ){
+function svg_path( $svg ){
 	$svg_path = get_stylesheet_directory_uri().'/assets/svg/';
 	return file_get_contents( $svg_path . sanitize_file_name( $svg . '.svg' ) );
 }
+
 
 /* shell function to echo ACF image with srcset
  *
