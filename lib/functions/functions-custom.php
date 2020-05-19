@@ -8,8 +8,8 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 // Add JS
 function theme_scripts() {
-	wp_register_script('script', get_stylesheet_directory_uri() . '/assets/js/scripts.js', '', NULL, true);
-	wp_enqueue_script('script');
+	wp_register_script('scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array('jquery'), NULL, true);
+	wp_enqueue_script('scripts');
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

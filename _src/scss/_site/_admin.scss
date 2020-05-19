@@ -1,0 +1,150 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: lighten($link-color, 75%);
+	-webkit-text-size-adjust: 100%;
+	font-size: 10px;
+}
+body {
+	font-family: $base-font;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+	transition: all 200ms ease-in;
+}
+#wpbody {
+	font-family: $base-font;
+
+	.wrap {
+		margin: 10px 20px 0 2px;
+		padding: 0;
+		max-width: none;
+	}
+	input[type=checkbox], input[type=radio] {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
+	.widefat tfoot td, .widefat th, .widefat thead td { font-size: 1.4rem }
+	input[type=checkbox]:checked::before {
+    margin: -.1875em 0 0 -.25em;
+    height: 1.3125em;
+    width: 1.3125em;
+	}
+	input[type=radio]:checked::before {
+    width: .5em;
+    height: .5em;
+    margin: .1875em;
+	}
+}
+
+#editor .editor-styles-wrapper {
+	font-family: $base-font !important;
+
+	@import "../_elements/grid-columns";
+	@import "../_elements/typography";
+
+	section.page-block {
+		position: relative;
+
+		/* Responsive background/overlay
+		.section-bg {
+			&.left-top img { object-position: left top; }
+			&.left-center img { object-position: left center; }
+			&.left-bottom img { object-position: left bottom; }
+			&.right-top img { object-position: right top; }
+			&.right-center img { object-position: right center; }
+			&.right-bottom img { object-position: right bottom; }
+			&.center-top img { object-position: center top; }
+			&.center-center img { object-position: center center; }
+			&.center-bottom img { object-position: center bottom; }
+			img {
+				@include position(absolute, 0 null null 0);
+				@include size(100%);
+				object-fit: cover;
+			}
+			.overlay {
+				@include position(absolute, 0 null null 0);
+				@include size(100%);
+			}
+		}
+		*/
+	}
+
+	.wp-block {
+		&.block-editor-block-list__block {
+			ul { list-style-type: disc; }
+			ul ul { list-style-type: circle; }
+			ul ul ul { list-style-type: square; }
+			ol { list-style-type: decimal; }
+			ol ol { list-style-type: lower-alpha; }
+			ol ol ol { list-style-type: lower-roman; }
+			ul,
+			ol {
+				font-size: $base-font-size;
+				padding-left: $base-padding;
+				margin-bottom: $base-margin;
+				li {
+					line-height: $base-line-height;
+					margin-bottom: 1rem;
+				}
+				ul, ol {
+					margin-top: 1rem;
+					margin-bottom: 0;
+				}
+		  }
+		}
+	}
+
+	// import any blocks here that are not showing properly in admin
+
+	//@import "../blocks/BLOCK_NAME";
+}
+
+.acf-field {
+	&.is-extra-wide {
+		.acf-repeater{
+			table.acf-table {
+				tr.acf-row {
+					&:hover td.acf-row-handle .acf-icon { left: -0.8rem; }
+					td {
+						&.acf-fields { width: 100%; }
+						&.acf-row-handle {
+							&.order { padding: 0; }
+							&.remove {
+								border: 0;
+								padding: 0;
+								width: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+ *	Styles for ACF radio button icons
+ */
+.acf-radio-icons {
+	label {
+		&:hover span { border-color: $lightgrey; }
+		&.selected span { border-color: $blue; }
+		input { display: none; }
+		span {
+			border: solid 0.2rem rgba($lightgrey,0);
+			font-weight: bold;
+			text-align: center;
+			display: inline-block;
+			width: 5.2rem;
+			height: 5.2rem;
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+
+			&.flip {
+				transform: rotate(180deg);
+				transform-origin: center;
+			}
+		}
+	}
+}
