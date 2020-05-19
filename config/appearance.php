@@ -1,11 +1,6 @@
 <?php
 /**
- * Genesis Sample appearance settings.
- *
- * @package Genesis Sample
- * @author  StudioPress
- * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * Genesis Child appearance settings.
  */
 
 $genesis_child_default_colors = [
