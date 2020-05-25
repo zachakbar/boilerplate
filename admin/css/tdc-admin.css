@@ -1,0 +1,11 @@
+/* Image Radio Selector Styles */
+.image-radios ul.acf-radio-list li { margin-bottom: 10px }
+.image-radios ul.acf-radio-list li input[type="radio"] { display: none }
+.image-radios ul.acf-radio-list li label {
+	display: inline-block;
+  padding: 5px 5px 0;
+  border: 3px solid transparent;
+}
+.image-radios ul.acf-radio-list li label:hover { border-color: #f0f0f0 }
+.image-radios ul.acf-radio-list li label.selected { border-color: #007cba }
+.image-radios ul.acf-radio-list li label img { max-width: 100% }

@@ -1,0 +1,88 @@
+//------------------------------------------------------------------------
+// TEXT WITH MEDIA MODULE
+//------------------------------------------------------------------------
+
+// base
+@import "breakpoint";
+@import "bourbon";
+@import "../_core/variables";
+@import "../_core/_mixins/_clearfix.scss";
+//@import "../_core/_mixins/_section-padding.scss";
+@import "../_core/_mixins/_wrap.scss";
+
+.text-media {
+	//@include section_padding(3rem 0 6rem,4.5rem 0 8rem,6rem 0 10rem);
+
+	.section-content {
+		display: grid;
+		margin: 0 auto;
+		padding: 0;
+		align-items: center;
+		overflow: hidden;
+
+		@include breakpoint($lg){
+			grid-gap: 0 6rem;
+			grid-template-columns: 6fr 3fr;
+
+			&.media-right {
+				grid-template-columns: 3fr 6fr;
+				&.more-text { grid-template-columns: 6fr 5fr; }
+
+				article { grid-column: 1; grid-row: 1; }
+				.section-media { grid-column: 2; grid-row: 1; }
+			}
+			&.more-text { grid-template-columns: 5fr 6fr; }
+			&.split-even { grid-template-columns: 1fr 1fr; }
+		}
+	}
+
+	article {
+		width: 100%;
+		text-align: left;
+		margin: 0 auto 4rem;
+
+		@include breakpoint($lg){
+			margin-bottom: 0;
+		}
+
+		h1 {
+			color: $black;
+			margin: 2.5rem 0 1.5rem;
+		}
+	}
+
+	.section-media {
+		width: 100%;
+		position: relative;
+
+		&.top {
+			align-self: start;
+			padding-bottom: 6rem;
+		}
+		&.bottom {
+			align-self: end;
+		}
+		&.video-url, &.video-embed {
+			margin: 0 0 4rem;
+
+			@include breakpoint($lg){
+				margin: 0;
+			}
+		}
+
+		.preview-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

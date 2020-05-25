@@ -84,6 +84,30 @@
             "default_value": ""
         },
         {
+            "key": "field_5ec695c3ddaf9",
+            "label": "Background Theme Color",
+            "name": "background_theme_color",
+            "type": "theme_color",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c4b634af7c82",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "allow_custom": 0,
+            "font_size": 14
+        },
+        {
             "key": "field_5c4b63d8f7c85",
             "label": "Background Gradient Style",
             "name": "background_gradient_color",
@@ -136,5 +160,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1589389053
+    "modified": 1590072790
 }

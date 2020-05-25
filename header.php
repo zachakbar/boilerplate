@@ -23,19 +23,8 @@ $slug = $post->post_name;
 <body <?php body_class(); ?>>
 
 <div <?php echo $slug == 'home' ? '' : 'id="'.$slug.'"'; ?> class="container">
-	
-	<header role="banner">
-		<div class="wrap">
-			<?php the_custom_logo(); ?>
-			<nav id="main_menu" role="navigation">
-				<?php 
-					wp_nav_menu(
-						array(
-							'theme_location' => 'main',
-							'container_class' => 'menu',
-						)
-					);
-				?>
-			</nav>
-		</div>
-	</header>
+
+	<?php 
+		echo get_template_part( 'lib/template-parts/header-mobile', get_field( 'header_mobile_layout', 'option' ) ); 
+		echo get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); 
+	?>

@@ -1,5 +1,11 @@
-header[role="banner"] {
-	@include clearfix;
-	background-color: rgba($black,0.75);
-	padding: 2rem 0;
-}
+/************************************************************************/
+/* HEADER STYLES
+/************************************************************************/
+
+// Importing in all of the desktop header stylesheets
+@import "_headers/_header-desktop-default.scss";
+@import "_headers/_header-desktop-hamburger.scss";
+
+
+// Importing in all of the mobile header stylesheets
+@import "_headers/_header-mobile-default.scss";
