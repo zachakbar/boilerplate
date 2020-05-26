@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * Genesis child theme.
  *
  * Post type supports.
  *

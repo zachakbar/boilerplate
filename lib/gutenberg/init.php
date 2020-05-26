@@ -3,13 +3,13 @@
  * Gutenberg theme support.
  */
 
-add_action( 'wp_enqueue_scripts', 'genesis_child_enqueue_gutenberg_frontend_styles' );
+add_action( 'wp_enqueue_scripts', 'tdc_enqueue_gutenberg_frontend_styles' );
 /**
  * Enqueues Gutenberg front-end styles.
  *
  * @since 2.7.0
  */
-function genesis_child_enqueue_gutenberg_frontend_styles() {
+function tdc_enqueue_gutenberg_frontend_styles() {
 
 	wp_enqueue_style(
 		genesis_get_theme_handle() . '-gutenberg',
@@ -20,13 +20,13 @@ function genesis_child_enqueue_gutenberg_frontend_styles() {
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'genesis_child_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'tdc_block_editor_styles' );
 /**
  * Enqueues Gutenberg admin editor fonts and styles.
  *
  * @since 2.7.0
  */
-function genesis_child_block_editor_styles() {
+function tdc_block_editor_styles() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -39,7 +39,7 @@ function genesis_child_block_editor_styles() {
 
 }
 
-add_filter( 'body_class', 'genesis_child_blocks_body_classes' );
+add_filter( 'body_class', 'tdc_blocks_body_classes' );
 /**
  * Adds body classes to help with block styling.
  *
@@ -52,7 +52,7 @@ add_filter( 'body_class', 'genesis_child_blocks_body_classes' );
  * @param array $classes The original classes.
  * @return array The modified classes.
  */
-function genesis_child_blocks_body_classes( $classes ) {
+function tdc_blocks_body_classes( $classes ) {
 
 	if ( ! is_singular() || ! function_exists( 'has_blocks' ) || ! function_exists( 'parse_blocks' ) ) {
 		return $classes;
@@ -90,31 +90,31 @@ add_theme_support( 'align-wide' );
 // Make media embeds responsive.
 add_theme_support( 'responsive-embeds' );
 
-$genesis_child_appearance = genesis_get_config( 'appearance' );
+$tdc_appearance = genesis_get_config( 'appearance' );
 
 // Adds support for editor font sizes.
 add_theme_support(
 	'editor-font-sizes',
-	$genesis_child_appearance['editor-font-sizes']
+	$tdc_appearance['editor-font-sizes']
 );
 
 // Adds support for editor color palette.
 add_theme_support(
 	'editor-color-palette',
-	$genesis_child_appearance['editor-color-palette']
+	$tdc_appearance['editor-color-palette']
 );
 
 require_once get_stylesheet_directory() . '/lib/gutenberg/inline-styles.php';
 
-add_action( 'after_setup_theme', 'genesis_child_content_width', 0 );
+add_action( 'after_setup_theme', 'tdc_content_width', 0 );
 /**
  * Set content width to match the “wide” Gutenberg block width.
  */
-function genesis_child_content_width() {
+function tdc_content_width() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/924
-	$GLOBALS['content_width'] = apply_filters( 'genesis_child_content_width', $appearance['content-width'] );
+	$GLOBALS['content_width'] = apply_filters( 'tdc_content_width', $appearance['content-width'] );
 
 }

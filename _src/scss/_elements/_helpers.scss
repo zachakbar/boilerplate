@@ -2,15 +2,15 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	
+
 	&.pos-top-center{ background-position: top center; }
 	&.pos-top-left{ background-position: top left; }
 	&.pos-top-right{ background-position: top center; }
-	
+
 	&.pos-btm-center{ background-position: bottom center; }
 	&.pos-btm-left{ background-position: bottom left; }
 	&.pos-btm-right{ background-position: bottom center; }
-	
+
 	&.full{
 		width: 100%;
 		min-height: 100vh;
@@ -28,16 +28,16 @@
 p img{
 	display: block;
 	margin-bottom: 2rem;
-	
+
 	&.aligncenter { margin: 0 auto; }
-	
+
 	&.alignleft{
 		@include breakpoint($md){
 			float: left;
 			margin-right: $base-margin;
 		}
 	}
-	
+
 	&.alignright{
 		@include breakpoint($md){
 			float: right;
@@ -52,7 +52,7 @@ p img{
 	padding-bottom: 56.25%; // 16:9
 	//padding-bottom: 75%; // 4:3
 	position: relative;
-	
+
 	embed,
 	object,
 	iframe {

@@ -13,7 +13,7 @@
  * @param string $color A color in hex format.
  * @return string The hex code for the most contrasting color: dark grey or white.
  */
-function genesis_child_color_contrast( $color ) {
+function tdc_color_contrast( $color ) {
 
 	$hexcolor = str_replace( '#', '', $color );
 	$red      = hexdec( substr( $hexcolor, 0, 2 ) );
@@ -36,7 +36,7 @@ function genesis_child_color_contrast( $color ) {
  * @param int    $change The amount to reduce or increase brightness by.
  * @return string Hex code for the adjusted color brightness.
  */
-function genesis_child_color_brightness( $color, $change ) {
+function tdc_color_brightness( $color, $change ) {
 
 	$hexcolor = str_replace( '#', '', $color );
 

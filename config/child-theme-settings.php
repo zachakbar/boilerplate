@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample theme settings.
+ * Genesis child theme settings.
  *
  * Genesis 2.9+ updates these settings when themes are activated.
  *

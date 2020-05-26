@@ -5,7 +5,7 @@
  * This file adds the default theme settings to the Genesis Child Theme.
  */
 
-add_filter( 'simple_social_default_styles', 'genesis_child_social_default_styles' );
+add_filter( 'simple_social_default_styles', 'tdc_social_default_styles' );
 /**
  * Set Simple Social Icon defaults.
  *
@@ -14,7 +14,7 @@ add_filter( 'simple_social_default_styles', 'genesis_child_social_default_styles
  * @param array $defaults Social style defaults.
  * @return array Modified social style defaults.
  */
-function genesis_child_social_default_styles( $defaults ) {
+function tdc_social_default_styles( $defaults ) {
 
 	$args = genesis_get_config( 'simple-social-icons-settings' );
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * Genesis child theme.
  *
  * @package Genesis Sample
  * @author  StudioPress

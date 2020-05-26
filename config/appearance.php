@@ -3,42 +3,42 @@
  * Genesis Child appearance settings.
  */
 
-$genesis_child_default_colors = [
+$tdc_default_colors = [
 	'link'   => '#0073e5',
 	'accent' => '#0073e5',
 ];
 
-$genesis_child_link_color = get_theme_mod(
-	'genesis_child_link_color',
-	$genesis_child_default_colors['link']
+$tdc_link_color = get_theme_mod(
+	'tdc_link_color',
+	$tdc_default_colors['link']
 );
 
-$genesis_child_accent_color = get_theme_mod(
-	'genesis_child_accent_color',
-	$genesis_child_default_colors['accent']
+$tdc_accent_color = get_theme_mod(
+	'tdc_accent_color',
+	$tdc_default_colors['accent']
 );
 
-$genesis_child_link_color_contrast   = genesis_child_color_contrast( $genesis_child_link_color );
-$genesis_child_link_color_brightness = genesis_child_color_brightness( $genesis_child_link_color, 35 );
+$tdc_link_color_contrast   = tdc_color_contrast( $tdc_link_color );
+$tdc_link_color_brightness = tdc_color_brightness( $tdc_link_color, 35 );
 
 return [
 	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
 	'content-width'        => 1062,
-	'button-bg'            => $genesis_child_link_color,
-	'button-color'         => $genesis_child_link_color_contrast,
-	'button-outline-hover' => $genesis_child_link_color_brightness,
-	'link-color'           => $genesis_child_link_color,
-	'default-colors'       => $genesis_child_default_colors,
+	'button-bg'            => $tdc_link_color,
+	'button-color'         => $tdc_link_color_contrast,
+	'button-outline-hover' => $tdc_link_color_brightness,
+	'link-color'           => $tdc_link_color,
+	'default-colors'       => $tdc_default_colors,
 	'editor-color-palette' => [
 		[
 			'name'  => __( 'Custom color', 'genesis-sample' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
 			'slug'  => 'theme-primary',
-			'color' => $genesis_child_link_color,
+			'color' => $tdc_link_color,
 		],
 		[
 			'name'  => __( 'Accent color', 'genesis-sample' ),
 			'slug'  => 'theme-secondary',
-			'color' => $genesis_child_accent_color,
+			'color' => $tdc_accent_color,
 		],
 	],
 	'editor-font-sizes'    => [

@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample Simple Social Icons default settings.
+ * Simple Social Icons default settings.
  *
  * @package Genesis Sample
  * @author  StudioPress
