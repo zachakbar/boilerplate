@@ -3,13 +3,13 @@
  * Adds front-end inline styles for the custom Gutenberg color palette.
  */
 
-add_action( 'wp_enqueue_scripts', 'genesis_child_custom_gutenberg_css' );
+add_action( 'wp_enqueue_scripts', 'tdc_custom_gutenberg_css' );
 /**
  * Outputs front-end inline styles based on colors declared in config/appearance.php.
  *
  * @since 2.9.0
  */
-function genesis_child_custom_gutenberg_css() {
+function tdc_custom_gutenberg_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -38,14 +38,14 @@ function genesis_child_custom_gutenberg_css() {
 }
 CSS;
 
-	$css .= genesis_child_inline_font_sizes();
-	$css .= genesis_child_inline_color_palette();
+	$css .= tdc_inline_font_sizes();
+	$css .= tdc_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'genesis_child_custom_gutenberg_admin_css' );
+add_action( 'enqueue_block_editor_assets', 'tdc_custom_gutenberg_admin_css' );
 /**
  * Outputs back-end inline styles based on colors declared in config/appearance.php.
  *
@@ -54,7 +54,7 @@ add_action( 'enqueue_block_editor_assets', 'genesis_child_custom_gutenberg_admin
  *
  * @since 2.9.0
  */
-function genesis_child_custom_gutenberg_admin_css() {
+function tdc_custom_gutenberg_admin_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
@@ -80,7 +80,7 @@ function genesis_child_custom_gutenberg_admin_css() {
 }
 CSS;
 
-	$css .= genesis_child_editor_inline_color_palette();
+	$css .= tdc_editor_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg-fonts', $css );
 
@@ -93,7 +93,7 @@ CSS;
  *
  * @return string The CSS for editor font sizes if theme support was declared.
  */
-function genesis_child_inline_font_sizes() {
+function tdc_inline_font_sizes() {
 
 	$css               = '';
 	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
@@ -121,7 +121,7 @@ CSS;
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
-function genesis_child_inline_color_palette() {
+function tdc_inline_color_palette() {
 
 	$css                  = '';
 	$appearance           = genesis_get_config( 'appearance' );
@@ -153,7 +153,7 @@ CSS;
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
-function genesis_child_editor_inline_color_palette() {
+function tdc_editor_inline_color_palette() {
 
 	$css                  = '';
 	$appearance           = genesis_get_config( 'appearance' );
