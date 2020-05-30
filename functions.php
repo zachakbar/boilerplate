@@ -12,6 +12,9 @@ require_once get_template_directory() . '/lib/init.php';
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
+// Add Classes
+require_once get_stylesheet_directory() . '/lib/classes/class-duplicate-post.php';
+
 // Add Custom functions
 require_once get_stylesheet_directory() . '/lib/functions/acf-blocks-init.php';
 require_once get_stylesheet_directory() . '/lib/functions/acf-functions.php';
