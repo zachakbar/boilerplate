@@ -24,7 +24,16 @@ $slug = $post->post_name;
 
 <div <?php echo $slug == 'home' ? '' : 'id="'.$slug.'"'; ?> class="container">
 
-	<?php 
-		echo get_template_part( 'lib/template-parts/header-mobile', get_field( 'header_mobile_layout', 'option' ) ); 
-		echo get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); 
-	?>
+	<header role="banner" class="desktop-<?php the_field( 'header_desktop_layout', 'option' ); ?> mobile-<?php the_field( 'header_mobile_layout', 'option' ); ?> <?php the_field( 'stickyscroll_behavior', 'option' ); ?>">
+		<?php 
+			if(get_field( 'include_top_bar', 'option' )):
+				get_template_part( 'lib/template-parts/header', 'top-bar' );
+			endif;
+		?>
+		<div class="wrap">
+			<?php
+				get_template_part( 'lib/template-parts/header-mobile', get_field( 'header_mobile_layout', 'option' ) ); 
+				get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); 
+			?>
+		</div>
+	</header>

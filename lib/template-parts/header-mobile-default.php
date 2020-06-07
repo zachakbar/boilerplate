@@ -1,4 +1,4 @@
-<nav id="mobile_main_menu" class="main-menu-mobile" role="navigation">
+<nav id="mobile_main_menu" class="main-menu-mobile <?php the_field( 'stickyscroll_behavior', 'option' ); ?>" role="navigation">
 	<?php 
 		wp_nav_menu(
 			array(

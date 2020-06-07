@@ -1,4 +1,4 @@
-<header role="banner" class="desktop centered stacked">
+<header role="banner" class="desktop centered stacked <?php the_field( 'stickyscroll_behavior', 'option' ); ?>">
 	<div class="wrap">
 		<a class="logo" href="/"><?php echo wp_get_attachment_image( get_field( 'desktop_logo', 'option' ), 'full' ) ?></a>
 	</div>
