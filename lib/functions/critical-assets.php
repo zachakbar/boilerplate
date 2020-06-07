@@ -75,7 +75,7 @@ function update_style_asset_url( $haystack ) {
 		$styles_output .= "header[role='banner']{background-color:".$header_styles['background_color'].";}header[role='banner'] .main-menu ul li a{color:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li a:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle .hamburger-inner,header[role='banner'] .menu-toggle .hamburger-inner::before,header[role='banner'] .menu-toggle .hamburger-inner::after{background:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle:hover .hamburger-inner,header[role='banner'] .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .menu-toggle:hover .hamburger-inner::after{background:".$header_styles['text_hover_color'].";}";
 		
 		if(isset($top_bar_styles)):
-			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";}#top_bar a{color:".$top_bar_styles['text_color'].";}#top_bar a:hover{color:".$top_bar_styles['text_hover_color'].";}";
+			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";border-color:".$top_bar_styles['text_color'].";}#top_bar a{color:".$top_bar_styles['text_color'].";}#top_bar a:hover{color:".$top_bar_styles['text_hover_color'].";}";
 		endif;
 		
 		$styles_output .= "</style>";
