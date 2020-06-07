@@ -313,22 +313,34 @@
             "sub_fields": [
                 {
                     "key": "field_5a77590624898",
-                    "label": "Network Name",
-                    "name": "name",
-                    "type": "text",
+                    "label": "Social Network",
+                    "name": "social_network",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "35",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "choices": {
+                        "facebook": "Facebook",
+                        "instagram": "Instagram",
+                        "linkedin": "LinkedIn",
+                        "pinterest": "Pinterest",
+                        "snapchat-ghost": "Snapchat",
+                        "twitter": "Twitter",
+                        "vimeo": "Vimeo",
+                        "youtube": "YouTube"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5a77592824899",
@@ -339,36 +351,12 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "65",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "placeholder": ""
-                },
-                {
-                    "key": "field_5a8b3f0e0ff88",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         },
@@ -425,10 +413,10 @@
         },
         {
             "key": "field_5a9f2354d92ae",
-            "label": "Header",
+            "label": "Head",
             "name": "header_scripts",
             "type": "textarea",
-            "instructions": "Add any additional <strong> header<\/strong> scripts here.",
+            "instructions": "These scripts will be added to the <strong>&lt;head&gt;<\/strong> tag at the top of every page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -447,7 +435,7 @@
             "label": "Body",
             "name": "body_scripts",
             "type": "textarea",
-            "instructions": "Add any additional <strong> body<\/strong> scripts here.",
+            "instructions": "These scripts will be added right after the opening <strong>&lt;body&gt;<\/strong> tag at the top of every page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -466,7 +454,7 @@
             "label": "Footer",
             "name": "footer_scripts",
             "type": "textarea",
-            "instructions": "Add any additional <strong> footer scripts here.",
+            "instructions": "These scripts will be added to the site's <strong>footer<\/strong> file at the bottom of every page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -513,5 +501,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589903748
+    "modified": 1591503881
 }

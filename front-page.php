@@ -5,6 +5,12 @@
  */
 get_header();
 
-get_template_part( '/lib/template-parts/page', 'layouts' );
+if(have_posts()):
+	while(have_posts()): the_post();
+
+		get_template_part( '/lib/template-parts/page', 'content' );
+		
+	endwhile;
+endif;
 
 get_footer();

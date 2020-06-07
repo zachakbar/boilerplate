@@ -45,7 +45,7 @@
         {
             "key": "field_5ebc2ad6beb11",
             "label": "Mobile Logo",
-            "name": "desktop_logo",
+            "name": "mobile_logo",
             "type": "image",
             "instructions": "(if none selected then desktop logo will be used)",
             "required": 0,
@@ -140,17 +140,15 @@
                 "id": ""
             },
             "choices": {
-                "default": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-default.png\" alt=\"Header Default\" \/>",
-                "with-social": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-with-social.png\" alt=\"Default with Social Icons\" \/>",
-                "hidden-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-right.png\" alt=\"Hidden Nav Right\" \/>",
-                "hidden-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-left.png\" alt=\"Hidden Nav Left\" \/>",
-                "centered-logo": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo.png\" alt=\"Centered Logo\" \/>",
-                "centered-logo-stacked": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo-stacked.png\" alt=\"Centered Logo Stacked\" \/>"
+                "menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-right.png\" alt=\"Nav Right\" \/>",
+                "centered-menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-right.png\" alt=\"Centered Nav Right\" \/>",
+                "menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-left.png\" alt=\"Nav Left\" \/>",
+                "centered-menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-left.png\" alt=\"Centered Nav Left\" \/>"
             },
             "allow_null": 0,
             "other_choice": 0,
             "default_value": "",
-            "layout": "vertical",
+            "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
         },
@@ -188,6 +186,396 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5edbdb728654a",
+            "label": "Top Bar Left",
+            "name": "top_bar_left",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5edbdb80d54e2": {
+                    "key": "layout_5edbdb80d54e2",
+                    "name": "social_icons",
+                    "label": "Social Icons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdb8c8654b",
+                            "label": "Social Icons",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the social links setup in the Social tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707e": {
+                    "key": "layout_5edbdc76e707e",
+                    "name": "phone_number",
+                    "label": "Phone Number",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc76e707f",
+                            "label": "Phone Number",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Phone Number setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707c": {
+                    "key": "layout_5edbdc76e707c",
+                    "name": "email_address",
+                    "label": "Email Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc76e707d",
+                            "label": "Email Address",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Email setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbc18654c": {
+                    "key": "layout_5edbdbc18654c",
+                    "name": "menu",
+                    "label": "Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdbc98654d",
+                            "label": "Select a Menu",
+                            "name": "select_menu",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-bar-1": "Top Bar 1",
+                                "top-bar-2": "Top Bar 2"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbff8654e": {
+                    "key": "layout_5edbdbff8654e",
+                    "name": "cta_button",
+                    "label": "CTA Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc0b8654f",
+                            "label": "Top Bar CTA",
+                            "name": "top_bar_cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1196b4b9096"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5edbdc3786550": {
+                    "key": "layout_5edbdc3786550",
+                    "name": "custom",
+                    "label": "Custom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc4386551",
+                            "label": "Top Bar Content",
+                            "name": "top_bar_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Top Bar Content",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5edbdcc83905b",
+            "label": "Top Bar Right",
+            "name": "top_bar_right",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5edbdb80d54e2": {
+                    "key": "layout_5edbdb80d54e2",
+                    "name": "social_icons",
+                    "label": "Social Icons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905c",
+                            "label": "Social Icons",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the social links setup in the Social tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707e": {
+                    "key": "layout_5edbdc76e707e",
+                    "name": "phone_number",
+                    "label": "Phone Number",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905d",
+                            "label": "Phone Number",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Phone Number setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707c": {
+                    "key": "layout_5edbdc76e707c",
+                    "name": "email_address",
+                    "label": "Email Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905e",
+                            "label": "Email Address",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Email setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbc18654c": {
+                    "key": "layout_5edbdbc18654c",
+                    "name": "menu",
+                    "label": "Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905f",
+                            "label": "Select a Menu",
+                            "name": "select_menu",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-bar-1": "Top Bar 1",
+                                "top-bar-2": "Top Bar 2"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbff8654e": {
+                    "key": "layout_5edbdbff8654e",
+                    "name": "cta_button",
+                    "label": "CTA Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc839060",
+                            "label": "Top Bar CTA",
+                            "name": "top_bar_cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1196b4b9096"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5edbdc3786550": {
+                    "key": "layout_5edbdc3786550",
+                    "name": "custom",
+                    "label": "Custom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc839061",
+                            "label": "Top Bar Content",
+                            "name": "top_bar_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Top Bar Content",
+            "min": "",
+            "max": ""
         },
         {
             "key": "field_5ebc7d95d83de",
@@ -295,7 +683,7 @@
                     "label": "Background Color",
                     "name": "background_color",
                     "type": "color_picker",
-                    "instructions": "(leave empty for transparent header)",
+                    "instructions": "(leave empty for transparent top bar)",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -303,7 +691,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#fff"
+                    "default_value": ""
                 },
                 {
                     "key": "field_5ec7ff7233b98",
@@ -334,6 +722,149 @@
                         "id": ""
                     },
                     "default_value": "#000"
+                }
+            ]
+        },
+        {
+            "key": "field_5edab96f9f298",
+            "label": "Mobile Navigation Styles",
+            "name": "mobile_navigation_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5edab96f9f299",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5edab96f9f29a",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5edab96f9f29b",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5edab9899f29c",
+                    "label": "Navigation Animation",
+                    "name": "navigation_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fade-in": "Fade In",
+                        "fade-up": "Slide Up",
+                        "fade-down": "Slide Down",
+                        "fade-left": "Slide Left",
+                        "fade-right": "Slide Right",
+                        "zoom-in": "Zoom In",
+                        "zoom-out": "Zoom Out"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5edabb5e9f29d",
+                    "label": "Animation Duration",
+                    "name": "animation_duration",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 3,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "seconds",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1
+                },
+                {
+                    "key": "field_5edabb9b9f29f",
+                    "label": "Animation Easing",
+                    "name": "animation_easing",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "linear": "Linear",
+                        "ease": "Ease",
+                        "ease-in": "Ease In",
+                        "ease-out": "Ease Out",
+                        "ease-in-out": "Ease In Out",
+                        "step-start": "Step Start",
+                        "step-end": "Step End"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         },
@@ -474,5 +1005,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590446214
+    "modified": 1591546391
 }

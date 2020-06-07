@@ -5,13 +5,7 @@ if(have_rows( 'layouts' )):
 
 		$layout = get_row_layout();
 		
-		switch($layout) {
-			
-			case 'LAYOUT_NAME':
-				get_template_part( 'template-parts/content', 'LAYOUT_NAME' );
-				break;
-			
-		}
+		get_template_part( 'lib/template-parts/content', $layout );
 
 	endwhile;
 endif;

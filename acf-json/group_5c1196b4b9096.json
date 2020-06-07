@@ -40,27 +40,17 @@
                     "key": "field_5c1196b4d57e9",
                     "label": "Button Color",
                     "name": "button_color",
-                    "type": "select",
+                    "type": "theme_color",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "40",
+                        "width": "100",
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "orange": "Orange",
-                        "blue": "Blue",
-                        "white": "White"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
+                    "allow_custom": 0,
+                    "font_size": 14
                 },
                 {
                     "key": "field_5df83d7f26613",
@@ -71,7 +61,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -95,17 +85,18 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
                     "choices": {
-                        "regular": "Normal",
+                        "small": "Small",
+                        "normal": "Normal",
                         "large": "Large"
                     },
                     "allow_null": 0,
                     "other_choice": 0,
-                    "default_value": "",
+                    "default_value": "normal",
                     "layout": "horizontal",
                     "return_format": "value",
                     "save_other_choice": 0
@@ -279,5 +270,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1589389047
+    "modified": 1591502692
 }

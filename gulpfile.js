@@ -41,7 +41,6 @@ var paths = {
 	},
 	styles: {
 		src: [
-			'_src/scss/admin.scss',
 			'_src/scss/critical.scss',
 			'_src/scss/styles.scss',
 			'_src/scss/base/*.scss',
@@ -50,6 +49,13 @@ var paths = {
 			'_src/scss/_site/**/*.scss'
 		],
 		dest: ['assets/css/'],
+		inc: [bourbon,breakpoint]
+	},
+	adminstyles: {
+		src: [
+			'_src/scss/tdc-admin.scss',
+		],
+		dest: ['admin/css/'],
 		inc: [bourbon,breakpoint]
 	},
 	blockscss: {
@@ -96,6 +102,19 @@ function css() {
 		.pipe(notify({ message: 'CSS complete!' }));
 }
 
+// admin css
+function admincss() {
+	return gulp.src(paths.adminstyles.src)
+		.pipe(sass({
+			outputStyle: 'compressed',
+			includePaths: paths.adminstyles.inc
+		}).on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest(paths.adminstyles.dest))
+		.pipe(updateTimestamp())
+		.pipe(notify({ message: 'Admin CSS complete!' }));
+}
+
 // blocks css
 function blockscss() {
 	return gulp.src(paths.blockscss.src)
@@ -113,16 +132,18 @@ function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.blocksjs.src, blocksjs);
   gulp.watch(paths.styles.src, css);
+  gulp.watch(paths.adminstyles.src, admincss);
   gulp.watch(paths.blockscss.src, blockscss);
 }
 
-var build = gulp.series(clean, gulp.parallel(watch, scripts, blocksjs, css, blockscss));
+var build = gulp.series(clean, gulp.parallel(watch, scripts, blocksjs, css, admincss, blockscss));
 
 // declare tasks
 exports.clean = clean;
 exports.scripts = scripts;
 exports.blocksjs = blocksjs;
 exports.styles = css;
+exports.adminstyles = admincss;
 exports.blockscss = blockscss;
 exports.watch = watch;
 exports.build = build;
