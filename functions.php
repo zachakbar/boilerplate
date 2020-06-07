@@ -60,6 +60,7 @@ add_action( 'after_setup_theme', 'tdc_theme_setup' );
 function tdc_theme_assets() {
 	wp_enqueue_style( 'tdc-styles', get_stylesheet_directory_uri() . '/assets/css/styles.css' );
 	
+	wp_enqueue_script( 'tdc-fontawesome', 'https://kit.fontawesome.com/8aba9c53ef.js', null, '5.13.0' );
 	wp_enqueue_script( 'tdc-script', get_template_directory_uri() . '/assets/js/scripts.js', '', NULL, true );
 }
 add_action( 'wp_enqueue_scripts', 'tdc_theme_assets' );

@@ -4,8 +4,27 @@
 
 // Importing in all of the desktop header stylesheets
 @import "_headers/_header-desktop-default.scss";
-@import "_headers/_header-desktop-hamburger.scss";
+//@import "_headers/_header-desktop-hamburger.scss";
 
 
 // Importing in all of the mobile header stylesheets
 @import "_headers/_header-mobile-default.scss";
+
+
+// Importing top bar styles
+@import "_headers/_header-top-bar.scss";
+
+
+header[role="banner"]{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	&.sticky {
+		position: fixed;
+	}
+}
+body.admin-bar header[role="banner"]{
+	top: 3.2rem;
+}

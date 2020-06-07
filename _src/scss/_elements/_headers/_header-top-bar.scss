@@ -1,0 +1,46 @@
+/************************************************************************/
+/* TOP BAR STYLES
+/************************************************************************/
+
+#top_bar {
+	display: none;
+	padding: 0.5rem 0;
+	font-size: 1.2rem;
+	line-height: 1;
+	border-bottom: 1px solid;
+	height: 3.2rem;
+	
+	@include breakpoint($md-lg){ display: block }
+	
+	.wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 4rem;
+		align-content: center;
+	}
+	.top-bar-left {
+		text-align: left;
+		
+		.top-bar-section { margin-right: 2rem; }
+	}
+	.top-bar-right {
+		text-align: right;
+		
+		.top-bar-section { margin-left: 2rem; }
+	}
+	.top-bar-section {
+		display: inline-block;
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			
+			li {
+				display: inline-block;
+				padding: 0.3rem;
+				
+				i { font-size: 1.6rem }
+			}
+		}
+	}
+}
