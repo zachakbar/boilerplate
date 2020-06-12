@@ -32,11 +32,17 @@
 								break;
 							
 							case 'menu':
-								get_template_part( 'lib/template-parts/nav', 'social-icons' );
+								wp_nav_menu(
+									array(
+										'theme_location' => get_sub_field( 'select_menu' ),
+										'container_class' => 'top-bar-menu',
+										'depth' => 1
+									)
+								);
 								break;
 							
 							case 'cta_button':
-								get_template_part( 'lib/template-parts/nav', 'social-icons' );
+								dynamic_button( 'top_bar_cta' );
 								break;
 							
 							case 'custom':
@@ -87,7 +93,7 @@
 								break;
 							
 							case 'cta_button':
-								get_template_part( 'lib/template-parts/nav', 'social-icons' );
+								dynamic_button( 'top_bar_cta' );
 								break;
 							
 							case 'custom':

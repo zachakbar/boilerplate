@@ -339,8 +339,8 @@
                             "clone": [
                                 "group_5c1196b4b9096"
                             ],
-                            "display": "seamless",
-                            "layout": "",
+                            "display": "group",
+                            "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
                         }
@@ -534,7 +534,7 @@
                             "clone": [
                                 "group_5c1196b4b9096"
                             ],
-                            "display": "seamless",
+                            "display": "group",
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
@@ -1005,5 +1005,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591546391
+    "modified": 1591594466
 }

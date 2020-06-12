@@ -8,15 +8,14 @@
 	font-size: 1.2rem;
 	line-height: 1;
 	border-bottom: 1px solid;
-	height: 3.2rem;
+	height: 4.2rem;
 	
 	@include breakpoint($md-lg){ display: block }
 	
-	.wrap {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 4rem;
-		align-content: center;
+	.top-bar-left, .top-bar-right {
+		display: flex;
+		align-items: center;
+		height: 100%;
 	}
 	.top-bar-left {
 		text-align: left;
@@ -41,6 +40,12 @@
 				
 				i { font-size: 1.6rem }
 			}
+		}
+		p {
+			margin: 0;
+			font-size: 1.2rem;
+			line-height: 1;
+			font-weight: 700;
 		}
 	}
 }

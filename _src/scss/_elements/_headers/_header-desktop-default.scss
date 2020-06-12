@@ -41,6 +41,7 @@ header[role="banner"] {
 		position: relative;
 		align-items: center;
 		padding: 0 1.5rem;
+		height: 100%;
 	}
 	
 	.logo {
@@ -130,6 +131,8 @@ header[role="banner"] {
 						font-weight: 600;
 					}
 					
+					/*
+					// uncomment to add underline effect to nav
 					&:after {
 						content: "";
 						display: block;
@@ -142,6 +145,44 @@ header[role="banner"] {
 						bottom: 0;
 						margin: 0 auto;
 						transition: width 0.2s;
+					}
+					*/
+				}
+				
+				// sub-menu styles
+				&.menu-item-has-children {
+					&:after {
+						
+					}
+					&:hover {
+						>.sub-menu {
+							transform: rotateX(0deg);
+							opacity: 1;
+						}
+					}
+				}
+				.sub-menu {
+					position: absolute;
+					top: 100%;
+					opacity: 0;
+					//background: $white;
+					display: block;
+					padding: 0;
+					transition: all 0.3s ease-in-out;
+					transform-origin: top;
+					transform: rotateX(-90deg);
+					
+					&:hover { transform: rotateX(0deg); opacity: 1; }
+					
+					li { padding: 0; text-align: left; }
+					a { white-space: nowrap; padding: 1.3rem 1.5rem 1.1rem; }
+					
+					.sub-menu {
+						left: 100%;
+						top: 0;
+						opacity: 0;
+						transform-origin: top;
+						transform: rotateX(-90deg);
 					}
 				}
 			}

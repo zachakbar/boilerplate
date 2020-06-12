@@ -30,55 +30,6 @@ function section_background() {
 	endif;
 }
 
-// buttons
-// get the button acf fields
-function get_button_fields() {
-	global $post;
-	$post_id = $post->ID;
-	
-	$btn = array();
-	
-	$button_styles = get_sub_field( 'button_styles' );
-	$button_color = $button_styles['button_color'];
-	$background_type = $button_styles['background_type'];
-	$button_size = $button_styles['button_size'];
-	
-	$button_text = get_sub_field( 'button_text' );
-	
-	$button_link = get_sub_field( 'button_link' );
-	$button_link_type = $button_link['button_link_type'];
-	$button_target = $button_link['button_link_target'];
-	$button_link = $button_link["button_link_$button_link_type"];
-	if($button_link_type == "internal"):
-		$button_link = get_permalink( $button_link->ID );
-	endif;
-	
-	$button_class = "btn-$button_color btn-$background_type btn-$button_size";
-	
-	$btn['link'] = esc_url($button_link);
-	$btn['class'] = esc_attr($button_class);
-	$btn['target'] = esc_attr($button_target);
-	$btn['text'] = esc_html($button_text);
-	
-	return $btn;
-}
-
-// echo single CTA button
-function dynamic_button() {
-	$btn = get_button_fields();
-	echo "<a href='{$btn['link']}' class='btn {$btn['class']}' target='{$btn['target']}'>{$btn['text']}</a>";
-}
-
-// echo multiple CTA buttons
-function dynamic_buttons( $field_name, $post_id ) {
-	if( have_rows( $field_name ) ):
-		while( have_rows( $field_name ) ): the_row();
-			$btn = get_button_fields( $post_id );
-			echo "<a href='{$btn['link']}' class='btn {$btn['class']}' target='{$btn['target']}'>{$btn['text']}</a>";
-		endwhile;
-	endif;
-}
-
 // Simple Link
 // return the simple link acf fields in an array
 function get_simple_link_fields() {
