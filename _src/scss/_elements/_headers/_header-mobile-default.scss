@@ -2,13 +2,6 @@
 /* HEADER STYLES
 /************************************************************************/
 
-header[role="banner"].mobile {
-	display: block;
-	
-	@include breakpoint($md-lg){
-		display: none;
-	}
-}
 .main-menu-mobile {
 	@include position(fixed, -115% null null 0);
 	transition: top 0.5s ease-in-out;

@@ -6,12 +6,6 @@ header[role="banner"] {
 	position: relative;
 	z-index: 10;
 	
-	&.desktop {
-		display: none;
-		
-		@include breakpoint($md-lg){ display: block }
-	}
-	
 	&.left-aligned {
 		.wrap { justify-content: flex-start }
 	}
@@ -33,17 +27,6 @@ header[role="banner"] {
 			}
 		}
 	}
-	
-	.wrap {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		position: relative;
-		align-items: center;
-		padding: 0 1.5rem;
-		height: 100%;
-	}
-	
 	.logo {
 		display: flex;
     justify-content: center;

@@ -62,26 +62,29 @@ add_action( 'wp_footer', 'custom_footer_scripts' );
 // get info from ACF fields to return to output function
 function get_button_fields( $btn_field ) {
 
-	$cta_button = get_field( $btn_field );
+	$cta_button = get_field( $btn_field ) ? get_field( $btn_field ) : get_sub_field( $btn_field );
 	$btn = array();
+	
+	$btn_text = $cta_button['button_text'];
+	$btn_styles = $cta_button['button_styles'];
+	$btn_link = $cta_button['button_link'];
 
-	$btn_color = isset($cta_button['button_color']) ? $cta_button['button_color'] : "";
-	$btn_style = $cta_button['button_style'] == "outline" ? "-outline" : "";
-	$btn_size = isset($cta_button['button_size']) ? $cta_button['button_size'] : "";
-	$btn['class'] = $cta_button['button_style'] == "text" ? "text-link" : "btn btn-".$btn_color.$btn_style." ".$btn_size;
-	$btn['class'] .= " custom-tracking";
+	$btn_style = isset($btn_styles['background_type']) ? $btn_styles['background_type'] : "";
+	$btn_color = isset($btn_styles['button_color']) ? $btn_styles['button_color'] : "";
+	$btn_size = isset($btn_styles['button_size']) ? $btn_styles['button_size'] : "";
+	
+	if($btn_style == "solid"):
+		$btn_color = "has-$btn_color-background-color has-$btn_color-border-color";
+	elseif($btn_style == "outline"):
+		$btn_color = "has-$btn_color-color has-$btn_color-border-color";
+	endif;
+	
+	$btn['class'] = "btn $btn_color $btn_style $btn_size";
 	$btn['modal'] = "";
 
-	$btn_text = $cta_button['button_text'];
-
-	$btn['ga_tracking'] = "";
-	if($cta_button['add_ga_tracking'] == 1):
-		$btn['ga_tracking'] = "data-category='".$cta_button['ga_tracking'][0]['event_category']."' data-action='".$cta_button['ga_tracking'][0]['event_action']."' data-label='".$cta_button['ga_tracking'][0]['event_label']."'";
-	endif;
-
-	$btn_link_type = $cta_button['button_link_type'];
-	$btn_link = $cta_button["button_link_$btn_link_type"];
-	$btn_target = $cta_button['button_link_target'];
+	$btn_link_type = $btn_link['button_link_type'];
+	$btn_target = $btn_link['button_link_target'];
+	$btn_link = $btn_link["button_link_$btn_link_type"];
 
 	if($btn_link_type == "internal"):
 		if(is_array($btn_link)):
@@ -110,7 +113,7 @@ function get_button_fields( $btn_field ) {
 // echo single CTA button
 function dynamic_button( $btn_field ) {
 	$btn = get_button_fields( $btn_field );
-	echo "<a href='{$btn['link']}' {$btn['ga_tracking']} class='{$btn['class']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
+	echo "<a href='{$btn['link']}' class='{$btn['class']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
 
 	if(!empty($btn['video'])):
 		echo $btn['video'];

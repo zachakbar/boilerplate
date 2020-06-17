@@ -30,10 +30,10 @@ $slug = $post->post_name;
 				get_template_part( 'lib/template-parts/header', 'top-bar' );
 			endif;
 		?>
-		<div class="wrap">
-			<?php
-				get_template_part( 'lib/template-parts/header-mobile', get_field( 'header_mobile_layout', 'option' ) ); 
-				get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); 
-			?>
+		<div class="mobile wrap">
+			<?php get_template_part( 'lib/template-parts/header-mobile', 'default' ); ?>
+		</div>
+		<div class="desktop wrap">
+			<?php get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); ?>
 		</div>
 	</header>

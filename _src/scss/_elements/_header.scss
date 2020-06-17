@@ -40,6 +40,28 @@ header[role="banner"]{
 			transition: all 0.5s ease-in-out;
 		}
 	}
+	
+	.wrap {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		position: relative;
+		align-items: center;
+		padding: 0 1.5rem;
+		height: 100%;
+		
+		&.mobile {
+			display: flex;
+			
+			@include breakpoint($md-lg){ display: none;	}
+		}
+		&.desktop {
+			display: none;
+			
+			@include breakpoint($md-lg){ display: flex }
+		}
+	}
+	
 }
 body.admin-bar header[role="banner"]{
 	top: 3.2rem;
