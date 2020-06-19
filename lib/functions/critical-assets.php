@@ -58,7 +58,9 @@ function update_style_asset_url( $haystack ) {
  function theme_options_css(){
 		$styles_output = "<style type='text/css'>";
 		$theme_colors = get_field( 'theme_colors', 'option' );
-		$header_styles = get_field( 'header_styles', 'option' );
+		$header_styles = get_field( 'desktop_header_styles', 'option' );
+		$mobile_header_styles = get_field( 'mobile_header_styles', 'option' );
+		$mobile_nav_styles = get_field( 'mobile_navigation_styles', 'option' );
 		if(get_field( 'include_top_bar', 'option' )):
 			$top_bar_styles = get_field( 'top_bar_styles', 'option' );
 		endif;
@@ -72,8 +74,20 @@ function update_style_asset_url( $haystack ) {
 			endif;
 		endforeach;
 		
+		// add desktop header styles
 		$styles_output .= "header[role='banner']{background-color:".$header_styles['background_color'].";}header[role='banner'] .main-menu ul li a{color:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li a:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li:hover > a{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu{background:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li .sub-menu a{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover{background:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover > a{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle .hamburger-inner,header[role='banner'] .menu-toggle .hamburger-inner::before,header[role='banner'] .menu-toggle .hamburger-inner::after{background:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle:hover .hamburger-inner,header[role='banner'] .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .menu-toggle:hover .hamburger-inner::after{background:".$header_styles['text_hover_color'].";}";
 		
+		// add mobile header styles
+		$styles_output .= "header[role='banner'] .mobile{background-color:".$mobile_header_styles['background_color'].";color:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile a{color:".$mobile_header_styles['text_color']."}header[role='banner'] .mobile a:hover{color:".$mobile_header_styles['text_hover_color']."}header[role='banner'] .mobile .menu-toggle{color:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile .menu-toggle .hamburger-inner,header[role='banner'] .mobile .menu-toggle .hamburger-inner::before,header[role='banner'] .mobile .menu-toggle .hamburger-inner::after{background:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile .menu-toggle:hover{color:".$mobile_header_styles['text_hover_color'].";}header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner,header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner::after{background:".$mobile_header_styles['text_hover_color'].";}";
+		
+		// add mobile navigation styles
+		$nav_bg_hex = $mobile_nav_styles['background_color'];
+		$nav_bg_rgb = hex2rgb($nav_bg_hex);
+		$nav_bg_opacity = $mobile_nav_styles['background_opacity'] / 100;
+		$nav_bg_css = "rgba(".$nav_bg_rgb['r'].",".$nav_bg_rgb['g'].",".$nav_bg_rgb['b'].",$nav_bg_opacity)";
+		$styles_output .= "#nav_overlay{background:$nav_bg_css;-webkit-transition: all .".$mobile_nav_styles['animation_duration']."s ".$mobile_nav_styles['animation_easing']."; -o-transition: all .".$mobile_nav_styles['animation_duration']."s ".$mobile_nav_styles['animation_easing']."; transition: all .".$mobile_nav_styles['animation_duration']."s ".$mobile_nav_styles['animation_easing'].";}#nav_overlay nav a{color:".$mobile_nav_styles['text_color'].";}#nav_overlay nav a:hover,#nav_overlay nav a:active{".$mobile_nav_styles['text_hover_color'].";}";
+		
+		// add top bar styles if applicable
 		if(isset($top_bar_styles)):
 			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";border-color:".$top_bar_styles['text_color'].";}#top_bar p{color:".$top_bar_styles['text_color'].";}#top_bar a{color:".$top_bar_styles['text_color'].";}#top_bar a:hover{color:".$top_bar_styles['text_hover_color'].";}";
 		endif;

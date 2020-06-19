@@ -1,18 +1,13 @@
-<header role="banner" class="desktop centered stacked <?php the_field( 'stickyscroll_behavior', 'option' ); ?>">
-	<div class="wrap">
-		<a class="logo" href="/"><?php echo wp_get_attachment_image( get_field( 'desktop_logo', 'option' ), 'full' ) ?></a>
-	</div>
+
+	<a class="logo" href="/"><?php echo wp_get_attachment_image( get_field( 'desktop_logo', 'option' ), 'full' ) ?></a>
 	
 	<nav id="main_menu" role="navigation">
-		<div class="wrap">
-			<?php 
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main',
-						'container_class' => 'main-menu',
-					)
-				);
-			?>
-		</div>
+		<?php 
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main',
+					'container_class' => 'main-menu',
+				)
+			);
+		?>
 	</nav>
-</header>

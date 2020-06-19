@@ -4,14 +4,36 @@
 	Theme Options page
 ========================================== */
 if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Options',
-		'menu_title'	=> 'Theme Options',
+	// Add parent.
+  $parent = acf_add_options_page(array(
+		'page_title' 	=> __('Theme Options'),
+		'menu_title'	=> __('Theme Options'),
 		'menu_slug' 	=> 'theme-options',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false, 
+		'redirect'		=> true, 
 		'parent_slug'	=> ''
-	));
+  ));
+
+  // Add general sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('General Options'),
+      'menu_title'  => __('General Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
+
+  // Add header sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('Header Options'),
+      'menu_title'  => __('Header Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
+
+  // Add footer sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('Footer Options'),
+      'menu_title'  => __('Footer Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
 }
 
 

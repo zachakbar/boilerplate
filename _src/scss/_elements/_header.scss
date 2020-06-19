@@ -2,24 +2,22 @@
 /* HEADER STYLES
 /************************************************************************/
 
-// Importing in all of the desktop header stylesheets
-@import "_headers/_header-desktop-default.scss";
-//@import "_headers/_header-desktop-hamburger.scss";
-
-
-// Importing in all of the mobile header stylesheets
-@import "_headers/_header-mobile-default.scss";
-
-
-// Importing top bar styles
-@import "_headers/_header-top-bar.scss";
-
+/*
+body.admin-bar header[role="banner"], body.admin-bar #nav_overlay.active {
+	top: 4.6rem;
+	
+	@include breakpoint(783px){
+		top: 3.2rem;
+	}
+}
+*/
 
 header[role="banner"]{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 20;
 	
 	&.sticky {
 		position: fixed;
@@ -62,7 +60,39 @@ header[role="banner"]{
 		}
 	}
 	
+	.logo {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		width: 14.6rem;
+		padding: 0.5rem 0.6rem;
+		
+		@include breakpoint($md){
+			//width: 18rem;
+			padding: 2rem 1.5rem 2.5rem;
+			padding: 0.5rem 0.6rem;
+		}
+		@include breakpoint($lg){
+			//width: 23rem;
+			padding: 2.4rem 1.6rem 3.1rem;
+			padding: 0.5rem 0.6rem;
+		}
+		
+		svg {
+			width: 100%;
+		}
+	}
+	
 }
-body.admin-bar header[role="banner"]{
-	top: 3.2rem;
-}
+
+
+// Importing in all of the desktop header stylesheets
+@import "_headers/_header-desktop.scss";
+
+
+// Importing in all of the mobile header stylesheets
+@import "_headers/_header-mobile.scss";
+
+
+// Importing top bar styles
+@import "_headers/_header-top-bar.scss";

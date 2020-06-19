@@ -68,7 +68,7 @@
         },
         {
             "key": "field_5ebc2aa3beb0e",
-            "label": "Desktop Layout",
+            "label": "Desktop Header",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -84,7 +84,7 @@
         },
         {
             "key": "field_5ebc7eaed83e3",
-            "label": "",
+            "label": "Desktop Header Layout",
             "name": "header_desktop_layout",
             "type": "radio",
             "instructions": "",
@@ -111,8 +111,70 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_5ebc9cff6e1eb",
+            "label": "Desktop Header Styles",
+            "name": "desktop_header_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5ebc7e1ad83df",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5ebc7e2fd83e0",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5ebc9d54c8457",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
             "key": "field_5ebd83dc8b661",
-            "label": "Mobile Layout",
+            "label": "Mobile Header",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -128,7 +190,7 @@
         },
         {
             "key": "field_5ebd83ec8b662",
-            "label": "",
+            "label": "Mobile Header Layout",
             "name": "header_mobile_layout",
             "type": "radio",
             "instructions": "",
@@ -151,6 +213,229 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_5edab96f9f298",
+            "label": "Mobile Header Styles",
+            "name": "mobile_header_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5edab96f9f299",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5edab96f9f29a",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5edab96f9f29b",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
+            "key": "field_5eece9de4f057",
+            "label": "Mobile Navigation Styles",
+            "name": "mobile_navigation_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5eece9df4f058",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#141414"
+                },
+                {
+                    "key": "field_5eecea1a9c0ee",
+                    "label": "Background Opacity",
+                    "name": "background_opacity",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 90,
+                    "min": 0,
+                    "max": 100,
+                    "step": "",
+                    "prepend": "",
+                    "append": "%"
+                },
+                {
+                    "key": "field_5eece9df4f059",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5eece9df4f05a",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5eece9df4f05b",
+                    "label": "Navigation Animation",
+                    "name": "navigation_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fade-in": "Fade In",
+                        "slide-up": "Slide Up",
+                        "slide-down": "Slide Down",
+                        "slide-left": "Slide Left",
+                        "slide-right": "Slide Right",
+                        "zoom-in": "Zoom In",
+                        "zoom-out": "Zoom Out"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5eece9df4f05c",
+                    "label": "Animation Duration",
+                    "name": "animation_duration",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 3,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "seconds",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1
+                },
+                {
+                    "key": "field_5eece9df4f05d",
+                    "label": "Animation Easing",
+                    "name": "animation_easing",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "linear": "Linear",
+                        "ease": "Ease",
+                        "ease-in": "Ease In",
+                        "ease-out": "Ease Out",
+                        "ease-in-out": "Ease In Out"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_5ec7feef33b94",
@@ -578,84 +863,6 @@
             "max": ""
         },
         {
-            "key": "field_5ebc7d95d83de",
-            "label": "Design",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5ebc9cff6e1eb",
-            "label": "Header Styles",
-            "name": "header_styles",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5ebc7e1ad83df",
-                    "label": "Background Color",
-                    "name": "background_color",
-                    "type": "color_picker",
-                    "instructions": "(leave empty for transparent header)",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#fff"
-                },
-                {
-                    "key": "field_5ebc7e2fd83e0",
-                    "label": "Text Color",
-                    "name": "text_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#000"
-                },
-                {
-                    "key": "field_5ebc9d54c8457",
-                    "label": "Text Hover Color",
-                    "name": "text_hover_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#000"
-                }
-            ]
-        },
-        {
             "key": "field_5ec7ff7233b96",
             "label": "Top Bar Styles",
             "name": "top_bar_styles",
@@ -722,149 +929,6 @@
                         "id": ""
                     },
                     "default_value": "#000"
-                }
-            ]
-        },
-        {
-            "key": "field_5edab96f9f298",
-            "label": "Mobile Navigation Styles",
-            "name": "mobile_navigation_styles",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5edab96f9f299",
-                    "label": "Background Color",
-                    "name": "background_color",
-                    "type": "color_picker",
-                    "instructions": "(leave empty for transparent header)",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#fff"
-                },
-                {
-                    "key": "field_5edab96f9f29a",
-                    "label": "Text Color",
-                    "name": "text_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#000"
-                },
-                {
-                    "key": "field_5edab96f9f29b",
-                    "label": "Text Hover Color",
-                    "name": "text_hover_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "#000"
-                },
-                {
-                    "key": "field_5edab9899f29c",
-                    "label": "Navigation Animation",
-                    "name": "navigation_animation",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "fade-in": "Fade In",
-                        "fade-up": "Slide Up",
-                        "fade-down": "Slide Down",
-                        "fade-left": "Slide Left",
-                        "fade-right": "Slide Right",
-                        "zoom-in": "Zoom In",
-                        "zoom-out": "Zoom Out"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5edabb5e9f29d",
-                    "label": "Animation Duration",
-                    "name": "animation_duration",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 3,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "seconds",
-                    "min": 1,
-                    "max": 10,
-                    "step": 1
-                },
-                {
-                    "key": "field_5edabb9b9f29f",
-                    "label": "Animation Easing",
-                    "name": "animation_easing",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "linear": "Linear",
-                        "ease": "Ease",
-                        "ease-in": "Ease In",
-                        "ease-out": "Ease Out",
-                        "ease-in-out": "Ease In Out",
-                        "step-start": "Step Start",
-                        "step-end": "Step End"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
                 }
             ]
         },
@@ -993,7 +1057,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-options"
+                "value": "acf-options-header-options"
             }
         ]
     ],
@@ -1005,5 +1069,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591594466
+    "modified": 1592586325
 }

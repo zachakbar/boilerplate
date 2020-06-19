@@ -15,7 +15,9 @@
 		* Call functions when document ready
 		*/
 		ready: function() {
+			this.menuToggle();
 			this.stickyHeaderShowOnScrollUp();
+			this.checkIfHeroIsFirstElement();
 		},
 
 		/**
@@ -27,6 +29,28 @@
 		},
 
 		// CUSTOM FUNCTIONS BELOW
+		menuToggle: function() {
+			$('.menu-toggle').on('click', function(){
+				$(this).toggleClass('is-active');
+				$('#nav_overlay').toggleClass('active');
+
+				$('#nav_overlay.active #main_menu').find('li').each(function(a, b){
+					var menuItem = $(this);
+					setTimeout(function() {
+						menuItem.addClass('slide-in-up');
+					}, 100 + (100 * a));
+				});
+				$('#nav_overlay:not(.active) #main_menu').find('li').removeClass('slide-in-up');
+
+				$('#nav_overlay.active #main_menu').find('.nav-cta-container, .search-form, .nav-cta').each(function(a, b){
+					var menuCTA = $(this);
+					setTimeout(function(){
+						menuCTA.addClass('slide-in-up');
+					}, 100 + (100 * a) + ($('#nav_overlay #main_menu li').length * 100));
+				});
+				$('#nav_overlay:not(.active) #main_menu').find('.nav-cta-container, .search-form, .nav-cta').removeClass('slide-in-up');
+			});
+		},
 
 		stickyHeaderShowOnScrollUp: function() {
 			var $body = $('body'),
@@ -54,7 +78,17 @@
 					lastScrollTop = st;
 				});
 			}
-		}
+		},
+
+		checkIfHeroIsFirstElement: function() {
+			var $body = $('body'),
+					$header = $('header[role="banner"]'),
+					$ele = $('section[role="main"]').find('section:first-of-type');
+
+			if( !$ele.hasClass( 'module-hero' ) && !$ele.hasClass('dark') ) {
+				$header.addClass('is-header-dark');
+			}
+		},
 
 	};
 

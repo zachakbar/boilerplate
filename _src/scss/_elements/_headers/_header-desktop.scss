@@ -2,51 +2,34 @@
 /* HEADER STYLES
 /************************************************************************/
 
-header[role="banner"] {
+header[role="banner"] .wrap.desktop {
 	position: relative;
-	z-index: 10;
 	
-	&.left-aligned {
-		.wrap { justify-content: flex-start }
-	}
-	&.centered {
-		.wrap { justify-content: center }
-		.main-menu ul { padding-right: 2rem }
+	&.left-aligned { justify-content: flex-start }
+	&.centered-logo {
+		justify-content: center;
 		
-		&.stacked {
-			.logo { padding: 1rem }
-			nav#main_menu {
+		.main-menu ul { padding-right: 2rem }
+	}		
+	&.centered-logo-stacked {
+		justify-content: center;
+		flex-wrap: wrap;
+		
+		.logo { padding: 1rem }
+		nav#main_menu {
+			width: 100%;
+			border-top: 1px solid currentColor;
+			
+			.main-menu {
 				width: 100%;
-				border-top: 1px solid currentColor;
 				
-				.main-menu ul {
+				ul {
 					padding: 0.3rem;
+					justify-content: center;
 					
 					li a:after { height: 0.3rem; bottom: -0.3rem }
 				}
 			}
-		}
-	}
-	.logo {
-		display: flex;
-    justify-content: center;
-    align-items: center;
-		width: 14.6rem;
-		padding: 0.5rem 0.6rem;
-		
-		@include breakpoint($md){
-			//width: 18rem;
-			padding: 2rem 1.5rem 2.5rem;
-			padding: 0.5rem 0.6rem;
-		}
-		@include breakpoint($lg){
-			//width: 23rem;
-			padding: 2.4rem 1.6rem 3.1rem;
-			padding: 0.5rem 0.6rem;
-		}
-		
-		svg {
-			width: 100%;
 		}
 	}
 	
