@@ -30,6 +30,86 @@ function section_background() {
 	endif;
 }
 
+
+// Dynamic Button functions
+// get info from ACF fields to return to output function
+function get_button_fields( $btn_field ) {
+
+	$cta_button = get_field( $btn_field ) ? get_field( $btn_field ) : get_sub_field( $btn_field );
+	$btn = array();
+	
+	$btn_text = $cta_button['button_text'];
+	$btn_styles = $cta_button['button_styles'];
+	$btn_link = $cta_button['button_link'];
+
+	$btn_style = isset($btn_styles['background_type']) ? $btn_styles['background_type'] : "";
+	$btn_color = isset($btn_styles['button_color']) ? $btn_styles['button_color'] : "";
+	$btn_size = isset($btn_styles['button_size']) ? $btn_styles['button_size'] : "";
+	
+	if($btn_style == "solid"):
+		$btn_color = "has-$btn_color-background-color has-$btn_color-border-color";
+	elseif($btn_style == "outline"):
+		$btn_color = "has-$btn_color-color has-$btn_color-border-color";
+	endif;
+	
+	$btn['class'] = "btn $btn_color $btn_style $btn_size";
+	$btn['modal'] = "";
+
+	$btn_link_type = $btn_link['button_link_type'];
+	$btn_target = $btn_link['button_link_target'];
+	$btn_link = $btn_link["button_link_$btn_link_type"];
+
+	if($btn_link_type == "internal"):
+		if(is_array($btn_link)):
+			$btn_href = get_permalink( $btn_link['ID'] );
+		else:
+			$btn_href = get_permalink( $btn_link->ID );
+		endif;
+	else:
+		$btn_href = $btn_link;
+	endif;
+
+	$btn['rel'] = '';
+	if($btn_link_type == "external"):
+		$btn['rel'] = 'rel="nofollow noopener"';
+	endif;
+
+	$btn['link_type'] = $btn_link_type;
+	$btn['link'] = $btn_href;
+	$btn['target'] = $btn_target;
+	$btn['text'] = $btn_text;
+
+	return $btn;
+	exit;
+}
+
+// echo single CTA button
+function dynamic_button( $btn_field ) {
+	$btn = get_button_fields( $btn_field );
+	echo "<a href='{$btn['link']}' class='{$btn['class']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
+
+	if(!empty($btn['video'])):
+		echo $btn['video'];
+	endif;
+}
+
+// echo multiple CTA buttons in a repeater
+function dynamic_buttons( $repeater_name, $field_name ) {
+	global $post;
+
+	if( have_rows( $repeater_name ) ):
+		while( have_rows( $repeater_name ) ): the_row();
+			$btn = get_button_fields( $field_name );
+			echo "<a href='{$btn['link']}' {$btn['ga_tracking']} class='{$btn['class']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
+
+			if(!empty($btn['video'])):
+				echo $btn['video'];
+			endif;
+		endwhile;
+	endif;
+}
+
+
 // Simple Link
 // return the simple link acf fields in an array
 function get_simple_link_fields() {
