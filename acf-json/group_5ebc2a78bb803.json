@@ -1,0 +1,1073 @@
+{
+    "key": "group_5ebc2a78bb803",
+    "title": "Header Options",
+    "fields": [
+        {
+            "key": "field_5ebc2a92beb0d",
+            "label": "Logo",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ebc2ac0beb10",
+            "label": "Desktop Logo",
+            "name": "desktop_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ebc2ad6beb11",
+            "label": "Mobile Logo",
+            "name": "mobile_logo",
+            "type": "image",
+            "instructions": "(if none selected then desktop logo will be used)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ebc2aa3beb0e",
+            "label": "Desktop Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ebc7eaed83e3",
+            "label": "Desktop Header Layout",
+            "name": "header_desktop_layout",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "image-radios",
+                "id": ""
+            },
+            "choices": {
+                "default": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-default.png\" alt=\"Header Default\" title=\"Header Default\" \/>",
+                "left-aligned": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-left-aligned.png\" alt=\"Default Left Aligned\" title=\"Default Left Aligned\" \/>",
+                "hidden-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-right.png\" alt=\"Hidden Nav Right\" title=\"Hidden Nav Right\" \/>",
+                "hidden-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-left.png\" alt=\"Hidden Nav Left\" title=\"Hidden Nav Left\" \/>",
+                "centered-logo": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo.png\" alt=\"Centered Logo\" title=\"Centered Logo\" \/>",
+                "centered-logo-stacked": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo-stacked.png\" alt=\"Centered Logo Stacked\" title=\"Centered Logo Stacked\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ebc9cff6e1eb",
+            "label": "Desktop Header Styles",
+            "name": "desktop_header_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5ebc7e1ad83df",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5ebc7e2fd83e0",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5ebc9d54c8457",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
+            "key": "field_5ebd83dc8b661",
+            "label": "Mobile Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ebd83ec8b662",
+            "label": "Mobile Header Layout",
+            "name": "header_mobile_layout",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "image-radios",
+                "id": ""
+            },
+            "choices": {
+                "menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-right.png\" alt=\"Nav Right\" \/>",
+                "centered-menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-right.png\" alt=\"Centered Nav Right\" \/>",
+                "menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-left.png\" alt=\"Nav Left\" \/>",
+                "centered-menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-left.png\" alt=\"Centered Nav Left\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5edab96f9f298",
+            "label": "Mobile Header Styles",
+            "name": "mobile_header_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5edab96f9f299",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5edab96f9f29a",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5edab96f9f29b",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
+            "key": "field_5eece9de4f057",
+            "label": "Mobile Navigation Styles",
+            "name": "mobile_navigation_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5eece9df4f058",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent header)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#141414"
+                },
+                {
+                    "key": "field_5eecea1a9c0ee",
+                    "label": "Background Opacity",
+                    "name": "background_opacity",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 90,
+                    "min": 0,
+                    "max": 100,
+                    "step": "",
+                    "prepend": "",
+                    "append": "%"
+                },
+                {
+                    "key": "field_5eece9df4f059",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5eece9df4f05a",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5eece9df4f05b",
+                    "label": "Navigation Animation",
+                    "name": "navigation_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fade-in": "Fade In",
+                        "slide-up": "Slide Up",
+                        "slide-down": "Slide Down",
+                        "slide-left": "Slide Left",
+                        "slide-right": "Slide Right",
+                        "zoom-in": "Zoom In",
+                        "zoom-out": "Zoom Out"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5eece9df4f05c",
+                    "label": "Animation Duration",
+                    "name": "animation_duration",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 3,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "seconds",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1
+                },
+                {
+                    "key": "field_5eece9df4f05d",
+                    "label": "Animation Easing",
+                    "name": "animation_easing",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "linear": "Linear",
+                        "ease": "Ease",
+                        "ease-in": "Ease In",
+                        "ease-out": "Ease Out",
+                        "ease-in-out": "Ease In Out"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5ec7feef33b94",
+            "label": "Top Bar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ec7fefb33b95",
+            "label": "Include Top Bar?",
+            "name": "include_top_bar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5edbdb728654a",
+            "label": "Top Bar Left",
+            "name": "top_bar_left",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5edbdb80d54e2": {
+                    "key": "layout_5edbdb80d54e2",
+                    "name": "social_icons",
+                    "label": "Social Icons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdb8c8654b",
+                            "label": "Social Icons",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the social links setup in the Social tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707e": {
+                    "key": "layout_5edbdc76e707e",
+                    "name": "phone_number",
+                    "label": "Phone Number",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc76e707f",
+                            "label": "Phone Number",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Phone Number setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707c": {
+                    "key": "layout_5edbdc76e707c",
+                    "name": "email_address",
+                    "label": "Email Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc76e707d",
+                            "label": "Email Address",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Email setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbc18654c": {
+                    "key": "layout_5edbdbc18654c",
+                    "name": "menu",
+                    "label": "Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdbc98654d",
+                            "label": "Select a Menu",
+                            "name": "select_menu",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-bar-1": "Top Bar 1",
+                                "top-bar-2": "Top Bar 2"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbff8654e": {
+                    "key": "layout_5edbdbff8654e",
+                    "name": "cta_button",
+                    "label": "CTA Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc0b8654f",
+                            "label": "Top Bar CTA",
+                            "name": "top_bar_cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1196b4b9096"
+                            ],
+                            "display": "group",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5edbdc3786550": {
+                    "key": "layout_5edbdc3786550",
+                    "name": "custom",
+                    "label": "Custom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdc4386551",
+                            "label": "Top Bar Content",
+                            "name": "top_bar_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Top Bar Content",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5edbdcc83905b",
+            "label": "Top Bar Right",
+            "name": "top_bar_right",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5edbdb80d54e2": {
+                    "key": "layout_5edbdb80d54e2",
+                    "name": "social_icons",
+                    "label": "Social Icons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905c",
+                            "label": "Social Icons",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the social links setup in the Social tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707e": {
+                    "key": "layout_5edbdc76e707e",
+                    "name": "phone_number",
+                    "label": "Phone Number",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905d",
+                            "label": "Phone Number",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Phone Number setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdc76e707c": {
+                    "key": "layout_5edbdc76e707c",
+                    "name": "email_address",
+                    "label": "Email Address",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905e",
+                            "label": "Email Address",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will automatically take the Email setup in the Contact Information tab of General Options on the Theme Options page.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbc18654c": {
+                    "key": "layout_5edbdbc18654c",
+                    "name": "menu",
+                    "label": "Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc83905f",
+                            "label": "Select a Menu",
+                            "name": "select_menu",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-bar-1": "Top Bar 1",
+                                "top-bar-2": "Top Bar 2"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5edbdbff8654e": {
+                    "key": "layout_5edbdbff8654e",
+                    "name": "cta_button",
+                    "label": "CTA Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc839060",
+                            "label": "Top Bar CTA",
+                            "name": "top_bar_cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1196b4b9096"
+                            ],
+                            "display": "group",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5edbdc3786550": {
+                    "key": "layout_5edbdc3786550",
+                    "name": "custom",
+                    "label": "Custom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5edbdcc839061",
+                            "label": "Top Bar Content",
+                            "name": "top_bar_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Top Bar Content",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5ec7ff7233b96",
+            "label": "Top Bar Styles",
+            "name": "top_bar_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec7fefb33b95",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5ec7ff7233b97",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent top bar)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5ec7ff7233b98",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5ec7ff7233b99",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
+            "key": "field_5ebc2aabbeb0f",
+            "label": "Sticky\/Scroll Behavior",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ebc2ca3beb12",
+            "label": "Sticky\/Scroll Behavior",
+            "name": "stickyscroll_behavior",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "sticky": "Always Sticky",
+                "sticky-scroll": "Sticky on Scroll Up Only"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ebc353a69432",
+            "label": "Sticky Header Logo",
+            "name": "sticky_logo",
+            "type": "image",
+            "instructions": "(if none selected then desktop logo will be used)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ebc2ca3beb12",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ebc7e6bd83e1",
+            "label": "Sticky Header Background Color",
+            "name": "sticky_header_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ebc2ca3beb12",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fff"
+        },
+        {
+            "key": "field_5ebc7e8ed83e2",
+            "label": "Sticky Header Text Color",
+            "name": "sticky_header_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ebc2ca3beb12",
+                        "operator": "!=",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1592586325
+}

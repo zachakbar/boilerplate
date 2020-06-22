@@ -31,9 +31,9 @@ $theme_includes = [
 	'/lib/output.php',
 
 	// custom functions
-	'/lib/functions/acf-blocks-init.php',
+	//'/lib/functions/acf-blocks-init.php',
 	'/lib/functions/acf-functions.php',
-	'/lib/functions/block-functions.php',
+	//'/lib/functions/block-functions.php',
 	'/lib/functions/critical-assets.php',
 	'/lib/functions/functions-custom.php',
 ];
@@ -48,3 +48,4 @@ foreach ( $theme_includes as $file ) {
 }
 unset( $file, $filepath );
 
+add_action( 'after_setup_theme', 'tdc_localization_setup' );

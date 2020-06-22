@@ -6,6 +6,7 @@
 
 var autoprefixer = require('gulp-autoprefixer'),
 		bourbon = require('bourbon').includePaths,
+		breakpoint = 'node_modules/breakpoint-sass/stylesheets',
 		concat = require('gulp-concat'),
 		del = require("del"),
 		gracefulFs = require('graceful-fs'),
@@ -24,7 +25,14 @@ var paths = {
 			styles: {
 				src: ['_src/scss/**/*.scss'],
 				dest: ['assets/css/'],
-				inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+				inc: [bourbon, breakpoint]
+			},
+			adminstyles: {
+				src: [
+					'_src/scss/tdc-admin.scss',
+				],
+				dest: ['admin/css/'],
+				inc: [bourbon,breakpoint]
 			}
 		};
 
@@ -66,18 +74,33 @@ function css() {
 		.pipe(notify({ message: 'CSS complete!' }));
 }
 
+// admin css
+function admincss() {
+	return gulp.src(paths.adminstyles.src)
+		.pipe(sass({
+			outputStyle: 'compressed',
+			includePaths: paths.adminstyles.inc
+		}).on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest(paths.adminstyles.dest))
+		.pipe(updateTimestamp())
+		.pipe(notify({ message: 'Admin CSS complete!' }));
+}
+
 // watch
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, css);
+  gulp.watch(paths.adminstyles.src, css);
 }
 
-var build = gulp.series(clean, gulp.parallel(watch, scripts, css));
+var build = gulp.series(clean, gulp.parallel(watch, scripts, css, admincss));
 
 // declare tasks
 exports.clean = clean;
 exports.scripts = scripts;
 exports.styles = css;
+exports.adminstyles = admincss;
 exports.watch = watch;
 exports.build = build;
 

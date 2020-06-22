@@ -1,5 +1,98 @@
-header[role="banner"] {
-	@include clearfix;
-	background-color: rgba($black,0.75);
-	padding: 2rem 0;
+/************************************************************************/
+/* HEADER STYLES
+/************************************************************************/
+
+/*
+body.admin-bar header[role="banner"], body.admin-bar #nav_overlay.active {
+	top: 4.6rem;
+	
+	@include breakpoint(783px){
+		top: 3.2rem;
+	}
 }
+*/
+
+header[role="banner"]{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+	
+	&.sticky {
+		position: fixed;
+	}
+	&.sticky-scroll {
+		&.is-scrolling {
+			position: fixed;
+			visibility: hidden;
+			opacity: 0 !important;
+			transform: translateY(-15rem);
+		}
+	
+		&.is-scrolling-up {
+			position: fixed;
+			visibility: visible;
+			opacity: 1 !important;
+			transform: translateY(0);
+			transition: all 0.5s ease-in-out;
+		}
+	}
+	
+	.wrap {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		position: relative;
+		align-items: center;
+		padding: 0 1.5rem;
+		height: 100%;
+		
+		&.mobile {
+			display: flex;
+			
+			@include breakpoint($md-lg){ display: none;	}
+		}
+		&.desktop {
+			display: none;
+			
+			@include breakpoint($md-lg){ display: flex }
+		}
+	}
+	
+	.logo {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		width: 14.6rem;
+		padding: 0.5rem 0.6rem;
+		
+		@include breakpoint($md){
+			//width: 18rem;
+			padding: 2rem 1.5rem 2.5rem;
+			padding: 0.5rem 0.6rem;
+		}
+		@include breakpoint($lg){
+			//width: 23rem;
+			padding: 2.4rem 1.6rem 3.1rem;
+			padding: 0.5rem 0.6rem;
+		}
+		
+		svg {
+			width: 100%;
+		}
+	}
+	
+}
+
+
+// Importing in all of the desktop header stylesheets
+@import "_headers/_header-desktop.scss";
+
+
+// Importing in all of the mobile header stylesheets
+@import "_headers/_header-mobile.scss";
+
+
+// Importing top bar styles
+@import "_headers/_header-top-bar.scss";
