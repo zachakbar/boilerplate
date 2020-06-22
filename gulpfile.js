@@ -6,6 +6,7 @@
 
 var autoprefixer = require('gulp-autoprefixer'),
 		bourbon = require('bourbon').includePaths,
+		breakpoint = 'node_modules/breakpoint-sass/stylesheets',
 		concat = require('gulp-concat'),
 		del = require("del"),
 		gracefulFs = require('graceful-fs'),
@@ -24,7 +25,7 @@ var paths = {
 			styles: {
 				src: ['_src/scss/**/*.scss'],
 				dest: ['assets/css/'],
-				inc: [bourbon, 'node_modules/breakpoint-sass/stylesheets']
+				inc: [bourbon, breakpoint]
 			},
 			adminstyles: {
 				src: [
