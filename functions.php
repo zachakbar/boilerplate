@@ -16,11 +16,15 @@ require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 require_once get_stylesheet_directory() . '/lib/classes/class-duplicate-post.php';
 
 // Add Custom functions
-require_once get_stylesheet_directory() . '/lib/functions/acf-blocks-init.php';
 require_once get_stylesheet_directory() . '/lib/functions/acf-functions.php';
-require_once get_stylesheet_directory() . '/lib/functions/block-functions.php';
 require_once get_stylesheet_directory() . '/lib/functions/critical-assets.php';
 require_once get_stylesheet_directory() . '/lib/functions/functions-custom.php';
+
+/* Uncomment if custom ACF blocks are needed in the theme
+// Custom ACF Blocks
+require_once get_stylesheet_directory() . '/lib/functions/acf-blocks-init.php';
+require_once get_stylesheet_directory() . '/lib/functions/block-functions.php';
+*/
 
 add_action( 'after_setup_theme', 'tdc_localization_setup' );
 /**

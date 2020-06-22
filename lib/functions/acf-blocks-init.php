@@ -21,7 +21,7 @@ function my_acf_block_category( $categories, $post ) {
 		$categories
 	);
 }
-//add_filter( 'block_categories', 'my_acf_block_category', 10, 2);
+add_filter( 'block_categories', 'my_acf_block_category', 10, 2);
 
 
 /*
@@ -47,5 +47,5 @@ function register_acf_block_types() {
 
 // Check if function exists and hook into setup.
 if( function_exists('acf_register_block_type') ) {
-  //add_action('acf/init', 'register_acf_block_types');
+  add_action('acf/init', 'register_acf_block_types');
 }

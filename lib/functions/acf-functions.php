@@ -1,13 +1,78 @@
 <?php
 
-// Add Theme Options page via ACF
+/* ==========================================
+	Theme Options page
+========================================== */
 if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Options',
-		'menu_title'	=> 'Theme Options',
+	// Add parent.
+  $parent = acf_add_options_page(array(
+		'page_title' 	=> __('Theme Options'),
+		'menu_title'	=> __('Theme Options'),
 		'menu_slug' 	=> 'theme-options',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false, 
+		'redirect'		=> true,
 		'parent_slug'	=> ''
-	));
+  ));
+
+  // Add general sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('General Options'),
+      'menu_title'  => __('General Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
+
+  // Add header sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('Header Options'),
+      'menu_title'  => __('Header Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
+
+  // Add footer sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('Footer Options'),
+      'menu_title'  => __('Footer Options'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
 }
+
+
+/* ==========================================
+	Convert Hex to RGB
+========================================== */
+function hex2rgb( $color ) {
+    if ( $color[0] == '#' ) {
+        $color = substr( $color, 1 );
+    }
+    if ( strlen( $color ) == 6 ) {
+        list( $r, $g, $b ) = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+    } elseif ( strlen( $color ) == 3 ) {
+        list( $r, $g, $b ) = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+    } else {
+        return false;
+    }
+    $r = hexdec( $r );
+    $g = hexdec( $g );
+    $b = hexdec( $b );
+    return array( 'r' => $r, 'g' => $g, 'b' => $b );
+}
+
+
+/* ==========================================
+	Add custom scripts to header/body/footer
+========================================== */
+// header
+function custom_header_scripts() {
+	echo get_field( 'header_scripts', 'option' );
+}
+add_action( 'wp_head', 'custom_header_scripts' );
+// body
+function custom_body_scripts() {
+	echo get_field( 'body_scripts', 'option' );
+}
+add_action( 'wp_body_open', 'custom_body_scripts' );
+// footer
+function custom_footer_scripts() {
+	echo get_field( 'footer_scripts', 'option' );
+}
+add_action( 'wp_footer', 'custom_footer_scripts' );
