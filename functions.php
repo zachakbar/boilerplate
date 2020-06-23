@@ -17,6 +17,7 @@ require_once get_stylesheet_directory() . '/lib/classes/class-duplicate-post.php
 
 // Add Custom functions
 require_once get_stylesheet_directory() . '/lib/functions/acf-functions.php';
+require_once get_stylesheet_directory() . '/lib/functions/page-elements.php';
 require_once get_stylesheet_directory() . '/lib/functions/critical-assets.php';
 require_once get_stylesheet_directory() . '/lib/functions/functions-custom.php';
 
@@ -99,6 +100,14 @@ function tdc_theme_support() {
 		add_theme_support( $feature, $args );
 	}
 
+	register_nav_menus( array(
+		'main'				=> __('Main Menu', 'tdc' ),
+		'main-left'		=> __('Main Menu - Left (for centered logo header)', 'tdc' ),
+		'main-right'	=> __('Main Menu - Right (for centered logo header)', 'tdc' ),
+		'footer'			=> __('Footer Menu', 'tdc' ),
+		'social'			=> __('Social Menu', 'tdc' ),
+	) );
+
 }
 
 add_action( 'after_setup_theme', 'tdc_post_type_support', 9 );
@@ -136,7 +145,7 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav', 12 );
+//add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
 // Repositions the secondary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );

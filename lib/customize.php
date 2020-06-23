@@ -20,7 +20,7 @@ function tdc_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'tdc_link_color',
 		[
-			'default'           => $appearance['default-colors']['link'],
+			'default'           => $appearance['link-color'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		]
 	);
@@ -41,7 +41,7 @@ function tdc_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'tdc_accent_color',
 		[
-			'default'           => $appearance['default-colors']['accent'],
+			'default'           => $appearance['accent-color'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		]
 	);

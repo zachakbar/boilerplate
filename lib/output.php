@@ -17,8 +17,8 @@ function tdc_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	$color_link   = get_theme_mod( 'tdc_link_color', $appearance['default-colors']['link'] );
-	$color_accent = get_theme_mod( 'tdc_accent_color', $appearance['default-colors']['accent'] );
+	$color_link   = get_theme_mod( 'tdc_link_color', $appearance['link-color'] );
+	$color_accent = get_theme_mod( 'tdc_accent_color', $appearance['accent-color'] );
 	$logo         = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
 	if ( $logo ) {
@@ -32,7 +32,7 @@ function tdc_css() {
 
 	$css = '';
 
-	$css .= ( $appearance['default-colors']['link'] !== $color_link ) ? sprintf(
+	$css .= ( $appearance['link-color'] !== $color_link ) ? sprintf(
 		'
 
 		a,
@@ -54,7 +54,7 @@ function tdc_css() {
 		$color_link
 	) : '';
 
-	$css .= ( $appearance['default-colors']['accent'] !== $color_accent ) ? sprintf(
+	$css .= ( $appearance['accent-color'] !== $color_accent ) ? sprintf(
 		'
 
 		button:focus,

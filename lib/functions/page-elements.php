@@ -1,5 +1,47 @@
 <?php
 
+// override genesis header
+function tdc_genesis_header(){
+	$mobile_nav_styles = get_field( 'mobile_navigation_styles', 'option' );
+	?>
+
+	<div id="nav_overlay" class="animation-<?php echo $mobile_nav_styles['navigation_animation']; ?>">
+		<div class="wrap">
+			<nav id="mobile_main_menu" class="main-menu-mobile <?php the_field( 'stickyscroll_behavior', 'option' ); ?>" role="navigation">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'main',
+							'container_class' => 'main-menu',
+							'depth' => 1
+						)
+					);
+				?>
+			</nav>
+		</div>
+	</div>
+
+	<header role="banner" class="<?php the_field( 'stickyscroll_behavior', 'option' ); ?>" itemscope="" itemtype="https://schema.org/WPHeader">
+		<?php
+			if(get_field( 'include_top_bar', 'option' )):
+				get_template_part( 'lib/template-parts/header', 'top-bar' );
+			endif;
+		?>
+		<div class="mobile wrap <?php the_field( 'header_mobile_layout', 'option' ); ?>">
+			<?php get_template_part( 'lib/template-parts/header-mobile', 'default' ); ?>
+		</div>
+		<div class="desktop wrap <?php the_field( 'header_desktop_layout', 'option' ); ?>">
+			<?php get_template_part( 'lib/template-parts/header-desktop', get_field( 'header_desktop_layout', 'option' ) ); ?>
+		</div>
+	</header>
+
+<?php }
+
+remove_action( 'genesis_header', 'genesis_header_markup_open' );
+remove_action( 'genesis_header', 'genesis_header_markup_close' );
+remove_action( 'genesis_header', 'genesis_do_header' );
+add_action( 'genesis_header', 'tdc_genesis_header' );
+
 // return an array with the Section Background ACF field group data
 function section_background() {
 

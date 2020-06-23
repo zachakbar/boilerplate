@@ -4,18 +4,42 @@
  */
 
 $tdc_default_colors = [
-	'link'   => '#0073e5',
-	'accent' => '#0073e5',
+	'black' => '#141414',
+	'white' => '#ffffff',
 ];
+$tdc_theme_options_colors = get_field( 'theme_colors', 'option' );
+$tdc_default_colors = array_merge($tdc_default_colors, $tdc_theme_options_colors);
+$tdc_gutenberg_colors = array(
+	array(
+		'name'  => 'Black',
+		'slug'  => 'black',
+		'color' => '#141414',
+	),
+	array(
+		'name'  => 'White',
+		'slug'  => 'white',
+		'color' => '#FFFFFF',
+	)
+);
+foreach($tdc_default_colors[0] as $key => $theme_color):
+	if(!empty($theme_color)):
+		$theme_color_array = array(
+			'name'	=> ucwords(str_replace("_", " ", $key)),
+			'slug'	=> $key,
+			'color'	=> $theme_color,
+		);
+		$tdc_gutenberg_colors[] = $theme_color_array;
+	endif;
+endforeach;
 
 $tdc_link_color = get_theme_mod(
 	'tdc_link_color',
-	$tdc_default_colors['link']
+	$tdc_default_colors['black']
 );
 
 $tdc_accent_color = get_theme_mod(
 	'tdc_accent_color',
-	$tdc_default_colors['accent']
+	$tdc_default_colors['white']
 );
 
 $tdc_link_color_contrast   = tdc_color_contrast( $tdc_link_color );
@@ -28,19 +52,9 @@ return [
 	'button-color'         => $tdc_link_color_contrast,
 	'button-outline-hover' => $tdc_link_color_brightness,
 	'link-color'           => $tdc_link_color,
+	'accent-color'           => $tdc_accent_color,
 	'default-colors'       => $tdc_default_colors,
-	'editor-color-palette' => [
-		[
-			'name'  => __( 'Custom color', 'genesis-sample' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
-			'slug'  => 'theme-primary',
-			'color' => $tdc_link_color,
-		],
-		[
-			'name'  => __( 'Accent color', 'genesis-sample' ),
-			'slug'  => 'theme-secondary',
-			'color' => $tdc_accent_color,
-		],
-	],
+	'editor-color-palette' => $tdc_gutenberg_colors,
 	'editor-font-sizes'    => [
 		[
 			'name' => __( 'Small', 'genesis-sample' ),
