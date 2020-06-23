@@ -3,15 +3,39 @@
 /* ==========================================
 	Theme Options page
 ========================================== */
+
+function add_admin_menu_separator( $position ) {
+
+	global $menu;
+
+	$menu[ $position ] = array(
+		0	=>	'',
+		1	=>	'read',
+		2	=>	'separator' . $position,
+		3	=>	'',
+		4	=>	'tdc-separator wp-menu-separator'
+	);
+
+}
+add_action( 'admin_init', 'add_admin_menu_separator' );
+
+
 if( function_exists('acf_add_options_page') ) {
 	// Add parent.
+  add_action( 'admin_menu', 'set_admin_menu_separator' );
+	function set_admin_menu_separator() {
+	  do_action( 'admin_init', 30 );
+	} // end set_admin_menu_separator
+
+
   $parent = acf_add_options_page(array(
-		'page_title' 	=> __('Theme Options'),
-		'menu_title'	=> __('Theme Options'),
+		'page_title' 	=> __('Striventa Theme Options'),
+		'menu_title'	=> __('Striventa'),
 		'menu_slug' 	=> 'theme-options',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> true,
-		'parent_slug'	=> ''
+		'parent_slug'	=> '',
+		'position'		=> 30
   ));
 
   // Add general sub page.

@@ -1,3 +1,7 @@
+/* Admin menu modification */
+#adminmenu li.wp-menu-separator.genesis-separator { display: none }
+
+
 /* Image Radio Selector Styles */
 .image-radios ul.acf-radio-list li { margin-bottom: 10px }
 .image-radios ul.acf-radio-list li input[type="radio"] { display: none }
@@ -23,7 +27,7 @@
     vertical-align: top;
     transform: scale(1);
     transition: transform .1s ease;
-    
+
     &:before {
 	    content: "";
 	    position: absolute;
@@ -38,7 +42,7 @@
     &:hover {
 	    transform: scale(1.2);
     }
-    
+
     .components-circular-option-picker__option {
 			display: inline-block;
 			vertical-align: top;
@@ -50,7 +54,7 @@
 			box-shadow: inset 0 0 0 14px;
 			transition: box-shadow .1s ease;
 			cursor: pointer;
-	    
+
 	    &:after {
 				content: "";
 				position: absolute;
@@ -69,7 +73,7 @@
 				background-color: transparent;
 				box-shadow: inset 0 0 0 14px;
 				outline: none;
-				
+
 				&:after {
 					content: "";
 					border: 2px solid #606a73;
@@ -86,7 +90,7 @@
 				box-shadow: inset 0 0 0 4px;
 				position: relative;
 				z-index: 1;
-				
+
 				&:after {
 					box-shadow: none;
 				}
@@ -121,7 +125,7 @@
   overflow: hidden;
   border-radius: 3px;
   color: #555d66;
-  
+
   &.is-secondary {
 	  white-space: nowrap;
     color: #0075af;

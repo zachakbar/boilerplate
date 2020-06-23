@@ -77,6 +77,7 @@ function css() {
 // admin css
 function admincss() {
 	return gulp.src(paths.adminstyles.src)
+		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: 'compressed',
 			includePaths: paths.adminstyles.inc
@@ -91,7 +92,7 @@ function admincss() {
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, css);
-  gulp.watch(paths.adminstyles.src, css);
+  gulp.watch(paths.adminstyles.src, admincss);
 }
 
 var build = gulp.series(clean, gulp.parallel(watch, scripts, css, admincss));
