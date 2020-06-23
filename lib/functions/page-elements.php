@@ -1,7 +1,7 @@
 <?php
 
-// override genesis header
-function tdc_genesis_header(){
+// insert mobile nav overlay
+function tdc_genesis_mobile_nav(){
 	$mobile_nav_styles = get_field( 'mobile_navigation_styles', 'option' );
 	?>
 
@@ -21,6 +21,12 @@ function tdc_genesis_header(){
 		</div>
 	</div>
 
+	<?php
+}
+
+// override genesis header
+function tdc_genesis_header(){ ?>
+
 	<header role="banner" class="<?php the_field( 'stickyscroll_behavior', 'option' ); ?>" itemscope="" itemtype="https://schema.org/WPHeader">
 		<?php
 			if(get_field( 'include_top_bar', 'option' )):
@@ -35,12 +41,14 @@ function tdc_genesis_header(){
 		</div>
 	</header>
 
-<?php }
+	<?php
+}
 
-remove_action( 'genesis_header', 'genesis_header_markup_open' );
-remove_action( 'genesis_header', 'genesis_header_markup_close' );
+remove_action( 'genesis_header', 'genesis_header_markup_open', 99 );
+remove_action( 'genesis_header', 'genesis_header_markup_close', 99 );
 remove_action( 'genesis_header', 'genesis_do_header' );
-add_action( 'genesis_header', 'tdc_genesis_header' );
+add_action( 'genesis_before_header', 'tdc_genesis_mobile_nav' );
+add_action( 'genesis_after_header', 'tdc_genesis_header' );
 
 // return an array with the Section Background ACF field group data
 function section_background() {

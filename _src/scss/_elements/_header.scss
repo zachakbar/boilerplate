@@ -5,12 +5,13 @@
 /*
 body.admin-bar header[role="banner"], body.admin-bar #nav_overlay.active {
 	top: 4.6rem;
-	
+
 	@include breakpoint(783px){
 		top: 3.2rem;
 	}
 }
 */
+header.site-header { display: none !important }
 
 header[role="banner"]{
 	position: fixed;
@@ -18,7 +19,7 @@ header[role="banner"]{
 	left: 0;
 	width: 100%;
 	z-index: 20;
-	
+
 	&.sticky {
 		position: fixed;
 	}
@@ -29,7 +30,7 @@ header[role="banner"]{
 			opacity: 0 !important;
 			transform: translateY(-15rem);
 		}
-	
+
 		&.is-scrolling-up {
 			position: fixed;
 			visibility: visible;
@@ -38,7 +39,7 @@ header[role="banner"]{
 			transition: all 0.5s ease-in-out;
 		}
 	}
-	
+
 	.wrap {
 		display: flex;
 		flex-wrap: nowrap;
@@ -47,26 +48,26 @@ header[role="banner"]{
 		align-items: center;
 		padding: 0 1.5rem;
 		height: 100%;
-		
+
 		&.mobile {
 			display: flex;
-			
+
 			@include breakpoint($md-lg){ display: none;	}
 		}
 		&.desktop {
 			display: none;
-			
+
 			@include breakpoint($md-lg){ display: flex }
 		}
 	}
-	
+
 	.logo {
 		display: flex;
     justify-content: center;
     align-items: center;
 		width: 14.6rem;
 		padding: 0.5rem 0.6rem;
-		
+
 		@include breakpoint($md){
 			//width: 18rem;
 			padding: 2rem 1.5rem 2.5rem;
@@ -77,12 +78,12 @@ header[role="banner"]{
 			padding: 2.4rem 1.6rem 3.1rem;
 			padding: 0.5rem 0.6rem;
 		}
-		
+
 		svg {
 			width: 100%;
 		}
 	}
-	
+
 }
 
 
