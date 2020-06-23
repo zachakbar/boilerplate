@@ -36,7 +36,10 @@ return [
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
 	'genesis-menus'                   => [
-		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
+		'main'				=> __('Main Menu', 'tdc' ),
+		'main-left'		=> __('Main Menu - Left (for centered logo header)', 'tdc' ),
+		'main-right'	=> __('Main Menu - Right (for centered logo header)', 'tdc' ),
+		'footer'			=> __('Footer Menu', 'tdc' ),
+		'social'			=> __('Social Menu', 'tdc' ),
 	],
 ];
