@@ -12,9 +12,10 @@
 }
 
 @mixin btn-static{
-	border-width: $btn-border-width;
-	border-style: $btn-border-style;
-	border-radius: $btn-border-radius;
+	//border-width: $btn-border-width;
+	//border-style: $btn-border-style;
+	//border-radius: $btn-border-radius;
+	border-style: solid;
 	font-family: $btn-font;
 	font-size: $btn-font-size;
 	font-weight: $btn-font-weight;
@@ -26,6 +27,15 @@
 	cursor: pointer;
 	outline: none;
 	transition: all 0.2s ease-in-out;
+
+	&.small {
+		font-size: $btn-sm-font-size;
+		padding: $btn-sm-padding;
+	}
+	&.large {
+		font-size: $btn-lg-font-size;
+		padding: $btn-lg-padding;
+	}
 }
 
-.btn-static{ @include btn-static; }
+.btn{ @include btn-static; }

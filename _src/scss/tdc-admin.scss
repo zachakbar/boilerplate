@@ -2,6 +2,10 @@
 #adminmenu li.wp-menu-separator.genesis-separator { display: none }
 
 
+/* Top Bar CTA custom styles block width fixes */
+.acf-field-clone[data-name="top_bar_cta"] .acf-field-clone[data-name="custom_button_styles"] .acf-clone-fields .acf-field { width: 50% !important }
+
+
 /* Image Radio Selector Styles */
 .image-radios ul.acf-radio-list li { margin-bottom: 10px }
 .image-radios ul.acf-radio-list li input[type="radio"] { display: none }

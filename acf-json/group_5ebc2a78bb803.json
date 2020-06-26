@@ -111,6 +111,110 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_5ef4e021994bd",
+            "label": "Header CTAs",
+            "name": "header_ctas",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Header CTA",
+            "sub_fields": [
+                {
+                    "key": "field_5ef4e0e7994be",
+                    "label": "CTA Style",
+                    "name": "cta_style",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "button": "CTA Button",
+                        "text-link": "Text Link"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5ef4e108994bf",
+                    "label": "CTA Button",
+                    "name": "cta_button",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ef4e0e7994be",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5c1196b4b9096"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5ef4e130994c0",
+                    "label": "Text Link",
+                    "name": "text_link",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ef4e0e7994be",
+                                "operator": "==",
+                                "value": "text-link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_5c1196b4d5937",
+                        "field_5c361abe53e9f"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        },
+        {
             "key": "field_5ebc9cff6e1eb",
             "label": "Desktop Header Styles",
             "name": "desktop_header_styles",
@@ -622,7 +726,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5c1196b4b9096"
+                                "group_5ef62aa9eee07"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -817,7 +921,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5c1196b4b9096"
+                                "group_5ef62aa9eee07"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -1069,5 +1173,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592586325
+    "modified": 1593192462
 }

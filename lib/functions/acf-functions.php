@@ -38,6 +38,13 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> 30
   ));
 
+  // Add theme styles sub page.
+  $child = acf_add_options_sub_page(array(
+      'page_title'  => __('Theme Styles'),
+      'menu_title'  => __('Theme Styles'),
+      'parent_slug' => $parent['menu_slug'],
+  ));
+
   // Add general sub page.
   $child = acf_add_options_sub_page(array(
       'page_title'  => __('General Options'),

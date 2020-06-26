@@ -7,12 +7,12 @@ function tdc_genesis_mobile_nav(){
 
 	<div id="nav_overlay" class="animation-<?php echo $mobile_nav_styles['navigation_animation']; ?>">
 		<div class="wrap">
-			<nav id="mobile_main_menu" class="main-menu-mobile <?php the_field( 'stickyscroll_behavior', 'option' ); ?>" role="navigation">
+			<nav id="mobile_main_menu" class="main-menu-mobile <?php the_field( 'stickyscroll_behavior', 'option' ); ?>" role="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
 				<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'main',
-							'container_class' => 'main-menu',
+							'container_class' => 'main-menu genesis-nav-menu',
 							'depth' => 1
 						)
 					);
@@ -44,11 +44,11 @@ function tdc_genesis_header(){ ?>
 	<?php
 }
 
-remove_action( 'genesis_header', 'genesis_header_markup_open', 99 );
-remove_action( 'genesis_header', 'genesis_header_markup_close', 99 );
+remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 remove_action( 'genesis_header', 'genesis_do_header' );
+remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 add_action( 'genesis_before_header', 'tdc_genesis_mobile_nav' );
-add_action( 'genesis_after_header', 'tdc_genesis_header' );
+add_action( 'genesis_header', 'tdc_genesis_header' );
 
 // return an array with the Section Background ACF field group data
 function section_background() {
@@ -85,24 +85,39 @@ function section_background() {
 // get info from ACF fields to return to output function
 function get_button_fields( $btn_field ) {
 
+	global $post;
 	$cta_button = get_field( $btn_field ) ? get_field( $btn_field ) : get_sub_field( $btn_field );
 	$btn = array();
+	$field = get_field_object( $btn_field );
+	$btn['id'] = "btn_".$post->ID."_".rand();
 
 	$btn_text = $cta_button['button_text'];
-	$btn_styles = $cta_button['button_styles'];
+	$btn_style = $cta_button['button_style'];
+	$btn_class = $btn_style."-button";
 	$btn_link = $cta_button['button_link'];
 
-	$btn_style = isset($btn_styles['background_type']) ? $btn_styles['background_type'] : "";
-	$btn_color = isset($btn_styles['button_color']) ? $btn_styles['button_color'] : "";
-	$btn_size = isset($btn_styles['button_size']) ? $btn_styles['button_size'] : "";
+	if($btn_style == 'custom'):
+		$btn_styles = $cta_button['custom_button_styles'];
+		$btn_type = isset($btn_styles['button_type']) ? $btn_styles['button_type'] : "";
+		$btn_size = isset($btn_styles['button_size']) ? $btn_styles['button_size'] : "";
+		$border_radius = isset($btn_styles['border_radius']) ? $btn_styles['border_radius'] : "";
+		$border_thickness = isset($btn_styles['border_thickness']) ? $btn_styles['border_thickness'] : "";
+		$font_weight = isset($btn_styles['font_weight']) ? $btn_styles['font_weight'] : "";
+		$text_transform = isset($btn_styles['text_transform']) ? $btn_styles['text_transform'] : "";
+		$btn_border_color = isset($btn_styles['border_color']) ? $btn_styles['border_color'] : "";
+		$btn_bg_color = isset($btn_styles['background_color']) ? $btn_styles['background_color'] : "";
+		$btn_text_color = isset($btn_styles['text_color']) ? $btn_styles['text_color'] : "";
+		$btn_hover_bg_color = isset($btn_styles['hover_background_color']) ? $btn_styles['hover_background_color'] : "";
+		$btn_hover_text_color = isset($btn_styles['hover_text_color']) ? $btn_styles['hover_text_color'] : "";
 
-	if($btn_style == "solid"):
-		$btn_color = "has-$btn_color-background-color has-$btn_color-border-color";
-	elseif($btn_style == "outline"):
-		$btn_color = "has-$btn_color-color has-$btn_color-border-color";
+		$btn_class .= " $btn_size";
+		$btn_bg_css = $btn_type == "solid" ? "background-color:$btn_bg_color;border-color:$btn_bg_color" : "border-color:$btn_border_color";
+		$btn['styles'] = "$btn_bg_css;color:$btn_text_color;border-radius:{$border_radius}px;border-width:{$border_thickness}px;font-weight:$font_weight;text-transform:$text_transform";
+		$btn['hover_styles'] = "background-color:$btn_hover_bg_color;color:$btn_hover_text_color;";
 	endif;
 
-	$btn['class'] = "btn $btn_color $btn_style $btn_size";
+	$btn['style'] = $btn_style;
+	$btn['class'] = "btn $btn_class";
 	$btn['modal'] = "";
 
 	$btn_link_type = $btn_link['button_link_type'];
@@ -136,7 +151,10 @@ function get_button_fields( $btn_field ) {
 // echo single CTA button
 function dynamic_button( $btn_field ) {
 	$btn = get_button_fields( $btn_field );
-	echo "<a href='{$btn['link']}' class='{$btn['class']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
+	echo "<a id='{$btn['id']}' href='{$btn['link']}' class='{$btn['class']}' data-type='{$btn['style']}' target='{$btn['target']}' {$btn['rel']} {$btn['modal']}>{$btn['text']}</a>";
+	if($btn['style'] == 'custom'):
+		echo "<style>#".$btn['id']."{".$btn['styles']."}#".$btn['id'].":hover{".$btn['hover_styles']."}</style>";
+	endif;
 
 	if(!empty($btn['video'])):
 		echo $btn['video'];
