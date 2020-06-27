@@ -96,12 +96,13 @@
                 "id": ""
             },
             "choices": {
-                "default": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-default.png\" alt=\"Header Default\" title=\"Header Default\" \/>",
-                "left-aligned": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-left-aligned.png\" alt=\"Default Left Aligned\" title=\"Default Left Aligned\" \/>",
-                "hidden-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-right.png\" alt=\"Hidden Nav Right\" title=\"Hidden Nav Right\" \/>",
-                "hidden-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-left.png\" alt=\"Hidden Nav Left\" title=\"Hidden Nav Left\" \/>",
-                "centered-logo": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo.png\" alt=\"Centered Logo\" title=\"Centered Logo\" \/>",
-                "centered-logo-stacked": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo-stacked.png\" alt=\"Centered Logo Stacked\" title=\"Centered Logo Stacked\" \/>"
+                "default": "<div class=\"header-layout default\" title=\"Default Header\"><\/div>",
+                "left-aligned": "<div class=\"header-layout left-aligned\" title=\"Left Aligned Nav\"><\/div>",
+                "left-aligned-cta": "<div class=\"header-layout left-aligned-cta\" title=\"Left Aligned Nav with CTA\"><\/div>",
+                "hidden-right": "<div class=\"header-layout hidden-right\" title=\"Hidden Menu Right\"><\/div>",
+                "hidden-left": "<div class=\"header-layout hidden-left\" value=\"Hidden Menu Left\"><\/div>",
+                "centered-logo": "<div class=\"header-layout centered-logo\" value=\"Centered Logo\"><\/div>",
+                "centered-logo-stacked": "<div class=\"header-layout centere-logo-stacked\" value=\"Centered Logo Stacked\"><\/div>"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -117,7 +118,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ebc7eaed83e3",
+                        "operator": "==",
+                        "value": "left-aligned-cta"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -302,14 +311,14 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "image-radios",
+                "class": "image-radios mobile",
                 "id": ""
             },
             "choices": {
-                "menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-right.png\" alt=\"Nav Right\" \/>",
-                "centered-menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-right.png\" alt=\"Centered Nav Right\" \/>",
-                "menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-left.png\" alt=\"Nav Left\" \/>",
-                "centered-menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-left.png\" alt=\"Centered Nav Left\" \/>"
+                "menu-right": "<div class=\"mobile-header-layout nav-right\" title=\"Nav Right\"><\/div>",
+                "centered-menu-right": "<div class=\"mobile-header-layout centered-nav-right\" title=\"Centered Nav Right\" ><\/div>",
+                "menu-left": "<div class=\"mobile-header-layout nav-left\" title=\"Nav Left\" ><\/div>",
+                "centered-menu-left": "<div class=\"mobile-header-layout centered-nav-left\" title=\"Centered Nav Left\" ><\/div>"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -1173,5 +1182,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593192462
+    "modified": 1593215986
 }
