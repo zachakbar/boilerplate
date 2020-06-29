@@ -286,6 +286,83 @@
             ]
         },
         {
+            "key": "field_5efa0cae440b8",
+            "label": "Desktop Sub-Menu Styles",
+            "name": "desktop_submenu_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5efa0cae440b9",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent sub-menu)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5efa0cae440ba",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5efa0ccf440bc",
+                    "label": "Hover Background Color",
+                    "name": "hover_background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent hover)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5efa0cae440bb",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
             "key": "field_5ebd83dc8b661",
             "label": "Mobile Header",
             "name": "",
@@ -1182,5 +1259,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593445340
+    "modified": 1593445651
 }

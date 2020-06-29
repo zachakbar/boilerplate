@@ -4,35 +4,35 @@
 
 header[role="banner"] .wrap.desktop {
 	position: relative;
-	
+
 	&.left-aligned { justify-content: flex-start }
 	&.centered-logo {
 		justify-content: center;
-		
+
 		.main-menu ul { padding-right: 2rem }
-	}		
+	}
 	&.centered-logo-stacked {
 		justify-content: center;
 		flex-wrap: wrap;
-		
+
 		.logo { padding: 1rem }
 		nav#main_menu {
 			width: 100%;
 			border-top: 1px solid currentColor;
-			
+
 			.main-menu {
 				width: 100%;
-				
+
 				ul {
 					padding: 0.3rem;
 					justify-content: center;
-					
+
 					li a:after { height: 0.3rem; bottom: -0.3rem }
 				}
 			}
 		}
 	}
-	
+
 	.menu-toggle {
 		font-size: 1.9rem;
 		font-weight: 700;
@@ -44,11 +44,11 @@ header[role="banner"] .wrap.desktop {
 		}
 	}
 
-	.main-menu {	
+	.main-menu {
 		ul {
 			font-family: $heading_font;
 			font-size: 1.8rem;
-			
+
 			@include breakpoint($md-lg){
 				display: flex;
 				justify-content: space-between;
@@ -64,16 +64,16 @@ header[role="banner"] .wrap.desktop {
 			@include breakpoint($lg){
 				padding: 2.5rem 0 2.5rem 2rem;
 			}
-			
+
 			li {
 				position: relative;
 				width: 100%;
 				text-align: center;
 				transition: all 0.3s ease-in-out;
-				
+
 				@include breakpoint($md-lg){
 					width: auto;
-					
+
 					&:hover > a, &.open > a, &.current-menu-item > a, &.current-page-parent > a, &.current-page-ancestor > a {
 						&:after {
 							width: calc(100% - 3rem);
@@ -83,20 +83,20 @@ header[role="banner"] .wrap.desktop {
 				@include breakpoint($md){
 					padding: 0 1rem;
 				}
-				
+
 				a {
 					display: block;
 					padding: 2rem;
-					color: $white;
+					//color: $white;
 					text-transform: uppercase;
 					transition: all 0.3s ease-in-out;
 					position: relative;
-					
+
 					@include breakpoint($md-lg){
 						padding: 1rem 1.5rem 0.8rem;
 						font-weight: 600;
 					}
-					
+
 					/*
 					// uncomment to add underline effect to nav
 					&:after {
@@ -114,11 +114,11 @@ header[role="banner"] .wrap.desktop {
 					}
 					*/
 				}
-				
+
 				// sub-menu styles
 				&.menu-item-has-children {
 					&:after {
-						
+
 					}
 					&:hover {
 						>.sub-menu {
@@ -137,12 +137,12 @@ header[role="banner"] .wrap.desktop {
 					transition: all 0.3s ease-in-out;
 					transform-origin: top;
 					transform: rotateX(-90deg);
-					
+
 					&:hover { transform: rotateX(0deg); opacity: 1; }
-					
+
 					li { padding: 0; text-align: left; }
 					a { white-space: nowrap; padding: 1.3rem 1.5rem 1.1rem; }
-					
+
 					.sub-menu {
 						left: 100%;
 						top: 0;
