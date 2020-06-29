@@ -102,7 +102,7 @@
                 "hidden-right": "<div class=\"header-layout hidden-right\" title=\"Hidden Menu Right\"><\/div>",
                 "hidden-left": "<div class=\"header-layout hidden-left\" value=\"Hidden Menu Left\"><\/div>",
                 "centered-logo": "<div class=\"header-layout centered-logo\" value=\"Centered Logo\"><\/div>",
-                "centered-logo-stacked": "<div class=\"header-layout centere-logo-stacked\" value=\"Centered Logo Stacked\"><\/div>"
+                "centered-logo-stacked": "<div class=\"header-layout centered-logo-stacked\" value=\"Centered Logo Stacked\"><\/div>"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -1182,5 +1182,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593215986
+    "modified": 1593445340
 }
