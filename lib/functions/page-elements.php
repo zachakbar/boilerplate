@@ -23,7 +23,6 @@ function tdc_genesis_mobile_nav(){
 
 	<?php
 }
-
 // override genesis header
 function tdc_genesis_header(){ ?>
 
@@ -49,6 +48,70 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 add_action( 'genesis_before_header', 'tdc_genesis_mobile_nav' );
 add_action( 'genesis_header', 'tdc_genesis_header' );
+
+// override genesis footer
+function tdc_genesis_footer(){ ?>
+
+	<footer role="contentinfo" class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
+		<div class="wrap">
+		<?php
+			if(have_rows( 'footer_columns', 'option' )):
+				$column_count = count(get_field( 'footer_columns', 'option' ));
+				echo "<div class='footer-columns col-$column_count'>";
+
+				while(have_rows( 'footer_columns', 'option' )): the_row();
+
+					$layout = get_row_layout();
+
+					echo "<div class='footer-column $layout'>";
+
+					switch($layout) {
+
+						case 'footer_logo':
+							echo wp_get_attachment_image( get_sub_field( 'footer_logo' ), 'full' );
+							break;
+
+						case 'menu':
+							if(get_sub_field( 'column_title' )):
+								echo "<strong>".get_sub_field( 'column_title' )."</strong>";
+							endif;
+							the_sub_field( 'menu' );
+							break;
+
+						case 'social':
+							if(get_sub_field( 'column_title' )):
+								echo "<strong>".get_sub_field( 'column_title' )."</strong>";
+							endif;
+							get_template_part( 'lib/template-parts/nav', 'social-icons' );
+							break;
+
+						case 'custom_content':
+							if(get_sub_field( 'column_title' )):
+								echo "<strong>".get_sub_field( 'column_title' )."</strong>";
+							endif;
+							the_sub_field( 'column_content' );
+							break;
+
+					}
+
+					echo "</div>";
+
+				endwhile;
+
+				echo "</div>";
+			endif;
+		?>
+		<div class="copyright"><?php the_field( 'footer_copyright_content', 'option' ); ?></div>
+		</div>
+	</footer>
+
+	<?php
+}
+
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+add_action( 'genesis_footer', 'tdc_genesis_footer' );
 
 // return an array with the Section Background ACF field group data
 function section_background() {

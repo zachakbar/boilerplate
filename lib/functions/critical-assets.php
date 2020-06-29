@@ -96,6 +96,10 @@ function update_style_asset_url( $haystack ) {
 			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";border-color:".$top_bar_styles['text_color'].";}#top_bar p{color:".$top_bar_styles['text_color'].";}#top_bar a:not(.btn){color:".$top_bar_styles['text_color'].";}#top_bar a:not(.btn):hover{color:".$top_bar_styles['text_hover_color'].";}";
 		endif;
 
+		// add footer styles
+		$footer_styles = get_field( 'footer_styles', 'option' );
+		$styles_output .= "footer.site-footer{background-color:".$footer_styles['background_color'].";color:".$footer_styles['text_color'].";}footer.site-footer a{color:".$footer_styles['link_text_color'].";}footer.site-footer a:hover{color:".$footer_styles['link_text_hover_color'].";}";
+
 		// add primary button styles
 		$primary_btn_styles = get_field( 'primary_button', 'option' );
 		$primary_btn_bg_css = $primary_btn_styles['button_type'] == "solid" ? "background-color:".$primary_btn_styles['background_color'].";border-color:".$primary_btn_styles['background_color'] : "border-color:".$primary_btn_styles['border_color'];

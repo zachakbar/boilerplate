@@ -1,5 +1,122 @@
 footer[role="contentinfo"] {
-	@include clearfix;
-	background-color: $lightgrey;
-	padding: 2rem 0;
+	font-size: 1.2rem;
+	line-height: 1.4;
+	padding: 4rem 0;
+	text-align: left;
+
+	p, a { font-size: 1.2rem; line-height: 1.4; margin-bottom: 1rem }
+
+	.footer-columns {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 3rem;
+		margin-bottom: 5rem;
+
+		@include breakpoint($lg){ grid-gap: 6rem }
+
+		&.col-2 {
+			@include breakpoint($md){
+				grid-template-columns: repeat(4, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+				}
+			}
+		}
+		&.col-3 {
+			@include breakpoint($md){
+				grid-template-columns: repeat(4, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:last-child { grid-column: 2 / span 2 }
+				}
+			}
+			@include breakpoint($lg){
+				grid-template-columns: repeat(6, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:last-child { grid-column: unset }
+				}
+			}
+		}
+		&.col-4 {
+			@include breakpoint($md){
+				grid-template-columns: repeat(4, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:last-child { grid-column: 2 / span 2 }
+				}
+			}
+			@include breakpoint($lg){
+				grid-template-columns: repeat(6, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:last-child { grid-column: 3 / span 2 }
+				}
+			}
+			@include breakpoint($xl){
+				grid-template-columns: repeat(4, 1fr);
+
+				.footer-column {
+					grid-column: span 1;
+
+					&:last-child { grid-column: unset }
+				}
+			}
+		}
+		&.col-5 {
+			@include breakpoint($md){
+				grid-template-columns: repeat(4, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:last-child { grid-column: 2 / span 2 }
+				}
+			}
+			@include breakpoint($lg){
+				grid-template-columns: repeat(6, 1fr);
+
+				.footer-column {
+					grid-column: span 2;
+
+					&:nth-child(4) { grid-column: 2 / span 2 }
+					&:last-child { grid-column: 4 / span 2 }
+				}
+			}
+			@include breakpoint($xl){
+				grid-template-columns: repeat(5, 1fr);
+
+				.footer-column {
+					grid-column: span 1;
+
+					&:nth-child(4) { grid-column: unset }
+					&:last-child { grid-column: unset }
+				}
+			}
+		}
+
+		strong { display: block; margin-bottom: 1.5rem }
+		.social-nav {
+			ul {
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: inline-block;
+					padding: 0.3rem;
+
+					i { font-size: 1.6rem }
+				}
+			}
+		}
+	}
 }

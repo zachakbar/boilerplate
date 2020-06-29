@@ -1,0 +1,369 @@
+{
+    "key": "group_5efa18b30af84",
+    "title": "Footer Options",
+    "fields": [
+        {
+            "key": "field_5efa192da8d6e",
+            "label": "Footer Columns",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5efa1e09334ce",
+            "label": "Footer Columns",
+            "name": "footer_columns",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5efa1e11de9ff": {
+                    "key": "layout_5efa1e11de9ff",
+                    "name": "footer_logo",
+                    "label": "Footer Logo",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efa1e24334cf",
+                            "label": "Footer Logo",
+                            "name": "footer_logo",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5efa1e34334d0": {
+                    "key": "layout_5efa1e34334d0",
+                    "name": "menu",
+                    "label": "Menu",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efa1e34334d1",
+                            "label": "Column Title",
+                            "name": "column_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5efa1e55334d2",
+                            "label": "Menu",
+                            "name": "menu",
+                            "type": "nav_menu",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "save_format": "menu",
+                            "container": "div",
+                            "allow_null": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5efa1e68334d3": {
+                    "key": "layout_5efa1e68334d3",
+                    "name": "social",
+                    "label": "Social Icons",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efa1e68334d4",
+                            "label": "Column Title",
+                            "name": "column_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5efa1c0bd2212",
+                            "label": "Column Social Icons",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5efa1953a8d71",
+                                        "operator": "==",
+                                        "value": "social"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "The social icons in this option will automatically be generated based on the Social settings under General Options.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5efa1e8e334d6": {
+                    "key": "layout_5efa1e8e334d6",
+                    "name": "custom_content",
+                    "label": "Custom Content",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efa1e8e334d7",
+                            "label": "Column Title",
+                            "name": "column_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5efa1e8e334d8",
+                            "label": "Column Content",
+                            "name": "column_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Footer Column",
+            "min": "",
+            "max": 5
+        },
+        {
+            "key": "field_5efa1c47d64a1",
+            "label": "Copyright",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5efa1c51d64a2",
+            "label": "Footer Copyright Content",
+            "name": "footer_copyright_content",
+            "type": "wysiwyg",
+            "instructions": "The text that will appear at the bottom of your site footer. Can include <a href=\"https:\/\/studiopress.github.io\/genesis\/basics\/genesis-shortcodes\/#footer-shortcodes\" target=\"_blank\" rel=\"nofollow noopenner\">footer shortcodes<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5efa594f028ef",
+            "label": "Footer Styles",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5efa597e028f0",
+            "label": "Footer Styles",
+            "name": "footer_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5efa5b62028f1",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5efa5b7f028f2",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5efa5bb9028f3",
+                    "label": "Link Text Color",
+                    "name": "link_text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5efa5bd6028f4",
+                    "label": "Link Text Hover Color",
+                    "name": "link_text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1593465864
+}
