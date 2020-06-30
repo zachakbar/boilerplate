@@ -1,5 +1,18 @@
 <?php
 
+// Add Font Embed from Theme Styles
+function custom_font_embed() {
+	$font_embed = get_field( 'font_embed_link', 'option' );
+
+	if(!empty($font_embed) && substr($font_embed, -3) == 'css'):
+		wp_enqueue_style( 'tdc-font', $font_embed );
+	elseif(!empty($font_embed) && substr($font_embed, -3) == '.js'):
+		wp_enqueue_script( 'tdc-font', $font_embed );
+	endif;
+}
+add_action( 'wp_enqueue_scripts', 'custom_font_embed' );
+
+
 // Add Stylesheets
 function theme_styles() {
 	wp_enqueue_style( 'tdc-styles', get_stylesheet_directory_uri() . '/assets/css/styles.css' );

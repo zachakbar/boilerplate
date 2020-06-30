@@ -21,6 +21,7 @@ $theme_includes = [
 	// classes
 	'/lib/classes/class-duplicate-post.php', // Duplicate Post
 	'/lib/classes/class-script-loader.php', // Adds Asyc/Defer option to wp_enqueue
+	'/lib/classes/class-acf-nav-menu-field.php', // Adds Nav Menu field type for ACF
 
 	// setup
 	'/lib/theme-defaults.php', // Main theme setup

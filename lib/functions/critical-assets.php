@@ -58,9 +58,6 @@ function update_style_asset_url( $haystack ) {
  function theme_options_css(){
 		$styles_output = "<style type='text/css'>";
 		$theme_colors = get_field( 'theme_colors', 'option' );
-		$header_styles = get_field( 'desktop_header_styles', 'option' );
-		$mobile_header_styles = get_field( 'mobile_header_styles', 'option' );
-		$mobile_nav_styles = get_field( 'mobile_navigation_styles', 'option' );
 		if(get_field( 'include_top_bar', 'option' )):
 			$top_bar_styles = get_field( 'top_bar_styles', 'option' );
 		endif;
@@ -74,13 +71,26 @@ function update_style_asset_url( $haystack ) {
 			endif;
 		endforeach;
 
+		// add font styles
+		$font_families = get_field( 'font_families', 'option' );
+		$font_sizes = get_field( 'font_sizes', 'option' );
+		$styles_output .= "body,header,article,footer,p,ul,a{font-family:".$font_families['default_font'].";}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:".$font_families['headers'].";}";
+		$styles_output .= "article,p,ul,a,span{font-size:".$font_sizes['body_copy']."}header[role='navigation'],header[role='navigation'] ul{font-size:".$font_sizes['header_navigation']."}footer[role='contentinfo'],footer[role='contentinfo'] p,footer[role='contentinfo'] ul{font-size:".$font_sizes['footer']."}h1,.h1{font-size:".$font_sizes['h1']."}h2,.h2{font-size:".$font_sizes['h2']."}h3,.h3{font-size:".$font_sizes['h3']."}h4,.h4{font-size:".$font_sizes['h4']."}h5,.h5{font-size:".$font_sizes['h5']."}h6,.h6{font-size:".$font_sizes['h6']."}";
+
 		// add desktop header styles
-		$styles_output .= "header[role='banner']{background-color:".$header_styles['background_color'].";}header[role='banner'] .main-menu ul li a{color:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li a:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li:hover > a{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu{background:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li .sub-menu a{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover{background:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover > a{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle .hamburger-inner,header[role='banner'] .menu-toggle .hamburger-inner::before,header[role='banner'] .menu-toggle .hamburger-inner::after{background:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle:hover .hamburger-inner,header[role='banner'] .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .menu-toggle:hover .hamburger-inner::after{background:".$header_styles['text_hover_color'].";}";
+		$header_styles = get_field( 'desktop_header_styles', 'option' );
+		$styles_output .= "header[role='banner']{background-color:".$header_styles['background_color'].";}header[role='banner'] .main-menu ul li a{color:".$header_styles['text_color'].";}header[role='banner'] .main-menu ul li a:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .main-menu ul li:hover > a{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle{color:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle .hamburger-inner,header[role='banner'] .menu-toggle .hamburger-inner::before,header[role='banner'] .menu-toggle .hamburger-inner::after{background:".$header_styles['text_color'].";}header[role='banner'] .menu-toggle:hover{color:".$header_styles['text_hover_color'].";}header[role='banner'] .menu-toggle:hover .hamburger-inner,header[role='banner'] .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .menu-toggle:hover .hamburger-inner::after{background:".$header_styles['text_hover_color'].";}";
+
+		// add desktop header sub-menu styles
+		$submenu_styles = get_field( 'desktop_submenu_styles', 'option' );
+		$styles_output .= "header[role='banner'] .main-menu ul li .sub-menu{background-color:".$submenu_styles['background_color'].";}header[role='banner'] .main-menu ul li .sub-menu a{color:".$submenu_styles['text_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover{background:".$submenu_styles['hover_background_color'].";}header[role='banner'] .main-menu ul li .sub-menu li:hover > a{color:".$submenu_styles['text_hover_color'].";}";
 
 		// add mobile header styles
+		$mobile_header_styles = get_field( 'mobile_header_styles', 'option' );
 		$styles_output .= "header[role='banner'] .mobile{background-color:".$mobile_header_styles['background_color'].";color:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile a{color:".$mobile_header_styles['text_color']."}header[role='banner'] .mobile a:hover{color:".$mobile_header_styles['text_hover_color']."}header[role='banner'] .mobile .menu-toggle{color:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile .menu-toggle .hamburger-inner,header[role='banner'] .mobile .menu-toggle .hamburger-inner::before,header[role='banner'] .mobile .menu-toggle .hamburger-inner::after{background:".$mobile_header_styles['text_color'].";}header[role='banner'] .mobile .menu-toggle:hover{color:".$mobile_header_styles['text_hover_color'].";}header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner,header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner::before,header[role='banner'] .mobile .menu-toggle:hover .hamburger-inner::after{background:".$mobile_header_styles['text_hover_color'].";}";
 
 		// add mobile navigation styles
+		$mobile_nav_styles = get_field( 'mobile_navigation_styles', 'option' );
 		$nav_bg_hex = $mobile_nav_styles['background_color'];
 		$nav_bg_rgb = hex2rgb($nav_bg_hex);
 		$nav_bg_opacity = $mobile_nav_styles['background_opacity'] / 100;
@@ -89,8 +99,22 @@ function update_style_asset_url( $haystack ) {
 
 		// add top bar styles if applicable
 		if(isset($top_bar_styles)):
-			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";border-color:".$top_bar_styles['text_color'].";}#top_bar p{color:".$top_bar_styles['text_color'].";}#top_bar a{color:".$top_bar_styles['text_color'].";}#top_bar a:hover{color:".$top_bar_styles['text_hover_color'].";}";
+			$styles_output .= "#top_bar{background-color:".$top_bar_styles['background_color'].";border-color:".$top_bar_styles['text_color'].";}#top_bar p{color:".$top_bar_styles['text_color'].";}#top_bar a:not(.btn){color:".$top_bar_styles['text_color'].";}#top_bar a:not(.btn):hover{color:".$top_bar_styles['text_hover_color'].";}";
 		endif;
+
+		// add footer styles
+		$footer_styles = get_field( 'footer_styles', 'option' );
+		$styles_output .= "footer.site-footer{background-color:".$footer_styles['background_color'].";color:".$footer_styles['text_color'].";}footer.site-footer a{color:".$footer_styles['link_text_color'].";}footer.site-footer a:hover{color:".$footer_styles['link_text_hover_color'].";}";
+
+		// add primary button styles
+		$primary_btn_styles = get_field( 'primary_button', 'option' );
+		$primary_btn_bg_css = $primary_btn_styles['button_type'] == "solid" ? "background-color:".$primary_btn_styles['background_color'].";border-color:".$primary_btn_styles['background_color'] : "border-color:".$primary_btn_styles['border_color'];
+		$styles_output .= ".btn.primary-button{".$primary_btn_bg_css.";color:".$primary_btn_styles['text_color'].";border-radius:".$primary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;font-weight:".$primary_btn_styles['font_weight'].";text-transform:".$primary_btn_styles['text_transform'].";}.btn.primary-button:hover{background-color:".$primary_btn_styles['hover_background_color'].";border-color:".$primary_btn_styles['hover_background_color'].";color:".$primary_btn_styles['hover_text_color'].";}";
+
+		// add secondary button styles
+		$secondary_btn_styles = get_field( 'secondary_button', 'option' );
+		$secondary_btn_bg_css = $secondary_btn_styles['button_type'] == "solid" ? "background-color:".$secondary_btn_styles['background_color'].";border-color:".$secondary_btn_styles['background_color'] : "border-color:".$secondary_btn_styles['border_color'];
+		$styles_output .= ".btn.secondary-button{".$secondary_btn_bg_css.";color:".$secondary_btn_styles['text_color'].";border-radius:".$secondary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;;font-weight:".$secondary_btn_styles['font_weight'].";text-transform:".$secondary_btn_styles['text_transform'].";}.btn.secondary-button:hover{background-color:".$secondary_btn_styles['hover_background_color'].";border-color:".$secondary_btn_styles['hover_background_color'].";color:".$secondary_btn_styles['hover_text_color'].";}";
 
 		$styles_output .= "</style>";
 		echo $styles_output;

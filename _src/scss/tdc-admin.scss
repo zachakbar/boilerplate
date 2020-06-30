@@ -1,5 +1,14 @@
+// base
+@import "breakpoint";
+@import "bourbon";
+@import "_core/variables";
+
 /* Admin menu modification */
 #adminmenu li.wp-menu-separator.genesis-separator { display: none }
+
+
+/* Top Bar CTA custom styles block width fixes */
+.acf-field-clone[data-name="top_bar_cta"] .acf-field-clone[data-name="custom_button_styles"] .acf-clone-fields .acf-field { width: 50% !important }
 
 
 /* Image Radio Selector Styles */
@@ -7,12 +16,72 @@
 .image-radios ul.acf-radio-list li input[type="radio"] { display: none }
 .image-radios ul.acf-radio-list li label {
 	display: inline-block;
-  padding: 5px 5px 0;
+  padding: 5px;
   border: 3px solid transparent;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 .image-radios ul.acf-radio-list li label:hover { border-color: #f0f0f0 }
 .image-radios ul.acf-radio-list li label.selected { border-color: #007cba }
 .image-radios ul.acf-radio-list li label img { max-width: 100% }
+.image-radios ul.acf-radio-list li label .header-layout {
+	width: 100%;
+	height: 0;
+	padding-bottom: 8.8%;
+	background-size: cover;
+	background-position: center center;
+
+	&.default {
+		background-image: url('../img/header-default.png');
+	}
+	&.left-aligned {
+		background-image: url('../img/header-left-aligned.png');
+	}
+	&.left-aligned-cta {
+		background-image: url('../img/header-left-aligned-cta.png');
+	}
+	&.hidden-right {
+		background-image: url('../img/header-hidden-nav-right.png');
+	}
+	&.hidden-left {
+		background-image: url('../img/header-hidden-nav-left.png');
+	}
+	&.centered-logo {
+		background-image: url('../img/header-centered-logo.png');
+	}
+	&.centered-logo-stacked {
+		background-image: url('../img/header-centered-logo-stacked.png');
+		padding-bottom: 12%;
+	}
+}
+.image-radios.mobile ul.acf-radio-list li {
+	width: 100%;
+
+	@include breakpoint($md_lg){
+		width: 45%;
+	}
+}
+.image-radios ul.acf-radio-list li label .mobile-header-layout {
+	width: 100%;
+	height: 0;
+	padding-bottom: 23%;
+	background-size: cover;
+	background-position: center center;
+
+	&.nav-right {
+		background-image: url('../img/mobile-header-menu-right.png');
+	}
+	&.nav-left {
+		background-image: url('../img/mobile-header-menu-left.png');
+	}
+	&.centered-nav-right {
+		background-image: url('../img/mobile-header-centered-menu-right.png');
+	}
+	&.centered-nav-left {
+		background-image: url('../img/mobile-header-centered-menu-left.png');
+	}
+}
 
 
 /* Theme Color Circles Styles */

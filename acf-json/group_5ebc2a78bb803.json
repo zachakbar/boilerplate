@@ -96,12 +96,13 @@
                 "id": ""
             },
             "choices": {
-                "default": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-default.png\" alt=\"Header Default\" title=\"Header Default\" \/>",
-                "left-aligned": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-left-aligned.png\" alt=\"Default Left Aligned\" title=\"Default Left Aligned\" \/>",
-                "hidden-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-right.png\" alt=\"Hidden Nav Right\" title=\"Hidden Nav Right\" \/>",
-                "hidden-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-hidden-nav-left.png\" alt=\"Hidden Nav Left\" title=\"Hidden Nav Left\" \/>",
-                "centered-logo": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo.png\" alt=\"Centered Logo\" title=\"Centered Logo\" \/>",
-                "centered-logo-stacked": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/header-centered-logo-stacked.png\" alt=\"Centered Logo Stacked\" title=\"Centered Logo Stacked\" \/>"
+                "default": "<div class=\"header-layout default\" title=\"Default Header\"><\/div>",
+                "left-aligned": "<div class=\"header-layout left-aligned\" title=\"Left Aligned Nav\"><\/div>",
+                "left-aligned-cta": "<div class=\"header-layout left-aligned-cta\" title=\"Left Aligned Nav with CTA\"><\/div>",
+                "hidden-right": "<div class=\"header-layout hidden-right\" title=\"Hidden Menu Right\"><\/div>",
+                "hidden-left": "<div class=\"header-layout hidden-left\" value=\"Hidden Menu Left\"><\/div>",
+                "centered-logo": "<div class=\"header-layout centered-logo\" value=\"Centered Logo\"><\/div>",
+                "centered-logo-stacked": "<div class=\"header-layout centered-logo-stacked\" value=\"Centered Logo Stacked\"><\/div>"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -109,6 +110,118 @@
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_5ef4e021994bd",
+            "label": "Header CTAs",
+            "name": "header_ctas",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ebc7eaed83e3",
+                        "operator": "==",
+                        "value": "left-aligned-cta"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Header CTA",
+            "sub_fields": [
+                {
+                    "key": "field_5ef4e0e7994be",
+                    "label": "CTA Style",
+                    "name": "cta_style",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "button": "CTA Button",
+                        "text-link": "Text Link"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5ef4e108994bf",
+                    "label": "CTA Button",
+                    "name": "cta_button",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ef4e0e7994be",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5ef62aa9eee07"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_5ef4e130994c0",
+                    "label": "Text Link",
+                    "name": "text_link",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ef4e0e7994be",
+                                "operator": "==",
+                                "value": "text-link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_5c1196b4d5937",
+                        "field_5c361abe53e9f"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
+                }
+            ]
         },
         {
             "key": "field_5ebc9cff6e1eb",
@@ -173,6 +286,83 @@
             ]
         },
         {
+            "key": "field_5efa0cae440b8",
+            "label": "Desktop Sub-Menu Styles",
+            "name": "desktop_submenu_styles",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5efa0cae440b9",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent sub-menu)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5efa0cae440ba",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5efa0ccf440bc",
+                    "label": "Hover Background Color",
+                    "name": "hover_background_color",
+                    "type": "color_picker",
+                    "instructions": "(leave empty for transparent hover)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5efa0cae440bb",
+                    "label": "Text Hover Color",
+                    "name": "text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
+        },
+        {
             "key": "field_5ebd83dc8b661",
             "label": "Mobile Header",
             "name": "",
@@ -198,14 +388,14 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "image-radios",
+                "class": "image-radios mobile",
                 "id": ""
             },
             "choices": {
-                "menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-right.png\" alt=\"Nav Right\" \/>",
-                "centered-menu-right": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-right.png\" alt=\"Centered Nav Right\" \/>",
-                "menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-menu-left.png\" alt=\"Nav Left\" \/>",
-                "centered-menu-left": "<img src=\"\/wp-content\/themes\/boilerplate-theme\/admin\/img\/mobile-header-centered-menu-left.png\" alt=\"Centered Nav Left\" \/>"
+                "menu-right": "<div class=\"mobile-header-layout nav-right\" title=\"Nav Right\"><\/div>",
+                "centered-menu-right": "<div class=\"mobile-header-layout centered-nav-right\" title=\"Centered Nav Right\" ><\/div>",
+                "menu-left": "<div class=\"mobile-header-layout nav-left\" title=\"Nav Left\" ><\/div>",
+                "centered-menu-left": "<div class=\"mobile-header-layout centered-nav-left\" title=\"Centered Nav Left\" ><\/div>"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -622,7 +812,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5c1196b4b9096"
+                                "group_5ef62aa9eee07"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -817,7 +1007,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5c1196b4b9096"
+                                "group_5ef62aa9eee07"
                             ],
                             "display": "group",
                             "layout": "block",
@@ -1069,5 +1259,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1592586325
+    "modified": 1593447752
 }

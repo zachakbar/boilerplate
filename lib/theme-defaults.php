@@ -5,6 +5,9 @@
  * This file adds the default theme settings to the Genesis Child Theme.
  */
 
+//* Remove support for structural wraps
+remove_theme_support( 'genesis-structural-wraps' );
+
 add_filter( 'simple_social_default_styles', 'tdc_social_default_styles' );
 /**
  * Set Simple Social Icon defaults.
