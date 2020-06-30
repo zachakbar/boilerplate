@@ -3,17 +3,17 @@ a {
 	font-weight: $link-font-weight;
 	text-decoration: none;
 	transition: all, 0.2s, ease-in-out;
-	
+
 	&:active,
 	&:focus,
 	&:hover {
 		color: shade($link-color,25%);
 		outline: 0;
 	}
-	
+
 	&.tooltip-item {
 		position: relative;
-		
+
 		&::after {
 			background-color: $white;
 			border: $input-border;
@@ -27,7 +27,7 @@ a {
 			padding: 1rem;
 			pointer-events: none;
 		}
-	
+
 		&:hover::after,
 		&:focus::after{
 			display: inline-block;
@@ -36,7 +36,7 @@ a {
 }
 
 p {
-	font-size: $base-font-size;
+	//font-size: $base-font-size;
 	line-height: $base-line-height;
 	margin-bottom: $base-margin;
 }
@@ -44,13 +44,14 @@ p {
 // headings
 #{headings()} {
 	color: $heading-color;
-	font-family: $heading-font;
+	//font-family: $heading-font;
 	font-weight: 500;
 	text-rendering: optimizelegibility;
 	line-height: $base-line-height;
 	margin-bottom: 1rem;
 }
 
+/*
 h1 {
 	font-size: 3.2rem;
 }
@@ -74,6 +75,7 @@ h5 {
 h6 {
 	font-size: 1.4rem;
 }
+*/
 
 // basic elements
 blockquote {
@@ -92,21 +94,21 @@ ol {
 }
 
 article {
-  	
+
 	ul { list-style-type: disc; }
 	ol { list-style-type: decimal; }
-	
+
 	ul,
 	ol {
 		font-size: $base-font-size;
 		padding-left: $base-padding;
 		margin-bottom: $base-margin;
-		
+
 		li {
 			line-height: $base-line-height;
 			margin-bottom: 1rem;
 		}
-	    
+
 		ul, ol { margin-bottom: 0; }
   }
 }

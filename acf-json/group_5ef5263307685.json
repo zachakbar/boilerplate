@@ -3,6 +3,299 @@
     "title": "Theme Styles",
     "fields": [
         {
+            "key": "field_5efb656b9cfad",
+            "label": "Font Styles",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5efb65809cfae",
+            "label": "Font Embed Link",
+            "name": "font_embed_link",
+            "type": "url",
+            "instructions": "(3rd party font such as Google Fonts or Adobe Fonts. Do not include the entire embed code, just the URL)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5efb67caac9ca",
+            "label": "Font Families",
+            "name": "font_families",
+            "type": "group",
+            "instructions": "(Include the entire font family declaration, including fallback fonts)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5efb67caac9cb",
+                    "label": "Default Font",
+                    "name": "default_font",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "font-family:",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5efb6825ac9d4",
+                    "label": "Headers",
+                    "name": "headers",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "font-family:",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5efb65c99cfaf",
+            "label": "Font Sizes",
+            "name": "font_sizes",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5efb661d9cfb0",
+                    "label": "Body Copy",
+                    "name": "body_copy",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 16,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb67119cfbb",
+                    "label": "Header\/Navigation",
+                    "name": "header_navigation",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 16,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb67259cfbc",
+                    "label": "Footer",
+                    "name": "footer",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 12,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb667c9cfb2",
+                    "label": "Heading 1 (H1)",
+                    "name": "h1",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 40,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb66b09cfb5",
+                    "label": "Heading 2 (H2)",
+                    "name": "h2",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 36,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb66bb9cfb6",
+                    "label": "Heading 3 (H3)",
+                    "name": "h3",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 28,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb66c79cfb7",
+                    "label": "Heading 4 (H4)",
+                    "name": "h4",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 22,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb66d29cfb8",
+                    "label": "Heading 5 (H5)",
+                    "name": "h5",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 18,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_5efb66dc9cfb9",
+                    "label": "Heading 6 (H6)",
+                    "name": "h6",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 16,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "px",
+                    "min": 10,
+                    "max": 100,
+                    "step": ""
+                }
+            ]
+        },
+        {
             "key": "field_5ef526330b15a",
             "label": "Theme Colors",
             "name": "",
@@ -250,5 +543,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1593212462
+    "modified": 1593538118
 }
