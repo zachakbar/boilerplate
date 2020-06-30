@@ -5,3 +5,4 @@ A WP Theme built on the Genesis Framework to help start making that special sauc
 ## Resources/Ideas
 - *Possible integration? [TGM-Plugin-Activation](https://github.com/TGMPA/TGM-Plugin-Activation)*
 - *[EditorConfig](https://editorconfig.org/)*
+- *[Genesis Snippets](https://my.studiopress.com/documentation/snippets/)*
