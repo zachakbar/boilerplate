@@ -54,3 +54,5 @@ foreach ( $theme_includes as $file ) {
 unset( $file, $filepath );
 
 add_action( 'after_setup_theme', 'tdc_localization_setup' );
+
+remove_theme_support( 'genesis-structural-wraps' );
