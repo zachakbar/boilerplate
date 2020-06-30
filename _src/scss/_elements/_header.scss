@@ -13,7 +13,7 @@ body.admin-bar header[role="banner"], body.admin-bar #nav_overlay.active {
 */
 
 header[role="banner"]{
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;

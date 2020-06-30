@@ -213,6 +213,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5efbb57e44a7c": {
+                    "key": "layout_5efbb57e44a7c",
+                    "name": "empty_column",
+                    "label": "Empty Column",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efbb58844a7d",
+                            "label": "Empty Column",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This will insert an empty spacer column in the footer.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Footer Column",
@@ -365,5 +392,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593465864
+    "modified": 1593554337
 }
