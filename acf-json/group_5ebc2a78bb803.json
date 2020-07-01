@@ -1164,50 +1164,18 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_5ebc353a69432",
-            "label": "Sticky Header Logo",
-            "name": "sticky_logo",
-            "type": "image",
-            "instructions": "(if none selected then desktop logo will be used)",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5ebc2ca3beb12",
-                        "operator": "!=",
-                        "value": "none"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5ebc7e6bd83e1",
-            "label": "Sticky Header Background Color",
-            "name": "sticky_header_background_color",
-            "type": "color_picker",
+            "key": "field_5efc9d42e9cf8",
+            "label": "Sticky Header Styles",
+            "name": "sticky_header_styles",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5ebc2ca3beb12",
-                        "operator": "!=",
-                        "value": "none"
+                        "operator": "==",
+                        "value": "sticky-scroll"
                     }
                 ]
             ],
@@ -1216,30 +1184,110 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#fff"
-        },
-        {
-            "key": "field_5ebc7e8ed83e2",
-            "label": "Sticky Header Text Color",
-            "name": "sticky_header_text_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5ebc2ca3beb12",
-                        "operator": "!=",
-                        "value": "none"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#000"
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5ebc353a69432",
+                    "label": "Sticky Header Logo",
+                    "name": "sticky_logo",
+                    "type": "image",
+                    "instructions": "(if none selected then desktop logo will be used)",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ebc2ca3beb12",
+                                "operator": "!=",
+                                "value": "none"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ebc7e6bd83e1",
+                    "label": "Background Color",
+                    "name": "sticky_header_background_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ebc2ca3beb12",
+                                "operator": "!=",
+                                "value": "none"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#fff"
+                },
+                {
+                    "key": "field_5ebc7e8ed83e2",
+                    "label": "Text Color",
+                    "name": "sticky_header_text_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ebc2ca3beb12",
+                                "operator": "!=",
+                                "value": "none"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                },
+                {
+                    "key": "field_5efc9d71e9cf9",
+                    "label": "Text Hover Color",
+                    "name": "sticky_header_text_hover_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ebc2ca3beb12",
+                                "operator": "!=",
+                                "value": "none"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#000"
+                }
+            ]
         }
     ],
     "location": [
@@ -1259,5 +1307,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593447752
+    "modified": 1593617178
 }

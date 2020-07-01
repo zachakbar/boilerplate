@@ -1,4 +1,4 @@
-<a class="logo" href="/"><?php echo wp_get_attachment_image( get_field( 'desktop_logo', 'option' ), 'full' ) ?></a>
+<?php get_desktop_logos(); ?>
 <div class="nav-cta-container">
 	<nav id="main_menu" role="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
 		<?php

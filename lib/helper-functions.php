@@ -51,3 +51,24 @@ function tdc_color_brightness( $color, $change ) {
 	return '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
 
 }
+
+
+/*
+ *  Get Desktop Logos
+ */
+function get_desktop_logos(){
+	$desktop_logo = get_field( 'desktop_logo', 'option' );
+	$stickyscroll_behavior = get_field( 'stickyscroll_behavior', 'option' );
+	$sticky_header_styles = get_field( 'sticky_header_styles', 'option' );
+	$logo_output = "";
+
+	if($stickyscroll_behavior == "sticky-scroll" && isset($sticky_header_styles['sticky_logo'])):
+		$sticky_logo = $sticky_header_styles['sticky_logo'];
+		$logo_output .= "<a class='logo desktop' href='/'>".wp_get_attachment_image( $desktop_logo, 'full' )."</a>";
+		$logo_output .= "<a class='logo sticky' href='/'>".wp_get_attachment_image( $sticky_logo, 'full' )."</a>";
+	else:
+		$logo_output .= "<a class='logo desktop sticky' href='/'>".wp_get_attachment_image( $desktop_logo, 'full' )."</a>";
+	endif;
+
+	echo $logo_output;
+}

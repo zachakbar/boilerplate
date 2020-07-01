@@ -1,4 +1,4 @@
-<a class="logo" href="/"><?php echo wp_get_attachment_image( get_field( 'desktop_logo', 'option' ), 'full' ) ?></a>
+<?php get_desktop_logos(); ?>
 <div class="menu-toggle hamburger hamburger--elastic">
   <div class="hamburger-box">
     <div class="hamburger-inner"></div>

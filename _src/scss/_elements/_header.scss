@@ -21,6 +21,9 @@ header[role="banner"]{
 
 	&.sticky {
 		position: fixed;
+
+		.logo.desktop { display: none }
+		.logo.sticky { display: flex }
 	}
 	&.sticky-scroll {
 		&.is-scrolling {
@@ -28,6 +31,9 @@ header[role="banner"]{
 			visibility: hidden;
 			opacity: 0 !important;
 			transform: translateY(-15rem);
+
+			.logo.desktop { display: none }
+			.logo.sticky { display: flex }
 		}
 
 		&.is-scrolling-up {
@@ -66,6 +72,9 @@ header[role="banner"]{
     align-items: center;
 		width: 14.6rem;
 		padding: 0.5rem 0.6rem;
+
+		&.sticky { display: none }
+		&.desktop { display: flex }
 
 		@include breakpoint($md){
 			//width: 18rem;
