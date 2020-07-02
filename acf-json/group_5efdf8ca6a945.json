@@ -1,5 +1,5 @@
 {
-    "key": "group_5ef5263307685",
+    "key": "group_5efdf8ca6a945",
     "title": "Theme Styles",
     "fields": [
         {
@@ -35,64 +35,9 @@
             "placeholder": ""
         },
         {
-            "key": "field_5efb67caac9ca",
-            "label": "Font Families",
-            "name": "font_families",
-            "type": "group",
-            "instructions": "(Include the entire font family declaration, including fallback fonts)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5efb67caac9cb",
-                    "label": "Default Font",
-                    "name": "default_font",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "font-family:",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5efb6825ac9d4",
-                    "label": "Headers",
-                    "name": "headers",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "font-family:",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5efb65c99cfaf",
-            "label": "Font Sizes",
-            "name": "font_sizes",
+            "key": "field_5efdf56c64df0",
+            "label": "Font Styles",
+            "name": "font_styles",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -102,196 +47,154 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_5efb661d9cfb0",
-                    "label": "Body Copy",
-                    "name": "body_copy",
-                    "type": "number",
+                    "key": "field_5efdf59364df1",
+                    "label": "Default Font",
+                    "name": "default_font",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 16,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb67119cfbb",
-                    "label": "Header\/Navigation",
-                    "name": "header_navigation",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 16,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
-                },
-                {
-                    "key": "field_5efb67259cfbc",
-                    "label": "Footer",
-                    "name": "footer",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 12,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
-                },
-                {
-                    "key": "field_5efb667c9cfb2",
-                    "label": "Heading 1 (H1)",
+                    "key": "field_5efdf86708abb",
+                    "label": "H1",
                     "name": "h1",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 40,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb66b09cfb5",
-                    "label": "Heading 2 (H2)",
+                    "key": "field_5efdf87608ac3",
+                    "label": "H2",
                     "name": "h2",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 36,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb66bb9cfb6",
-                    "label": "Heading 3 (H3)",
+                    "key": "field_5efdf88508acb",
+                    "label": "H3",
                     "name": "h3",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 28,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb66c79cfb7",
-                    "label": "Heading 4 (H4)",
+                    "key": "field_5efdfa5fda197",
+                    "label": "H4",
                     "name": "h4",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 22,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb66d29cfb8",
-                    "label": "Heading 5 (H5)",
+                    "key": "field_5efdfa66da198",
+                    "label": "H5",
                     "name": "h5",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 18,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 },
                 {
-                    "key": "field_5efb66dc9cfb9",
-                    "label": "Heading 6 (H6)",
+                    "key": "field_5efdfa6cda199",
+                    "label": "H6",
                     "name": "h6",
-                    "type": "number",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": 16,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "px",
-                    "min": 10,
-                    "max": 100,
-                    "step": ""
+                    "clone": [
+                        "group_5efdf97fd45c8"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
                 }
             ]
         },
@@ -520,28 +423,13 @@
             }
         ]
     ],
-    "menu_order": 99,
+    "menu_order": 0,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "excerpt",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "page_attributes",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593538118
+    "modified": 1593703292
 }
