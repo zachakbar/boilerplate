@@ -7,7 +7,7 @@ $tdc_default_colors = [
 	'black' => '#141414',
 	'white' => '#ffffff',
 ];
-$tdc_theme_options_colors = get_field( 'theme_colors', 'option' );
+$tdc_theme_options_colors = get_field( 'theme_colors', 'option' ) ? get_field( 'theme_colors', 'option' ) : array();
 $tdc_default_colors = array_merge($tdc_default_colors, $tdc_theme_options_colors);
 $tdc_gutenberg_colors = array(
 	array(
@@ -21,16 +21,18 @@ $tdc_gutenberg_colors = array(
 		'color' => '#FFFFFF',
 	)
 );
-foreach($tdc_default_colors[0] as $key => $theme_color):
-	if(!empty($theme_color)):
-		$theme_color_array = array(
-			'name'	=> ucwords(str_replace("_", " ", $key)),
-			'slug'	=> $key,
-			'color'	=> $theme_color,
-		);
-		$tdc_gutenberg_colors[] = $theme_color_array;
-	endif;
-endforeach;
+if(isset($tdc_default_colors[0])):
+	foreach($tdc_default_colors[0] as $key => $theme_color):
+		if(!empty($theme_color)):
+			$theme_color_array = array(
+				'name'	=> ucwords(str_replace("_", " ", $key)),
+				'slug'	=> $key,
+				'color'	=> $theme_color,
+			);
+			$tdc_gutenberg_colors[] = $theme_color_array;
+		endif;
+	endforeach;
+endif;
 
 $tdc_link_color = get_theme_mod(
 	'tdc_link_color',

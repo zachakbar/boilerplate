@@ -35,7 +35,8 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> true,
 		'parent_slug'	=> '',
-		'position'		=> 30
+		'position'		=> 30,
+		'icon_url'		=> 'data:image/svg+xml;base64,' . base64_encode(file_get_contents(get_stylesheet_directory().'/admin/img/striventa-icon.svg'))
   ));
 
   // Add theme styles sub page.
