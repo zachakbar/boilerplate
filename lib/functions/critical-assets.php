@@ -75,7 +75,7 @@ function update_style_asset_url( $haystack ) {
 		$font_families = get_field( 'font_families', 'option' );
 		$font_sizes = get_field( 'font_sizes', 'option' );
 		$styles_output .= "body,header,article,footer,p,ul,a{font-family:".$font_families['default_font'].";}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:".$font_families['headers'].";}";
-		$styles_output .= "article,p,ul,a,span{font-size:".$font_sizes['body_copy']."px;}header[role='navigation'],header[role='navigation'] ul{font-size:".$font_sizes['header_navigation']."px;}footer[role='contentinfo'],footer[role='contentinfo'] p,footer[role='contentinfo'] ul{font-size:".$font_sizes['footer']."px;}h1,.h1{font-size:".$font_sizes['h1']."px;}h2,.h2{font-size:".$font_sizes['h2']."px;}h3,.h3{font-size:".$font_sizes['h3']."px;}h4,.h4{font-size:".$font_sizes['h4']."px;}h5,.h5{font-size:".$font_sizes['h5']."px;}h6,.h6{font-size:".$font_sizes['h6']."px;}";
+		$styles_output .= "article,p,ul,a,span{font-size:".$font_sizes['body_copy']."}header[role='navigation'],header[role='navigation'] ul{font-size:".$font_sizes['header_navigation']."}footer[role='contentinfo'],footer[role='contentinfo'] p,footer[role='contentinfo'] ul{font-size:".$font_sizes['footer']."}h1,.h1{font-size:".$font_sizes['h1']."}h2,.h2{font-size:".$font_sizes['h2']."}h3,.h3{font-size:".$font_sizes['h3']."}h4,.h4{font-size:".$font_sizes['h4']."}h5,.h5{font-size:".$font_sizes['h5']."}h6,.h6{font-size:".$font_sizes['h6']."}";
 
 		// add desktop header styles
 		$header_styles = get_field( 'desktop_header_styles', 'option' );
