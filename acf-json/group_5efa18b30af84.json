@@ -166,6 +166,109 @@
                     "min": "",
                     "max": "1"
                 },
+                "layout_5efe1287088a9": {
+                    "key": "layout_5efe1287088a9",
+                    "name": "contact_info",
+                    "label": "Contact Info",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5efe129a088aa",
+                            "label": "Column Title",
+                            "name": "column_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5efe12a5088ab",
+                            "label": "Contact Info",
+                            "name": "contact_info",
+                            "type": "group",
+                            "instructions": "Select which contact information to show in this column. Values are taken from the General Options page.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5efe12d1088ac",
+                                    "label": "Phone Number",
+                                    "name": "phone_number",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33.333",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5efe12f2088ad",
+                                    "label": "Email Address",
+                                    "name": "email_address",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33.333",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5efe12fc088ae",
+                                    "label": "Address",
+                                    "name": "address",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33.333",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5efa1e8e334d6": {
                     "key": "layout_5efa1e8e334d6",
                     "name": "custom_content",
@@ -392,5 +495,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1593554337
+    "modified": 1593709325
 }

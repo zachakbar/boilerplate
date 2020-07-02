@@ -85,6 +85,13 @@ function tdc_genesis_footer(){ ?>
 							get_template_part( 'lib/template-parts/nav', 'social-icons' );
 							break;
 
+						case 'contact_info':
+							if(get_sub_field( 'column_title' )):
+								echo "<strong>".get_sub_field( 'column_title' )."</strong>";
+							endif;
+							get_template_part( 'lib/template-parts/contact', 'info' );
+							break;
+
 						case 'custom_content':
 							if(get_sub_field( 'column_title' )):
 								echo "<strong>".get_sub_field( 'column_title' )."</strong>";

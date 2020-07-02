@@ -74,7 +74,7 @@ function update_style_asset_url( $haystack ) {
 		// add font styles
 		$font_styles = get_field( 'font_styles', 'option' );
 		// default font
-		$styles_output .= "header,article,footer,p,ul,a,span{font-family:".$font_styles['default_font']['font_family'].";font-size:".$font_styles['default_font']['font_size']."px;font-weight:".$font_styles['default_font']['font_weight'].";color:".$font_styles['default_font']['font_color'].";text-transform:".$font_styles['default_font']['text_transform'].";font-style:".$font_styles['default_font']['font_style'].";letter-spacing:".$font_styles['default_font']['letter_spacing']."em;}";
+		$styles_output .= "header,article,footer,p,ul,a{font-family:".$font_styles['default_font']['font_family'].";font-size:".$font_styles['default_font']['font_size']."px;font-weight:".$font_styles['default_font']['font_weight'].";color:".$font_styles['default_font']['font_color'].";text-transform:".$font_styles['default_font']['text_transform'].";font-style:".$font_styles['default_font']['font_style'].";letter-spacing:".$font_styles['default_font']['letter_spacing']."em;}";
 		// h1
 		$styles_output .= "h1{font-family:".$font_styles['h1']['font_family'].";font-size:".$font_styles['h1']['font_size']."px;font-weight:".$font_styles['h1']['font_weight'].";color:".$font_styles['h1']['font_color'].";text-transform:".$font_styles['h1']['text_transform'].";font-style:".$font_styles['h1']['font_style'].";letter-spacing:".$font_styles['h1']['letter_spacing']."em;}";
 		// h2
@@ -122,7 +122,7 @@ function update_style_asset_url( $haystack ) {
 
 		// add footer styles
 		$footer_styles = get_field( 'footer_styles', 'option' );
-		$styles_output .= "footer.site-footer{background-color:".$footer_styles['background_color'].";color:".$footer_styles['text_color'].";}footer.site-footer a{color:".$footer_styles['link_text_color'].";}footer.site-footer a:hover{color:".$footer_styles['link_text_hover_color'].";}";
+		$styles_output .= "footer.site-footer{background-color:".$footer_styles['background_color'].";color:".$footer_styles['text_color'].";}footer.site-footer p,footer.site-footer ul,footer.site-footer span{color:".$footer_styles['link_text_color'].";}footer.site-footer a{color:".$footer_styles['link_text_color'].";}footer.site-footer a:hover{color:".$footer_styles['link_text_hover_color'].";}";
 
 		// add primary button styles
 		$primary_btn_styles = get_field( 'primary_button', 'option' );

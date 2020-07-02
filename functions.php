@@ -21,8 +21,8 @@ $theme_includes = [
 	// classes
 	'/lib/classes/class-duplicate-post.php', // Duplicate Post
 	'/lib/classes/class-script-loader.php', // Adds Asyc/Defer option to wp_enqueue
-	//'/lib/classes/class-acf-nav-menu-field.php', // Adds Nav Menu field type for ACF
-	//'/lib/classes/class-acf-json-save.php', // Adds ACF local folder override on save
+	'/lib/classes/class-acf-nav-menu-field.php', // Adds Nav Menu field type for ACF
+	'/lib/classes/class-acf-json-save.php', // Adds ACF local folder override on save
 	'/lib/classes/class-reusable-blocks-menu.php', // Adds menu item for reusable blocks
 
 	// setup
