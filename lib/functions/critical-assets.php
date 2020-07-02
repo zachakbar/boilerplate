@@ -72,10 +72,21 @@ function update_style_asset_url( $haystack ) {
 		endforeach;
 
 		// add font styles
-		$font_families = get_field( 'font_families', 'option' );
-		$font_sizes = get_field( 'font_sizes', 'option' );
-		$styles_output .= "body,header,article,footer,p,ul,a{font-family:".$font_families['default_font'].";}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:".$font_families['headers'].";}";
-		$styles_output .= "article,p,ul,a,span{font-size:".$font_sizes['body_copy']."px;}header[role='navigation'],header[role='navigation'] ul{font-size:".$font_sizes['header_navigation']."px;}footer[role='contentinfo'],footer[role='contentinfo'] p,footer[role='contentinfo'] ul{font-size:".$font_sizes['footer']."px;}h1,.h1{font-size:".$font_sizes['h1']."px;}h2,.h2{font-size:".$font_sizes['h2']."px;}h3,.h3{font-size:".$font_sizes['h3']."px;}h4,.h4{font-size:".$font_sizes['h4']."px;}h5,.h5{font-size:".$font_sizes['h5']."px;}h6,.h6{font-size:".$font_sizes['h6']."px;}";
+		$font_styles = get_field( 'font_styles', 'option' );
+		// default font
+		$styles_output .= "header,article,footer,p,ul,a,span{font-family:".$font_styles['default_font']['font_family'].";font-size:".$font_styles['default_font']['font_size']."px;font-weight:".$font_styles['default_font']['font_weight'].";color:".$font_styles['default_font']['font_color'].";text-transform:".$font_styles['default_font']['text_transform'].";font-style:".$font_styles['default_font']['font_style'].";letter-spacing:".$font_styles['default_font']['letter_spacing']."em;}";
+		// h1
+		$styles_output .= "h1{font-family:".$font_styles['h1']['font_family'].";font-size:".$font_styles['h1']['font_size']."px;font-weight:".$font_styles['h1']['font_weight'].";color:".$font_styles['h1']['font_color'].";text-transform:".$font_styles['h1']['text_transform'].";font-style:".$font_styles['h1']['font_style'].";letter-spacing:".$font_styles['h1']['letter_spacing']."em;}";
+		// h2
+		$styles_output .= "h2{font-family:".$font_styles['h2']['font_family'].";font-size:".$font_styles['h2']['font_size']."px;font-weight:".$font_styles['h2']['font_weight'].";color:".$font_styles['h2']['font_color'].";text-transform:".$font_styles['h2']['text_transform'].";font-style:".$font_styles['h2']['font_style'].";letter-spacing:".$font_styles['h2']['letter_spacing']."em;}";
+		// h3
+		$styles_output .= "h3{font-family:".$font_styles['h3']['font_family'].";font-size:".$font_styles['h3']['font_size']."px;font-weight:".$font_styles['h3']['font_weight'].";color:".$font_styles['h3']['font_color'].";text-transform:".$font_styles['h3']['text_transform'].";font-style:".$font_styles['h3']['font_style'].";letter-spacing:".$font_styles['h3']['letter_spacing']."em;}";
+		// h4
+		$styles_output .= "h4{font-family:".$font_styles['h4']['font_family'].";font-size:".$font_styles['h4']['font_size']."px;font-weight:".$font_styles['h4']['font_weight'].";color:".$font_styles['h4']['font_color'].";text-transform:".$font_styles['h4']['text_transform'].";font-style:".$font_styles['h4']['font_style'].";letter-spacing:".$font_styles['h4']['letter_spacing']."em;}";
+		// h5
+		$styles_output .= "h5{font-family:".$font_styles['h5']['font_family'].";font-size:".$font_styles['h5']['font_size']."px;font-weight:".$font_styles['h5']['font_weight'].";color:".$font_styles['h5']['font_color'].";text-transform:".$font_styles['h5']['text_transform'].";font-style:".$font_styles['h5']['font_style'].";letter-spacing:".$font_styles['h5']['letter_spacing']."em;}";
+		// h6
+		$styles_output .= "h6{font-family:".$font_styles['h6']['font_family'].";font-size:".$font_styles['h6']['font_size']."px;font-weight:".$font_styles['h6']['font_weight'].";color:".$font_styles['h6']['font_color'].";text-transform:".$font_styles['h6']['text_transform'].";font-style:".$font_styles['h6']['font_style'].";letter-spacing:".$font_styles['h6']['letter_spacing']."em;}";
 
 		// add desktop header styles
 		$header_styles = get_field( 'desktop_header_styles', 'option' );
