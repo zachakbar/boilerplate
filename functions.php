@@ -40,8 +40,8 @@ $theme_includes = [
 	'/lib/functions/functions-custom.php',
 
 	// custom block functions
-	//'/lib/functions/acf-blocks-init.php',
-	//'/lib/functions/block-functions.php',
+	'/lib/functions/acf-blocks-init.php',
+	'/lib/functions/block-functions.php',
 ];
 
 foreach ( $theme_includes as $file ) {

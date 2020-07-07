@@ -68,7 +68,9 @@ function css() {
 			outputStyle: 'compressed',
 			includePaths: paths.styles.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			grid: true
+		}))
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(updateTimestamp())
 		.pipe(notify({ message: 'CSS complete!' }));
@@ -82,7 +84,9 @@ function admincss() {
 			outputStyle: 'compressed',
 			includePaths: paths.adminstyles.inc
 		}).on('error', sass.logError))
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			grid: true
+		}))
 		.pipe(gulp.dest(paths.adminstyles.dest))
 		.pipe(updateTimestamp())
 		.pipe(notify({ message: 'Admin CSS complete!' }));

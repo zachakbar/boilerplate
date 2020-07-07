@@ -19,6 +19,7 @@ function critical_css() {
 	echo '<style type="text/css">'.update_style_asset_url( $css ).'</style>';
 }
 add_action( 'wp_head', 'critical_css' );
+add_action( 'admin_head', 'critical_css' );
 
 
 /* Add rel="preload" to stylesheets loaded by wp_enqueue_scripts()
@@ -67,14 +68,14 @@ function update_style_asset_url( $haystack ) {
 		foreach($theme_colors[0] as $key => $theme_color):
 			if(!empty($theme_color)):
 				$class = str_replace("_", "-", $key);
-				$styles_output .= ".has-$class-color{color:$theme_color;}.has-$class-background-color{background-color:$theme_color;}";
+				$styles_output .= ".has-$class-color{color:$theme_color;}.has-$class-background-color{background-color:$theme_color;border-color:$theme_color;}";
 			endif;
 		endforeach;
 
 		// add font styles
 		$font_styles = get_field( 'font_styles', 'option' );
 		// default font
-		$styles_output .= "header,article,footer,p,ul,a{font-family:".$font_styles['default_font']['font_family'].";font-size:".$font_styles['default_font']['font_size']."px;font-weight:".$font_styles['default_font']['font_weight'].";color:".$font_styles['default_font']['font_color'].";text-transform:".$font_styles['default_font']['text_transform'].";font-style:".$font_styles['default_font']['font_style'].";letter-spacing:".$font_styles['default_font']['letter_spacing']."em;}";
+		$styles_output .= "header,article,footer,.content p,.content ul,.content a{font-family:".$font_styles['default_font']['font_family'].";font-size:".$font_styles['default_font']['font_size']."px;font-weight:".$font_styles['default_font']['font_weight'].";color:".$font_styles['default_font']['font_color'].";text-transform:".$font_styles['default_font']['text_transform'].";font-style:".$font_styles['default_font']['font_style'].";letter-spacing:".$font_styles['default_font']['letter_spacing']."em;}";
 		// h1
 		$styles_output .= "h1{font-family:".$font_styles['h1']['font_family'].";font-size:".$font_styles['h1']['font_size']."px;font-weight:".$font_styles['h1']['font_weight'].";color:".$font_styles['h1']['font_color'].";text-transform:".$font_styles['h1']['text_transform'].";font-style:".$font_styles['h1']['font_style'].";letter-spacing:".$font_styles['h1']['letter_spacing']."em;}";
 		// h2
@@ -124,17 +125,22 @@ function update_style_asset_url( $haystack ) {
 		$footer_styles = get_field( 'footer_styles', 'option' );
 		$styles_output .= "footer.site-footer{background-color:".$footer_styles['background_color'].";color:".$footer_styles['text_color'].";}footer.site-footer p,footer.site-footer ul,footer.site-footer span{color:".$footer_styles['link_text_color'].";}footer.site-footer a{color:".$footer_styles['link_text_color'].";}footer.site-footer a:hover{color:".$footer_styles['link_text_hover_color'].";}";
 
+		// add default button styles to Gutenberg block buttons
+		$primary_btn_styles = get_field( 'primary_button', 'option' );
+		$styles_output .= ".wp-block-button__link{border-radius:".$primary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;font-weight:".$primary_btn_styles['font_weight'].";text-transform:".$primary_btn_styles['text_transform'].";}";
+
 		// add primary button styles
 		$primary_btn_styles = get_field( 'primary_button', 'option' );
 		$primary_btn_bg_css = $primary_btn_styles['button_type'] == "solid" ? "background-color:".$primary_btn_styles['background_color'].";border-color:".$primary_btn_styles['background_color'] : "border-color:".$primary_btn_styles['border_color'];
-		$styles_output .= ".btn.primary-button{".$primary_btn_bg_css.";color:".$primary_btn_styles['text_color'].";border-radius:".$primary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;font-weight:".$primary_btn_styles['font_weight'].";text-transform:".$primary_btn_styles['text_transform'].";}.btn.primary-button:hover{background-color:".$primary_btn_styles['hover_background_color'].";border-color:".$primary_btn_styles['hover_background_color'].";color:".$primary_btn_styles['hover_text_color'].";}";
+		$styles_output .= ".btn.btn-primary,.wp-block-button__link.btn-primary{".$primary_btn_bg_css.";color:".$primary_btn_styles['text_color'].";border-radius:".$primary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;font-weight:".$primary_btn_styles['font_weight'].";text-transform:".$primary_btn_styles['text_transform'].";}.btn.btn-primary:hover,.wp-block-button__link.btn-primary:hover{background-color:".$primary_btn_styles['hover_background_color'].";border-color:".$primary_btn_styles['hover_background_color'].";color:".$primary_btn_styles['hover_text_color'].";}";
 
 		// add secondary button styles
 		$secondary_btn_styles = get_field( 'secondary_button', 'option' );
 		$secondary_btn_bg_css = $secondary_btn_styles['button_type'] == "solid" ? "background-color:".$secondary_btn_styles['background_color'].";border-color:".$secondary_btn_styles['background_color'] : "border-color:".$secondary_btn_styles['border_color'];
-		$styles_output .= ".btn.secondary-button{".$secondary_btn_bg_css.";color:".$secondary_btn_styles['text_color'].";border-radius:".$secondary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;;font-weight:".$secondary_btn_styles['font_weight'].";text-transform:".$secondary_btn_styles['text_transform'].";}.btn.secondary-button:hover{background-color:".$secondary_btn_styles['hover_background_color'].";border-color:".$secondary_btn_styles['hover_background_color'].";color:".$secondary_btn_styles['hover_text_color'].";}";
+		$styles_output .= ".btn.btn-secondary,.wp-block-button__link.btn-secondary{".$secondary_btn_bg_css.";color:".$secondary_btn_styles['text_color'].";border-radius:".$secondary_btn_styles['border_radius']."px;border-width:".$primary_btn_styles['border_thickness']."px;;font-weight:".$secondary_btn_styles['font_weight'].";text-transform:".$secondary_btn_styles['text_transform'].";}.btn.btn-secondary:hover,.wp-block-button__link.btn-secondary:hover{background-color:".$secondary_btn_styles['hover_background_color'].";border-color:".$secondary_btn_styles['hover_background_color'].";color:".$secondary_btn_styles['hover_text_color'].";}";
 
 		$styles_output .= "</style>";
 		echo $styles_output;
  }
  add_filter( 'wp_head', 'theme_options_css' );
+ add_filter( 'admin_head', 'theme_options_css' );

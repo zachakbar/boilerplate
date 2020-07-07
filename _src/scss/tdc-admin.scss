@@ -11,6 +11,15 @@
 .acf-field-clone[data-name="top_bar_cta"] .acf-field-clone[data-name="custom_button_styles"] .acf-clone-fields .acf-field { width: 50% !important }
 
 
+/* Default Radio styles overwrite */
+.components-modal__frame input[type=radio]:checked:before, .components-popover input[type=radio]:checked:before, .edit-post-header input[type=radio]:checked:before, .edit-post-sidebar input[type=radio]:checked:before, .edit-post-text-editor input[type=radio]:checked:before, .edit-post-visual-editor input[type=radio]:checked:before, .editor-post-publish-panel input[type=radio]:checked:before {
+	width: 4px;
+	height: 4px;
+	margin: 1px 0 0 1px;
+}
+.select2-container { font-size: 14px; }
+
+
 /* Image Radio Selector Styles */
 .image-radios ul.acf-radio-list li { margin-bottom: 10px }
 .image-radios ul.acf-radio-list li input[type="radio"] { display: none }

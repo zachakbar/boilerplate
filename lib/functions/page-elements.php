@@ -163,7 +163,7 @@ function get_button_fields( $btn_field ) {
 
 	$btn_text = $cta_button['button_text'];
 	$btn_style = $cta_button['button_style'];
-	$btn_class = $btn_style."-button";
+	$btn_class = "btn-".$btn_style;
 	$btn_link = $cta_button['button_link'];
 
 	if($btn_style == 'custom'):
@@ -210,7 +210,7 @@ function get_button_fields( $btn_field ) {
 	endif;
 
 	$btn['link_type'] = $btn_link_type;
-	$btn['link'] = $btn_href;
+	$btn['link'] = is_admin() ? "javascript:void(0);" : $btn_href;
 	$btn['target'] = $btn_target;
 	$btn['text'] = $btn_text;
 

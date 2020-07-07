@@ -10,18 +10,20 @@
  * Create custom Gutenberg block category
  *
  */
-function my_acf_block_category( $categories, $post ) {
-	return array_merge(
-		array(
+if(!function_exists('tdc_block_categories')):
+	function tdc_block_categories( $categories, $post ) {
+		return in_array('tdc-blocks', $categories) ? $categories : array_merge(
 			array(
-				'slug' => 'CUSTOM_CATEGORY_SLUG',
-				'title' => __( 'CUSTOM_CATEGORY_NAME', 'CUSTOM_CATEGORY_SLUG' ),
+				array(
+					'slug'			=> 'tdc-blocks',
+					'title'			=> __( 'Striventa Blocks', 'tdc' ),
+				),
 			),
-		),
-		$categories
-	);
-}
-add_filter( 'block_categories', 'my_acf_block_category', 10, 2);
+			$categories
+		);
+	}
+	add_filter(	'block_categories',	'tdc_block_categories', 10, 2 );
+endif;
 
 
 /*
@@ -29,23 +31,22 @@ add_filter( 'block_categories', 'my_acf_block_category', 10, 2);
  *
  * @link https://developer.wordpress.org/resource/dashicons/
  */
-function register_acf_block_types() {
+function tdc_register_acf_block_types() {
   // GENREAL BLOCKS
   acf_register_block_type(array(
-    'name'              => 'BLOCK_SLUG',
-    'title'             => __('BLOCK_NAME'),
-    'description'       => __('BLOCK_DESCRIPTION'),
-    'render_template'   => 'lib/template-parts/blocks/BLOCK_CONTENT.php',
-    'category'          => 'CUSTOM_CATEGORY_SLUG',
-    'icon'              => 'align-left',
+    'name'              => 'theme_button',
+    'title'             => __('Theme Button'),
+    'description'       => __('Insert a button using the Theme Styles button settings.'),
+    'render_template'   => 'lib/blocks/theme_button.php',
+    'category'          => 'tdc-blocks',
+    'icon'              => '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false"><path d="M19 6H5c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H5V8h14v8z"></path></svg>',
     'keywords'          => array( 'standard', 'content' ),
-    'supports'          => [ 'align' => true ],
-    'align'             => 'full',
-    'enqueue_style'     => get_stylesheet_directory_uri().'/assets/css/blocks/BLOCK_CSS.css'
+    'supports'          => [ 'align' => false ],
+    //'enqueue_style'     => get_stylesheet_directory_uri().'/assets/css/blocks/theme_button.css'
   ));
 }
 
 // Check if function exists and hook into setup.
 if( function_exists('acf_register_block_type') ) {
-  add_action('acf/init', 'register_acf_block_types');
+  add_action('acf/init', 'tdc_register_acf_block_types');
 }
