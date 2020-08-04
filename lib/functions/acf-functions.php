@@ -120,7 +120,15 @@ add_action( 'wp_footer', 'custom_footer_scripts' );
 function tdc_change_acf_color_picker() {
 	$custom_colors = '["#141414","#ffffff"';
 	$theme_colors = get_field( 'theme_colors', 'option' );
-	$custom_colors .= ',"'.$theme_colors[0]['theme_color_1'].'","'.$theme_colors[0]['theme_color_2'].'","'.$theme_colors[0]['theme_color_3'].'","'.$theme_colors[0]['theme_color_4'].'","'.$theme_colors[0]['theme_color_5'].'","'.$theme_colors[0]['theme_color_6'].'"]';
+
+	foreach($theme_colors[0] as $theme_color):
+		if(!empty($theme_color)):
+			$custom_colors .= ',"'.$theme_color.'"';
+		endif;
+	endforeach;
+
+	$custom_colors .= ']';
+
 	echo "<script>
 		acf.add_filter('color_picker_args', function( args, field ){
 

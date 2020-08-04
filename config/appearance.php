@@ -46,9 +46,10 @@ $tdc_accent_color = get_theme_mod(
 
 $tdc_link_color_contrast   = tdc_color_contrast( $tdc_link_color );
 $tdc_link_color_brightness = tdc_color_brightness( $tdc_link_color, 35 );
+$tdc_fonts_url = get_field( 'font_embed_link', 'option' ) ?: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap';
 
 return [
-	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
+	'fonts-url'            => $tdc_fonts_url,
 	'content-width'        => 1062,
 	'button-bg'            => $tdc_link_color,
 	'button-color'         => $tdc_link_color_contrast,

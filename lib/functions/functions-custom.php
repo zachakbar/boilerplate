@@ -1,5 +1,6 @@
 <?php
 
+/*
 // Add Font Embed from Theme Styles
 function custom_font_embed() {
 	$font_embed = get_field( 'font_embed_link', 'option' );
@@ -11,6 +12,7 @@ function custom_font_embed() {
 	endif;
 }
 add_action( 'wp_enqueue_scripts', 'custom_font_embed' );
+*/
 
 
 // Add Stylesheets
